@@ -1,0 +1,27 @@
+/* Estilo para la tabla */
+table {
+    border-collapse: collapse;
+    margin: 50px auto;
+  }
+  
+  /* Estilo para las celdas de la tabla */
+  td, th {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  /* Estilo para el encabezado de la tabla */
+  th {
+    background-color: #f2f2f2;
+    text-align: center;
+  }
+  
+
+/* TODO: esto esta bien??? */
+  /* Estilo para el contenedor principal */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  

@@ -1,0 +1,36 @@
+/* Define la fuente para todo el documento */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Estilo para el encabezado */
+  h1 {
+    color: #0077be;
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  /* Estilo para los párrafos */
+  p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 20px 0;
+  }
+  
+  /* Estilo para la imagen */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 5px solid #0077be;
+    box-shadow: 0px 0px 10px #0077be;
+  }
+  
+  /* Estilo para el reproductor de audio */
+  audio {
+    display: block;
+    margin: 50px auto;
+  }
+  
