@@ -1,36 +1,128 @@
-/* Define la fuente para todo el documento */
-body {
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Estilo para el encabezado */
-  h1 {
-    color: #0077be;
-    font-size: 2.5em;
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  /* Estilo para los párrafos */
-  p {
-    font-size: 1.2em;
-    line-height: 1.5;
-    margin: 20px 0;
-  }
-  
-  /* Estilo para la imagen */
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border: 5px solid #0077be;
-    box-shadow: 0px 0px 10px #0077be;
-  }
-  
-  /* Estilo para el reproductor de audio */
-  audio {
-    display: block;
-    margin: 50px auto;
-  }
-  
+/* Estilos para el HTML del Concejo de Cabranes */
+
+
+header {
+  background-color: #1E3638;
+  color: #ffffff;
+  text-align: center;
+  padding: 1em;
+}
+
+nav {
+  background-color: #63B2B8;
+  color: #000A0A;
+  padding: 1em;
+}
+
+nav h2 {
+  margin-bottom: 0.5em;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-bottom: 0.5em;
+}
+
+nav li a {
+  color: #000A0A;
+  background-color: #63B2B8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav li a:hover {
+  color: #63B2B8;
+  background-color: #1E3638;
+}
+
+
+main {
+  background-color: #f2f2f2;
+  color: #333333; 
+  padding: 1em;
+}
+
+main h2 {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+main p {
+  margin-bottom: 20px;
+}
+
+
+footer {
+  background-color: #1E3638;
+  color: #B0CFD1;
+  text-align: center;
+  padding: 1em;
+}
+
+footer a {
+  color: #B0CFD1;
+  background-color: #1E3638;
+}
+
+
+/* Tabla */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #B0CFD1;
+}
+
+th {
+  background-color: #63B2B8;
+  color: #000A0A;
+}
+
+caption {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+tr:hover {
+  background-color: #B0CFD1;
+}
+
+
+/*lista definicion*/
+dl {
+  margin: 0;
+  padding: 0;
+}
+
+dt {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+dd {
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+
+/*lista ordenada*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+li {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #333;
+}
