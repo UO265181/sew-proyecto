@@ -1,33 +1,16 @@
-/* Estilos para el HTML del Concejo de Cabranes */
-
-
+/* Especifidad: 001*/
 header {
   background-color: #1E3638;
   color: #ffffff;
-  text-align: center;
-  padding: 1em;
 }
 
+/* Especifidad: 001*/
 nav {
   background-color: #63B2B8;
   color: #000A0A;
-  padding: 1em;
 }
 
-nav h2 {
-  margin-bottom: 0.5em;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  margin-bottom: 0.5em;
-}
-
+/* Especifidad: 003*/
 nav li a {
   color: #000A0A;
   background-color: #63B2B8;
@@ -35,94 +18,81 @@ nav li a {
   font-weight: bold;
 }
 
+/* Especifidad: 013*/
 nav li a:hover {
   color: #63B2B8;
   background-color: #1E3638;
 }
 
-
+/* Especifidad: 001*/
 main {
   background-color: #f2f2f2;
-  color: #333333; 
-  padding: 1em;
+  color: #333333;
 }
 
+/* Especifidad: 002*/
 main h2 {
-  margin-top: 0;
-  margin-bottom: 1em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  background-color: #63B2B8;
+  color: #000A0A;
 }
 
-main p {
-  margin-bottom: 20px;
-}
-
-
+/* Especifidad: 001*/
 footer {
   background-color: #1E3638;
   color: #B0CFD1;
   text-align: center;
-  padding: 1em;
 }
 
+/* Especifidad: 002*/
 footer a {
   color: #B0CFD1;
   background-color: #1E3638;
 }
 
-
-/* Tabla */
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th, td {
-  padding: 12px;
+/* Especifidad: 001*/
+th,
+td {
   text-align: left;
   border-bottom: 1px solid #B0CFD1;
 }
 
+/* Especifidad: 001*/
 th {
-  background-color: #63B2B8;
+  background-color: #B0CFD1;
   color: #000A0A;
 }
 
+/* Especifidad: 001*/
 caption {
-  font-size: 24px;
   font-weight: bold;
-  margin-bottom: 12px;
 }
 
+/* Especifidad: 011*/
 tr:hover {
-  background-color: #B0CFD1;
+  background-color: white;
+  color: #000A0A;
 }
 
-
-/*lista definicion*/
-dl {
-  margin: 0;
-  padding: 0;
-}
-
+/* Especifidad: 001*/
 dt {
   font-weight: bold;
-  margin-top: 10px;
 }
 
-dd {
-  margin-left: 0;
-  margin-bottom: 10px;
-}
-
-/*lista ordenada*/
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+/* Especifidad: 002*/
+figure figcaption {
+  background-color: #B0CFD1;
+  color: #000A0A;
   text-align: center;
 }
-li {
-  margin: 10px 0;
-  font-size: 18px;
-  color: #333;
+
+/* Especifidad: 001*/
+video {
+  border: 10px solid #B0CFD1;
+}
+
+/* Especifidad: 001*/
+audio {
+  border: 10px solid #B0CFD1;
 }

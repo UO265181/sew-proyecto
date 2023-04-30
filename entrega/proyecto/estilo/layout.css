@@ -1,29 +1,132 @@
-/* Layout para el HTML del Concejo de Cabranes */
-
-/* Grid container */
-.container {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-areas:
-    "header header"
-    "nav main"
-    "footer footer";
-  height: 100vh;
-}
-
-/* Elementos en el grid */
+/* Especifidad: 001*/
 header {
-  grid-area: header;
+  display: block;
+  text-align: center;
+  padding: 1em;
 }
 
+/* Especifidad: 001*/
 nav {
-  grid-area: nav;
+  display: block;
+  padding: 1em;
 }
 
+/* Especifidad: 002*/
+nav h2 {
+  margin-bottom: 0.5em;
+}
+
+/* Especifidad: 002*/
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Especifidad: 002*/
+nav li {
+  margin-bottom: 0.5em;
+}
+
+/* Especifidad: 001*/
 main {
-  grid-area: main;
+  display: block;
+  padding: 1em;
 }
 
+/* Especifidad: 002*/
+main h2 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Especifidad: 002*/
+main h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.25em;
+}
+
+/* Especifidad: 002*/
+main p {
+  margin-bottom: 20px;
+}
+
+/* Especifidad: 001*/
+section {
+  display: block;
+}
+
+/* Especifidad: 001*/
 footer {
-  grid-area: footer;
+  display: block;
+  padding: 1em;
+}
+
+/* Especifidad: 001*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Especifidad: 001*/
+th,
+td {
+  padding: 12px;
+}
+
+/* Especifidad: 001*/
+caption {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+/* Especifidad: 001*/
+dl {
+  margin: 0;
+  padding: 0;
+}
+
+/* Especifidad: 001*/
+dt {
+  margin-top: 10px;
+}
+
+/* Especifidad: 001*/
+dd {
+  margin-left: 0;
+  margin-bottom: 5px;
+}
+
+/* Especifidad: 001*/
+ul {
+  margin-top: 5px;
+}
+
+/* Especifidad: 001*/
+figure {
+  margin: 20px;
+  max-width: 50%;
+}
+
+/* Especifidad: 002*/
+figure img {
+  width: 100%;
+  height: auto;
+}
+
+/* Especifidad: 001*/
+video {
+  max-width: 50%;
+  width: 50%;
+  height: auto;
+  margin: 20px;
+  padding: 5px;
+}
+
+/* Especifidad: 001*/
+audio {
+  margin: 20px;
+  padding: 5px;
+  width: 50%;
+  max-width: 50%;
 }
