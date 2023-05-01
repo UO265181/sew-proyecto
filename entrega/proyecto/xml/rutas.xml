@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<rutas xmlns="http://www.uniovi.es"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.uniovi.es rutas.xsd">
+    <ruta nombre="TODO" tipo="Arquitectura y monumentos" medio_transporte="A pie" recomendacion="8">
+        <duracion unidades="horas">4</duracion>
+        <agencia>NaturAller</agencia>
+        <descripcion>Esta ruta te llevará a conocer algunos de los monumentos prerrománicos más
+            importantes del concejo.</descripcion>
+        <personas>Cualquiera</personas>
+        <inicio>
+            <fecha>2023-06-10</fecha>
+            <hora>10:00:00</hora>
+            <lugar>Plaza del ayuntamiento </lugar>
+            <direccion>Calle Foncalada </direccion>
+            <coordenadas>
+                <longitud>-5.852826</longitud>
+                <latitud>43.361300</latitud>
+                <altitud>100</altitud>
+            </coordenadas>
+        </inicio>
+
+        <referencias>
+            <referencia url="https://es.wikipedia.org/wiki/Foncalada">Foncalada en Wikipedia</referencia>
+            <referencia url="http://prerromanicoasturiano.es/">Prerrománico Asturiano</referencia>
+            <referencia
+                url="https://www.turismoasturias.es/descubre/cultura/prerromanico-en-asturias">Turismo
+                Asturias: Prerrománico en Asturias</referencia>
+        </referencias>
+        <hitos>
+            <hito nombre="TODO">
+                <descripcion>Conocida como la "Iglesia de Santullano", este monumento es uno de los
+                    más importantes del arte prerrománico asturiano.</descripcion>
+                <coordenadas>
+                    <longitud>-5.864891</longitud>
+                    <latitud>43.364939</latitud>
+                    <altitud>130</altitud>
+                </coordenadas>
+                <distancia unidades="kilometros">0.5</distancia>
+                <galeria_fotos>
+                    <foto>san_julian_1.jpg</foto>
+                    <foto>san_julian_2.jpg</foto>
+                </galeria_fotos>
+                <galeria_videos>
+                    <video>https://www.youtube.com/watch?v=ZD8gVnZZ2Ko</video>
+                </galeria_videos>
+            </hito>
+            <hito nombre="TODO">
+                <descripcion>Construida en el siglo IX, esta iglesia palatina es una de las obras
+                    más destacadas del arte asturiano prerrománico.</descripcion>
+                <coordenadas>
+                    <longitud>-5.846508</longitud>
+                    <latitud>43.375942</latitud>
+                    <altitud>310</altitud>
+                </coordenadas>
+                <distancia unidades="kilometros">0.5</distancia>
+                <galeria_fotos>
+                    <foto>santa_maria_1.jpg</foto>
+                    <foto>santa_maria_2.jpg</foto>
+                </galeria_fotos>
+                <galeria_videos>
+                    <video>https://www.youtube.com/watch?v=JDfTft3jX30</video>
+                </galeria_videos>
+            </hito>
+            <hito nombre="TODO">
+                <descripcion>Construida en el siglo IX, esta iglesia palatina es una de las obras
+                    más destacadas del arte asturiano prerrománico.</descripcion>
+                <coordenadas>
+                    <longitud>-5.846508</longitud>
+                    <latitud>43.375942</latitud>
+                    <altitud>310</altitud>
+                </coordenadas>
+                <distancia unidades="kilometros">0.5</distancia>
+                <galeria_fotos>
+                    <foto>santa_maria_1.jpg</foto>
+                    <foto>santa_maria_2.jpg</foto>
+                </galeria_fotos>
+                <galeria_videos>
+                    <video>https://www.youtube.com/watch?v=JDfTft3jX30</video>
+                </galeria_videos>
+            </hito>
+        </hitos>
+        <planimetria></planimetria>
+        <altimetria></altimetria>
+    </ruta>
+
+    <ruta nombre="TODO" tipo="Arquitectura y monumentos" medio_transporte="A pie" recomendacion="8">
+        <duracion unidades="horas">4</duracion>
+        <agencia>NaturAller</agencia>
+        <descripcion>Esta ruta te llevará a conocer algunos de los monumentos prerrománicos más
+            importantes del concejo.</descripcion>
+        <personas>Cualquiera</personas>
+        <inicio>
+            <fecha>2023-06-10</fecha>
+            <hora>10:00:00</hora>
+            <lugar>Plaza del ayuntamiento </lugar>
+            <direccion>Calle Foncalada </direccion>
+            <coordenadas>
+                <longitud>-5.852826</longitud>
+                <latitud>43.361300</latitud>
+                <altitud>100</altitud>
+            </coordenadas>
+        </inicio>
+
+        <referencias>
+            <referencia url="https://es.wikipedia.org/wiki/Foncalada">Foncalada en Wikipedia</referencia>
+            <referencia url="http://prerromanicoasturiano.es/">Prerrománico Asturiano</referencia>
+            <referencia
+                url="https://www.turismoasturias.es/descubre/cultura/prerromanico-en-asturias">Turismo
+                Asturias: Prerrománico en Asturias</referencia>
+        </referencias>
+        <hitos>
+            <hito nombre="TODO">
+                <descripcion>Conocida como la "Iglesia de Santullano", este monumento es uno de los
+                    más importantes del arte prerrománico asturiano.</descripcion>
+                <coordenadas>
+                    <longitud>-5.864891</longitud>
+                    <latitud>43.364939</latitud>
+                    <altitud>130</altitud>
+                </coordenadas>
+                <distancia unidades="kilometros">0.5</distancia>
+                <galeria_fotos>
+                    <foto>san_julian_1.jpg</foto>
+                    <foto>san_julian_2.jpg</foto>
+                </galeria_fotos>
+                <galeria_videos>
+                    <video>https://www.youtube.com/watch?v=ZD8gVnZZ2Ko</video>
+                </galeria_videos>
+            </hito>
+            <hito nombre="TODO">
+                <descripcion>Construida en el siglo IX, esta iglesia palatina es una de las obras
+                    más destacadas del arte asturiano prerrománico.</descripcion>
+                <coordenadas>
+                    <longitud>-5.846508</longitud>
+                    <latitud>43.375942</latitud>
+                    <altitud>310</altitud>
+                </coordenadas>
+                <distancia unidades="kilometros">0.5</distancia>
+                <galeria_fotos>
+                    <foto>santa_maria_1.jpg</foto>
+                    <foto>santa_maria_2.jpg</foto>
+                </galeria_fotos>
+                <galeria_videos>
+                    <video>https://www.youtube.com/watch?v=JDfTft3jX30</video>
+                </galeria_videos>
+            </hito>
+            <hito nombre="TODO">
+                <descripcion>Construida en el siglo IX, esta iglesia palatina es una de las obras
+                    más destacadas del arte asturiano prerrománico.</descripcion>
+                <coordenadas>
+                    <longitud>-5.846508</longitud>
+                    <latitud>43.375942</latitud>
+                    <altitud>310</altitud>
+                </coordenadas>
+                <distancia unidades="kilometros">0.5</distancia>
+                <galeria_fotos>
+                    <foto>santa_maria_1.jpg</foto>
+                    <foto>santa_maria_2.jpg</foto>
+                </galeria_fotos>
+                <galeria_videos>
+                    <video>https://www.youtube.com/watch?v=JDfTft3jX30</video>
+                </galeria_videos>
+            </hito>
+        </hitos>
+        <planimetria></planimetria>
+        <altimetria></altimetria>
+    </ruta>
+
+    <ruta nombre="TODO" tipo="Arquitectura y monumentos" medio_transporte="A pie" recomendacion="8">
+        <duracion unidades="horas">4</duracion>
+        <agencia>NaturAller</agencia>
+        <descripcion>Esta ruta te llevará a conocer algunos de los monumentos prerrománicos más
+            importantes del concejo.</descripcion>
+        <personas>Cualquiera</personas>
+        <inicio>
+            <fecha>2023-06-10</fecha>
+            <hora>10:00:00</hora>
+            <lugar>Plaza del ayuntamiento </lugar>
+            <direccion>Calle Foncalada </direccion>
+            <coordenadas>
+                <longitud>-5.852826</longitud>
+                <latitud>43.361300</latitud>
+                <altitud>100</altitud>
+            </coordenadas>
+        </inicio>
+
+        <referencias>
+            <referencia url="https://es.wikipedia.org/wiki/Foncalada">Foncalada en Wikipedia</referencia>
+            <referencia url="http://prerromanicoasturiano.es/">Prerrománico Asturiano</referencia>
+            <referencia
+                url="https://www.turismoasturias.es/descubre/cultura/prerromanico-en-asturias">Turismo
+                Asturias: Prerrománico en Asturias</referencia>
+        </referencias>
+        <hitos>
+            <hito nombre="TODO">
+                <descripcion>Conocida como la "Iglesia de Santullano", este monumento es uno de los
+                    más importantes del arte prerrománico asturiano.</descripcion>
+                <coordenadas>
+                    <longitud>-5.864891</longitud>
+                    <latitud>43.364939</latitud>
+                    <altitud>130</altitud>
+                </coordenadas>
+                <distancia unidades="kilometros">0.5</distancia>
+                <galeria_fotos>
+                    <foto>san_julian_1.jpg</foto>
+                    <foto>san_julian_2.jpg</foto>
+                </galeria_fotos>
+                <galeria_videos>
+                    <video>https://www.youtube.com/watch?v=ZD8gVnZZ2Ko</video>
+                </galeria_videos>
+            </hito>
+            <hito nombre="TODO">
+                <descripcion>Construida en el siglo IX, esta iglesia palatina es una de las obras
+                    más destacadas del arte asturiano prerrománico.</descripcion>
+                <coordenadas>
+                    <longitud>-5.846508</longitud>
+                    <latitud>43.375942</latitud>
+                    <altitud>310</altitud>
+                </coordenadas>
+                <distancia unidades="kilometros">0.5</distancia>
+                <galeria_fotos>
+                    <foto>santa_maria_1.jpg</foto>
+                    <foto>santa_maria_2.jpg</foto>
+                </galeria_fotos>
+                <galeria_videos>
+                    <video>https://www.youtube.com/watch?v=JDfTft3jX30</video>
+                </galeria_videos>
+            </hito>
+            <hito nombre="TODO">
+                <descripcion>Construida en el siglo IX, esta iglesia palatina es una de las obras
+                    más destacadas del arte asturiano prerrománico.</descripcion>
+                <coordenadas>
+                    <longitud>-5.846508</longitud>
+                    <latitud>43.375942</latitud>
+                    <altitud>310</altitud>
+                </coordenadas>
+                <distancia unidades="kilometros">0.5</distancia>
+                <galeria_fotos>
+                    <foto>santa_maria_1.jpg</foto>
+                    <foto>santa_maria_2.jpg</foto>
+                </galeria_fotos>
+                <galeria_videos>
+                    <video>https://www.youtube.com/watch?v=JDfTft3jX30</video>
+                </galeria_videos>
+            </hito>
+        </hitos>
+        <planimetria></planimetria>
+        <altimetria></altimetria>
+    </ruta>
+</rutas>
