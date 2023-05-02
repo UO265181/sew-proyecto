@@ -30,6 +30,17 @@ class ArchivoXML {
                     $('<p>').text('tipo: ' + tipo).appendTo(section);
                     $('<p>').text('medio_transporte: ' + medio_transporte).appendTo(section);
                     $('<p>').text('recomendacion: ' + recomendacion).appendTo(section);
+
+
+
+                    $("hito", this).each(function () {
+                        var nombre = $("nombre", this).text();
+                        var descripcion = $("descripcion", this).text();
+                        var longitud = $("longitud", this).text();
+                        var latitud = $("latitud", this).text();
+                        var altitud = $("altitud", this).text();
+                    });
+
                 });
 
 
