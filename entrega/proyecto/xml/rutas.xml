@@ -86,7 +86,7 @@
         <altimetria></altimetria>
     </ruta>
 
-    <ruta nombre="TODO" tipo="Arquitectura y monumentos" medio_transporte="A pie" recomendacion="8">
+    <ruta nombre="ruta 2" tipo="Arquitectura y monumentos" medio_transporte="A pie" recomendacion="8">
         <duracion unidades="horas">4</duracion>
         <agencia>NaturAller</agencia>
         <descripcion>Esta ruta te llevará a conocer algunos de los monumentos prerrománicos más
@@ -112,7 +112,7 @@
                 Asturias: Prerrománico en Asturias</referencia>
         </referencias>
         <hitos>
-            <hito nombre="TODO">
+            <hito nombre="ruta 3">
                 <descripcion>Conocida como la "Iglesia de Santullano", este monumento es uno de los
                     más importantes del arte prerrománico asturiano.</descripcion>
                 <coordenadas>
