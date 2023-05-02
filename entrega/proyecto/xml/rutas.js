@@ -34,11 +34,16 @@ class ArchivoXML {
 
 
                     $("hito", this).each(function () {
-                        var nombre = $("nombre", this).text();
+                        var hito = $(this).attr('nombre');
                         var descripcion = $("descripcion", this).text();
-                        var longitud = $("longitud", this).text();
-                        var latitud = $("latitud", this).text();
-                        var altitud = $("altitud", this).text();
+                        var distancia = $("distancia", this).text();
+
+
+                        
+                        var sectionHito = $('<section>').appendTo(section);
+                        $('<h2>').text(hito).appendTo(sectionHito);
+                        $('<p>').text('descripcion: ' + descripcion).appendTo(sectionHito);
+                        $('<p>').text('distancia: ' + distancia).appendTo(sectionHito);
                     });
 
                 });
