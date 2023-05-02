@@ -14,11 +14,15 @@ class ArchivoXML {
 
 
                 $('ruta', datos).each(function () {
-                    var ruta = $(this).attr('nombre');
-                    $("p").html(ruta);
+                    $("h2").html($(this).attr('nombre'));
+                    $("ul").html();
+                    $("li").html($(this).attr('tipo'));
+                    $("li").html($(this).attr('medio_transporte'));
+                    $("li").html($(this).attr('recomendacion'));
+
                 });
 
-                var ruta = $('ruta', datos).attr("nombre");
+                var ruta = $('ruta', datos);
                 var tipo = $('ruta', datos).attr("tipo");
                 var medio_transporte = $('ruta', datos).attr("medio_transporte");
                 var agencia = $('agencia', datos).text();
