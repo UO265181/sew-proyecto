@@ -12,8 +12,15 @@ class ArchivoXML {
             method: 'GET',
             success: function(datos){
                 
-                    //Pasar el archivo XML a un string
-                    var str = (new XMLSerializer()).serializeToString(datos);
+
+                    var ruta                = $('ruta',datos).attr("nombre");
+                    var tipo              = $('ruta',datos).attr("tipo");
+                    var medio_transporte               = $('ruta',datos).attr("medio_transporte");
+                    var agencia                  = $('agencia',datos).text();
+                    var amanecer              = $('ruta',datos).attr("rise");
+
+
+                    $("p").html(ruta);   
                                    
                 },
             error:function(){
