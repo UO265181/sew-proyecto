@@ -14,22 +14,24 @@ class ArchivoXML {
 
 
                 $('ruta', datos).each(function () {
-                    $("h2").html($(this).attr('nombre'));
-                    $("ul").html();
-                    $("li").html($(this).attr('tipo'));
-                    $("li").html($(this).attr('medio_transporte'));
-                    $("li").html($(this).attr('recomendacion'));
+                    var ruta = $(this).attr('nombre');
+                    var tipo = $(this).attr('nombre');
+                    var medio_transporte = $(this).attr('nombre');
+                    var recomendacion = $(this).attr('nombre');
+                    
+                    var duracion = $(this).find('duracion').text();
+                    var agencia = $(this).find('agencia').text();
+                    var descripcion = $(this).find('descripcion').text();
+                    var personas = $(this).find('personas').text();
+                
 
+                    var section = $('<section>').appendTo('body');
+                    $('<h2>').text(ruta).appendTo(div);
+                    $('<p>').text('tipo: ' + tipo).appendTo(div);
+                    $('<p>').text('medio_transporte: ' + medio_transporte).appendTo(div);
+                    $('<p>').text('recomendacion: ' + recomendacion).appendTo(div);
                 });
 
-                var ruta = $('ruta', datos);
-                var tipo = $('ruta', datos).attr("tipo");
-                var medio_transporte = $('ruta', datos).attr("medio_transporte");
-                var agencia = $('agencia', datos).text();
-                var amanecer = $('ruta', datos).attr("rise");
-
-
-                $("p").html(ruta);
 
             },
             error: function () {
