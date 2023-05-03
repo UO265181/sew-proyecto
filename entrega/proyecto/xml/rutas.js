@@ -20,87 +20,82 @@ class ArchivoXML {
                     var recomendacion = $(this).attr('recomendacion');
 
                     var duracion = $(this).find('duracion').text();
+                    var duracion_unidades = $(this).find('duracion').attr('unidades');
                     var agencia = $(this).find('agencia').text();
                     var descripcion = $(this).find('descripcion').text();
                     var personas = $(this).find('personas').text();
+                    var inicio = $(this).find('inicio');
+                    var inicio_fecha = $(inicio).find('fecha').text();
+                    var inicio_hora = $(inicio).find('hora').text();
+                    var inicio_lugar = $(inicio).find('lugar').text();
+                    var inicio_direccion = $(inicio).find('direccion').text();
+                    var coordenadas = $(this).find('coordenadas');
+                    var longitud = $(coordenadas).find('longitud').text();
+                    var latitud = $(coordenadas).find('latitud').text();
+                    var altitud = $(coordenadas).find('altitud').text();
 
 
-                    var section = $('<section>').appendTo('body');
+                    var section = $('<section>').appendTo('main');
                     $('<h2>').text(ruta).appendTo(section);
-                    $('<p>').text('tipo: ' + tipo).appendTo(section);
-                    $('<p>').text('medio_transporte: ' + medio_transporte).appendTo(section);
-                    $('<p>').text('recomendacion: ' + recomendacion).appendTo(section);
 
+                    $('<p>').text(descripcion).appendTo(section);
+
+                    var datosDeRuta = $('<ul>');
+                    $('<li>').text('Tipo: ' + tipo).appendTo(datosDeRuta);
+                    $('<li>').text('Medio de transporte: ' + medio_transporte).appendTo(datosDeRuta);
+                    $('<li>').text('Recomendación: ' + recomendacion).appendTo(datosDeRuta);
+                    $('<li>').text('Agencia: ' + agencia).appendTo(datosDeRuta);
+                    $('<li>').text('Personas: ' + personas).appendTo(datosDeRuta);
+                    $('<li>').text('Duración ('+duracion_unidades+'): ' + duracion).appendTo(datosDeRuta);
+                    datosDeRuta.appendTo(section);
+
+                    $('<h3>').text("Inicio").appendTo(section);
+                    var datosDeInicio = $('<ul>');
+                    $('<li>').text('Fecha: ' + inicio_fecha).appendTo(datosDeInicio);
+                    $('<li>').text('Hora: ' + inicio_hora).appendTo(datosDeInicio);
+                    $('<li>').text('Lugar: ' + inicio_lugar).appendTo(datosDeInicio);
+                    $('<li>').text('Dirección: ' + inicio_direccion).appendTo(datosDeInicio);
+                    var coordenadasItem = $('<li>').text("Coordenadas: ")
+                    var coordenadasLista = $('<ul>').appendTo(coordenadasItem);
+                    $('<li>').text('Longitud: ' + longitud).appendTo(coordenadasLista);
+                    $('<li>').text('Latitud: ' + latitud).appendTo(coordenadasLista);
+                    $('<li>').text('Altitud: ' + altitud).appendTo(coordenadasLista);
+                    coordenadasItem.appendTo(datosDeInicio);
+                    datosDeInicio.appendTo(section);
 
 
                     $("hito", this).each(function () {
                         var hito = $(this).attr('nombre');
                         var descripcion = $("descripcion", this).text();
                         var distancia = $("distancia", this).text();
+                        var distancia_unidades = $("distancia", this).attr('unidades');
+                        var coordenadas = $(this).find('coordenadas');
+                        var longitud = $(coordenadas).find('longitud').text();
+                        var latitud = $(coordenadas).find('latitud').text();
+                        var altitud = $(coordenadas).find('altitud').text();
 
 
                         
                         var sectionHito = $('<section>').appendTo(section);
-                        $('<h2>').text(hito).appendTo(sectionHito);
+                        $('<h3>').text(hito).appendTo(sectionHito);
+
                         $('<p>').text('descripcion: ' + descripcion).appendTo(sectionHito);
-                        $('<p>').text('distancia: ' + distancia).appendTo(sectionHito);
+
+                        var datosDeHito = $('<ul>');
+                        $('<li>').text('Distancia ('+distancia_unidades+'): ' + distancia).appendTo(datosDeHito);
+                        var coordenadasItem = $('<li>').text("Coordenadas: ")
+                        var coordenadasLista = $('<ul>').appendTo(coordenadasItem);
+                        $('<li>').text('Longitud: ' + longitud).appendTo(coordenadasLista);
+                        $('<li>').text('Latitud: ' + latitud).appendTo(coordenadasLista);
+                        $('<li>').text('Altitud: ' + altitud).appendTo(coordenadasLista);
+                        coordenadasItem.appendTo(datosDeHito);
+                        datosDeHito.appendTo(sectionHito);
                     });
 
                 });
 
 
                 /*
-                $("ruta", xml).each(function () {
-    // Obtener los atributos de la ruta
-    var tipo = $(this).attr("tipo");
-    var recomendacion = $(this).attr("recomendacion");
-
-    // Crear la sección de la ruta
-    var seccionRuta = $("<section>").addClass("ruta");
-
-    // Crear el encabezado de la sección
-    var encabezadoRuta = $("<h2>").text(tipo + " (Recomendación: " + recomendacion + ")");
-    seccionRuta.append(encabezadoRuta);
-
-    // Recorrer los hitos de la ruta
-    $("hito", this).each(function () {
-        // Obtener los datos del hito
-        var nombre = $("nombre", this).text();
-        var descripcion = $("descripcion", this).text();
-        var longitud = $("longitud", this).text();
-        var latitud = $("latitud", this).text();
-        var altitud = $("altitud", this).text();
-        var distancia = $("distancia", this).text();
-        var unidades = $("distancia", this).attr("unidades");
-        var fotos = $("galeria_fotos foto", this).map(function () {
-            return $(this).text();
-        }).get();
-        var videos = $("galeria_videos video", this).map(function () {
-            return $(this).text();
-        }).get();
-
-        // Crear la sección del hito
-        var seccionHito = $("<section>").addClass("hito");
-
-        // Crear el encabezado del hito
-        var encabezadoHito = $("<h3>").text(nombre);
-        seccionHito.append(encabezadoHito);
-
-        // Crear el párrafo de la descripción
-        var parrafoDescripcion = $("<p>").text(descripcion);
-        seccionHito.append(parrafoDescripcion);
-
-        // Crear la lista de coordenadas
-        var listaCoordenadas = $("<ul>").addClass("coordenadas");
-        var itemCoordenadasLongitud = $("<li>").text("Longitud: " + longitud);
-        var itemCoordenadasLatitud = $("<li>").text("Latitud: " + latitud);
-        var itemCoordenadasAltitud = $("<li>").text("Altitud: " + altitud);
-        listaCoordenadas.append(itemCoordenadasLongitud, itemCoordenadasLatitud, itemCoordenadasAltitud);
-        seccionHito.append(listaCoordenadas);
-
-        // Crear el párrafo de la distancia
-        var parrafoDistancia = $("<p>").text("Distancia: " + distancia + " " + unidades);
-        seccionHito.append(parrafoDistancia);
 
         // Crear la lista de fotos
         var listaFotos = $("<ul>").addClass("galeria-fotos");
@@ -134,13 +129,6 @@ class ArchivoXML {
         $(insertarAntesDe).before(elemento);
     }
     verXML() {
-        //Muestra el archivo JSON recibido
-        this.crearElemento("h2", "Archivo XML", "footer");
-        this.crearElemento("h3", this.correcto, "footer"); // Crea un elemento con DOM 
-        this.crearElemento("h4", "XML", "footer"); // Crea un elemento con DOM        
-        this.crearElemento("h5", "", "footer"); // Crea un elemento con DOM para el string con XML
-        this.crearElemento("h4", "Datos", "footer"); // Crea un elemento con DOM 
-        this.crearElemento("p", "", "footer"); // Crea un elemento con DOM para los datos obtenidos con XML
         this.cargarDatos();
         $("button").attr("disabled", "disabled");
     }

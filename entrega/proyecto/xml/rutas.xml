@@ -4,245 +4,230 @@
 <rutas xmlns="http://www.uniovi.es"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.uniovi.es rutas.xsd">
-    <ruta nombre="TODO" tipo="Arquitectura y monumentos" medio_transporte="A pie" recomendacion="8">
-        <duracion unidades="horas">4</duracion>
-        <agencia>NaturAller</agencia>
-        <descripcion>Esta ruta te llevará a conocer algunos de los monumentos prerrománicos más
-            importantes del concejo.</descripcion>
+    <ruta nombre="Senda Fluvial del Río Viacaba" tipo="Senda Fluvial"
+        medio_transporte="A pie" recomendacion="10">
+        <duracion unidades="minutos">45</duracion>
+        <agencia>Sin Agencia</agencia>
+        <descripcion>La ruta comienza en la población de Santa Eulalia de Cabranes y termina donde estaba la antigua mina de antracita con su castillete restaurado en Vegapallía. Es un agradable paseo siguiendo el cauce del río Viacaba con interesantes monumentos artísticos e industriales que por si mismo merece la pena realizarse aunque también puede complementarse al PR AS- 52 como vuelta de la misma acortando el trayecto y haciéndolo más fácil. El camino se inicia junto al ayuntamiento de Santa Eulalia, donde hemos dejado aparcado el vehículo, desde aquí vamos hacia la iglesia y junto a ella sale un camino de hormigón que nos llevará al principio de la senda. La senda atraviesa zonas de labranza junto al río y nos llevará en un corto espacio de tiempo y tras pasar varios puentes, hasta el pueblo de Viñón, donde podemos ver la iglesia de San Julián y al final del camino el castillete restaurado de la antigua mina. Aquí mismo podremos comer en las mesas que hay allí o bien descansar un momento contemplando el río. La vuelta la haremos por el mismo recorrido.</descripcion>
         <personas>Cualquiera</personas>
         <inicio>
-            <fecha>2023-06-10</fecha>
-            <hora>10:00:00</hora>
-            <lugar>Plaza del ayuntamiento </lugar>
-            <direccion>Calle Foncalada </direccion>
+            <lugar>La entrada este de Santolaya de Cabranes</lugar>
+            <direccion>Cuesta arriba, luego seguir el camino hormigonado señalado como PR AS - 52</direccion>
             <coordenadas>
-                <longitud>-5.852826</longitud>
-                <latitud>43.361300</latitud>
-                <altitud>100</altitud>
+                <longitud>43.416461</longitud>
+                <latitud>-5.409074</latitud>
+                <altitud>259</altitud>
             </coordenadas>
         </inicio>
 
         <referencias>
-            <referencia url="https://es.wikipedia.org/wiki/Foncalada">Foncalada en Wikipedia</referencia>
-            <referencia url="http://prerromanicoasturiano.es/">Prerrománico Asturiano</referencia>
             <referencia
-                url="https://www.turismoasturias.es/descubre/cultura/prerromanico-en-asturias">Turismo
-                Asturias: Prerrománico en Asturias</referencia>
+                url="http://asturiasmarymontana.blogspot.com/2013/07/pr-as-senda-fluvial-del-rio-viacaba.html">Ruta descrita en un blog</referencia>
+            <referencia
+                url="https://es.wikiloc.com/rutas-senderismo/senda-fluvial-del-rio-viacaba-62712839">Ruta en wikiloc</referencia>
+            <referencia
+                url="https://www.lne.es/asturias/2021/03/12/ruta-asturias-senda-fluvial-viacaba-41387093.html">Artículo de La Nueva España</referencia>
+            <referencia
+                url="https://www.lacomarcadelasidra.com/web-2-0-directory/senda-fluvial-del-rio-viacaba-cabranes-asturias/">Ruta en LaComarcaDeLaSidra</referencia>
         </referencias>
         <hitos>
-            <hito nombre="TODO">
-                <descripcion>Conocida como la "Iglesia de Santullano", este monumento es uno de los
-                    más importantes del arte prerrománico asturiano.</descripcion>
+            <hito nombre="Parroquia de Santa Eulalia">
+                <descripcion>La iglesia de Santa Eulalia de Cabranes es un templo que data del siglo XV, construido sobre una iglesia románica anterior. Cuenta con un campanario cuadrado y se accede a través de dos puertas. La iglesia está compuesta por cinco naves, con ventanas rectangulares y saeteras, y está bajo la advocación de Santa Eulalia de Mérida. También hay imágenes de San José, San Antonio, el Corazón de Jesús, la Virgen del Rosario y la Virgen de la Purísima Concepción. Durante la Guerra Civil, el templo fue dañado y se eliminaron algunos ornamentos, pero fueron restaurados posteriormente.</descripcion>
                 <coordenadas>
-                    <longitud>-5.864891</longitud>
-                    <latitud>43.364939</latitud>
-                    <altitud>130</altitud>
+                    <longitud>43.417013</longitud>
+                    <latitud>-5.411659</latitud>
+                    <altitud>247</altitud>
                 </coordenadas>
-                <distancia unidades="kilometros">0.5</distancia>
+                <distancia unidades="kilometros">0.2</distancia>
                 <galeria_fotos>
-                    <foto>san_julian_1.jpg</foto>
-                    <foto>san_julian_2.jpg</foto>
+                    <foto alt="Foto de la parroquia de Santa Eulalia desde atrás"
+                        figCaption="Parroquia de Santa Eulalia">multimedia/parroquia1.jpg</foto>
+                    <foto alt="Foto de la parroquia de Santa Eulalia desde alante"
+                        figCaption="Parroquia de Santa Eulalia">multimedia/parroquia2.jpg</foto>
+                    <foto alt="Foto de la parroquia de Santa Eulalia desde dentro"
+                        figCaption="Parroquia de Santa Eulalia">multimedia/parroquia3.jpg</foto>
                 </galeria_fotos>
                 <galeria_videos>
-                    <video>https://www.youtube.com/watch?v=ZD8gVnZZ2Ko</video>
+                    <video>multimedia/ruta1.mp4</video>
                 </galeria_videos>
             </hito>
-            <hito nombre="TODO">
-                <descripcion>Construida en el siglo IX, esta iglesia palatina es una de las obras
-                    más destacadas del arte asturiano prerrománico.</descripcion>
+            <hito nombre="Iglesia de San Julián de Viñón">
+                <descripcion>La Iglesia de San Julián de Viñón es un templo románico ubicado en la localidad asturiana de Viñón en el concejo de Cabranes. Fue declarado Monumento Provincial de Interés Histórico-Artístico en 1965 y en la actualidad es considerado Bien de Interés Cultural. Aunque la fecha fundacional del templo no está clara, se estima que fue construido en el siglo XII. La Iglesia presenta una nave única rectangular con techo de madera a dos aguas en el exterior y un ábside rectangular cubierto con una bóveda de medio cañón. En ampliaciones posteriores se le añadieron los pórticos frontal y lateral así como la sacristía. Ha sido restaurada en varias ocasiones y en la última, en 2004, se alteró radicalmente el aspecto exterior de la Iglesia. Se ha sugerido que el emplazamiento de la Iglesia obedece al propósito de esconderla de eventuales expediciones musulmanas.</descripcion>
                 <coordenadas>
-                    <longitud>-5.846508</longitud>
-                    <latitud>43.375942</latitud>
-                    <altitud>310</altitud>
+                    <longitud>43.427156</longitud>
+                    <latitud>-5.424395</latitud>
+                    <altitud>165</altitud>
                 </coordenadas>
-                <distancia unidades="kilometros">0.5</distancia>
+                <distancia unidades="kilometros">2.5</distancia>
                 <galeria_fotos>
-                    <foto>santa_maria_1.jpg</foto>
-                    <foto>santa_maria_2.jpg</foto>
+                    <foto alt="Foto de la iglesia de San Julián de Viñón"
+                        figCaption="Iglesia de San Julián de Viñón">multimedia/sanJulian1.jpg</foto>
+                    <foto alt="Dibujo de la iglesia de San Julián de Viñón desde dentro"
+                        figCaption="Dibujo de la Iglesia de San Julián de Viñón">multimedia/sanJulian2.jpg</foto>
                 </galeria_fotos>
-                <galeria_videos>
-                    <video>https://www.youtube.com/watch?v=JDfTft3jX30</video>
-                </galeria_videos>
             </hito>
-            <hito nombre="TODO">
-                <descripcion>Construida en el siglo IX, esta iglesia palatina es una de las obras
-                    más destacadas del arte asturiano prerrománico.</descripcion>
+            <hito nombre="Castillete minero de Vegapallía">
+                <descripcion>El castillete de Viñón es el único testimonio de la minería carbonera del área, que estuvo activa hasta 1969 laboreando con cierta intensidad un afloramiento carbonero que es prolongación septentrional de la Cuenca Hullera Central. El resto de las instalaciones han sido demolidas.</descripcion>
                 <coordenadas>
-                    <longitud>-5.846508</longitud>
-                    <latitud>43.375942</latitud>
-                    <altitud>310</altitud>
+                    <longitud>43.429206</longitud>
+                    <latitud>-5.429909</latitud>
+                    <altitud>162</altitud>
                 </coordenadas>
-                <distancia unidades="kilometros">0.5</distancia>
+                <distancia unidades="kilometros">0.6</distancia>
                 <galeria_fotos>
-                    <foto>santa_maria_1.jpg</foto>
-                    <foto>santa_maria_2.jpg</foto>
+                    <foto alt="Foto del castillete minero de Vegapallía"
+                        figCaption="Castillete minero de Vegapallía">multimedia/castillete1.jpg</foto>
+                    <foto alt="Foto del castillete minero de Vegapallía"
+                        figCaption="Castillete minero de Vegapallía">multimedia/castillete2.jpg</foto>
                 </galeria_fotos>
-                <galeria_videos>
-                    <video>https://www.youtube.com/watch?v=JDfTft3jX30</video>
-                </galeria_videos>
+            </hito>
+        </hitos>
+        <planimetria>TODO</planimetria>
+        <altimetria>TODO</altimetria>
+    </ruta>
+
+    <ruta nombre="Ruta de Peña Cabrera" tipo="Senderos de pequeño recorrido"
+        medio_transporte="A pie" recomendacion="7">
+        <duracion unidades="horas">4</duracion>
+        <agencia>Sin Agencia</agencia>
+        <descripcion>El recorrido parte de Santolaya y transcurre entre Villaviciosa y Piloña, por senderos y caminos carreteros a través de fincas, plantaciones de eucalipto y bosques de robles. Después de la subida inicial, se sigue por la cresta de la loma entre los valles de los ríos Viacaba y Profundo, con vistas panorámicas a ambos. Desde el área recreativa de Peña Cabrera, el punto de partida, se puede disfrutar de una vista impresionante de Villaviciosa y su ría antes de regresar o bajar por la carretera hasta Viñón y volver por el camino del río Viacaba, donde se encuentra el Museo de la Escuela Rural de Viñón. Durante el recorrido, se pueden escuchar los sonidos de la vida diaria de las pequeñas parroquias y su entorno, como el corte de leña, la siega de los prados, tractores y perros, todos ellos en la lejanía.</descripcion>
+        <personas>Cualquiera</personas>
+        <inicio>
+            <lugar>Centro del pueblo de Santolaya</lugar>
+            <direccion>Cruzamos todo el pueblo hacia arriba, por sus calles asfaltadas. A los 300 metros del cartel, pasando las últimas casas, encontramos una pista de hormigón, que luego será senda, aunque bien conservada. </direccion>
+            <coordenadas>
+                <longitud>43.417013</longitud>
+                <latitud>-5.411659</latitud>
+                <altitud>247</altitud>
+            </coordenadas>
+        </inicio>
+        <referencias>
+            <referencia url="https://es.wikiloc.com/rutas-senderismo/pena-cabrera-pr-as-52-16159042">Ruta en wikiloc</referencia>
+            <referencia url="https://cabranes.vivirasturias.com/rutas/c/0/i/58610702/pr-as-52-ruta-pena-cabrera">Ruta en vivirasturias.com</referencia>
+            <referencia url="https://www.turismoasturias.es/descubre/naturaleza/rutas/senderismo/ruta-pena-cabrera">Ruta en turismoasturias.es</referencia>
+        </referencias>
+        <hitos>
+            <hito nombre="Portilla">
+                <descripcion>A escasos metros del final nos encontramos una portilla que hemos de rebasar para finalizar el trayecto</descripcion>
+                <coordenadas>
+                    <longitud>43.436068</longitud>
+                    <latitud>-5.412070</latitud>
+                    <altitud>483</altitud>
+                </coordenadas>
+                <distancia unidades="kilometros">4</distancia>
+                <galeria_fotos>
+                    <foto alt="Fotografía de unos senderistas pasando la portilla"
+                        figCaption="Portilla">multimedia/portilla1.jpg</foto>
+                </galeria_fotos>
+            </hito>
+            <hito nombre="Cima de Peña Cabrera">
+                <descripcion>Modesta cima de Peña Cabrera</descripcion>
+                <coordenadas>
+                    <longitud>43.436377</longitud>
+                    <latitud>-5.413244</latitud>
+                    <altitud>483</altitud>
+                </coordenadas>
+                <distancia unidades="kilometros">0.2</distancia>
+                <galeria_fotos>
+                    <foto alt="Foto de las vistas desde la cima de Peña Cabrera"
+                        figCaption="Vistas de la cima de Peña Cabrera">multimedia/cima1.jpg</foto>
+                    <foto alt="Foto de senderistas en la cima de Peña Cabrera"
+                        figCaption="Senderistas en la cima de Peña Cabrera">multimedia/cima2.jpg</foto>
+                </galeria_fotos>
+            </hito>
+            <hito nombre="Área recreativa">
+                <descripcion>Aquí podremos disfrutar de la naturaleza, de un buen bocata, una buena barbacoa, para después recrearnos en sus impresionantes vistas: al norte podremos contemplar gran parte del concejo de Villaviciosa, su ría y el mar Cantábrico y al sur se alzan unos majestuosos Picos de Europa y casi la totalidad del concejo Cabranés, más tarde nos podremos tumbar debajo de un árbol y disfrutar del silencio, un lugar donde tocar el cielo con nuestros dedos y disfrutar de unas vistas inigualables, un ambiente natural como el que se respira en toda la Comarca de la Sidra.</descripcion>
+                <coordenadas>
+                    <longitud>43.436512</longitud>
+                    <latitud>-5.420018</latitud>
+                    <altitud>447</altitud>
+                </coordenadas>
+                <distancia unidades="kilometros">0.6</distancia>
+                <galeria_fotos>
+                    <foto alt="Foto de la entrada al área recreativa de Peña Cabrera"
+                        figCaption="Entrada al área recreativa">multimedia/recreativa1.jpg</foto>
+                    <foto alt="Foto de una mesa del área recreativa de Peña Cabrera"
+                        figCaption="Mesa del área recreativa">multimedia/recreativa2.jpg</foto>
+                </galeria_fotos>
             </hito>
         </hitos>
         <planimetria></planimetria>
         <altimetria></altimetria>
     </ruta>
-
-    <ruta nombre="ruta 2" tipo="Arquitectura y monumentos" medio_transporte="A pie" recomendacion="8">
-        <duracion unidades="horas">4</duracion>
-        <agencia>NaturAller</agencia>
-        <descripcion>Esta ruta te llevará a conocer algunos de los monumentos prerrománicos más
-            importantes del concejo.</descripcion>
-        <personas>Cualquiera</personas>
+    <ruta nombre="TODO" tipo="TODO" medio_transporte="TODO" recomendacion="TODO">
+        <duracion unidades="horas">TODO</duracion>
+        <agencia>TODO</agencia>
+        <descripcion>TODO</descripcion>
+        <personas>TODO</personas>
         <inicio>
-            <fecha>2023-06-10</fecha>
-            <hora>10:00:00</hora>
-            <lugar>Plaza del ayuntamiento </lugar>
-            <direccion>Calle Foncalada </direccion>
+            <fecha>TODO</fecha>
+            <hora>TODO</hora>
+            <lugar>TODO</lugar>
+            <direccion>TODO</direccion>
             <coordenadas>
-                <longitud>-5.852826</longitud>
-                <latitud>43.361300</latitud>
-                <altitud>100</altitud>
+                <longitud>TODO</longitud>
+                <latitud>TODO</latitud>
+                <altitud>TODO</altitud>
             </coordenadas>
         </inicio>
-
         <referencias>
-            <referencia url="https://es.wikipedia.org/wiki/Foncalada">Foncalada en Wikipedia</referencia>
-            <referencia url="http://prerromanicoasturiano.es/">Prerrománico Asturiano</referencia>
-            <referencia
-                url="https://www.turismoasturias.es/descubre/cultura/prerromanico-en-asturias">Turismo
-                Asturias: Prerrománico en Asturias</referencia>
-        </referencias>
-        <hitos>
-            <hito nombre="ruta 3">
-                <descripcion>Conocida como la "Iglesia de Santullano", este monumento es uno de los
-                    más importantes del arte prerrománico asturiano.</descripcion>
-                <coordenadas>
-                    <longitud>-5.864891</longitud>
-                    <latitud>43.364939</latitud>
-                    <altitud>130</altitud>
-                </coordenadas>
-                <distancia unidades="kilometros">0.5</distancia>
-                <galeria_fotos>
-                    <foto>san_julian_1.jpg</foto>
-                    <foto>san_julian_2.jpg</foto>
-                </galeria_fotos>
-                <galeria_videos>
-                    <video>https://www.youtube.com/watch?v=ZD8gVnZZ2Ko</video>
-                </galeria_videos>
-            </hito>
-            <hito nombre="TODO">
-                <descripcion>Construida en el siglo IX, esta iglesia palatina es una de las obras
-                    más destacadas del arte asturiano prerrománico.</descripcion>
-                <coordenadas>
-                    <longitud>-5.846508</longitud>
-                    <latitud>43.375942</latitud>
-                    <altitud>310</altitud>
-                </coordenadas>
-                <distancia unidades="kilometros">0.5</distancia>
-                <galeria_fotos>
-                    <foto>santa_maria_1.jpg</foto>
-                    <foto>santa_maria_2.jpg</foto>
-                </galeria_fotos>
-                <galeria_videos>
-                    <video>https://www.youtube.com/watch?v=JDfTft3jX30</video>
-                </galeria_videos>
-            </hito>
-            <hito nombre="TODO">
-                <descripcion>Construida en el siglo IX, esta iglesia palatina es una de las obras
-                    más destacadas del arte asturiano prerrománico.</descripcion>
-                <coordenadas>
-                    <longitud>-5.846508</longitud>
-                    <latitud>43.375942</latitud>
-                    <altitud>310</altitud>
-                </coordenadas>
-                <distancia unidades="kilometros">0.5</distancia>
-                <galeria_fotos>
-                    <foto>santa_maria_1.jpg</foto>
-                    <foto>santa_maria_2.jpg</foto>
-                </galeria_fotos>
-                <galeria_videos>
-                    <video>https://www.youtube.com/watch?v=JDfTft3jX30</video>
-                </galeria_videos>
-            </hito>
-        </hitos>
-        <planimetria></planimetria>
-        <altimetria></altimetria>
-    </ruta>
-
-    <ruta nombre="TODO" tipo="Arquitectura y monumentos" medio_transporte="A pie" recomendacion="8">
-        <duracion unidades="horas">4</duracion>
-        <agencia>NaturAller</agencia>
-        <descripcion>Esta ruta te llevará a conocer algunos de los monumentos prerrománicos más
-            importantes del concejo.</descripcion>
-        <personas>Cualquiera</personas>
-        <inicio>
-            <fecha>2023-06-10</fecha>
-            <hora>10:00:00</hora>
-            <lugar>Plaza del ayuntamiento </lugar>
-            <direccion>Calle Foncalada </direccion>
-            <coordenadas>
-                <longitud>-5.852826</longitud>
-                <latitud>43.361300</latitud>
-                <altitud>100</altitud>
-            </coordenadas>
-        </inicio>
-
-        <referencias>
-            <referencia url="https://es.wikipedia.org/wiki/Foncalada">Foncalada en Wikipedia</referencia>
-            <referencia url="http://prerromanicoasturiano.es/">Prerrománico Asturiano</referencia>
-            <referencia
-                url="https://www.turismoasturias.es/descubre/cultura/prerromanico-en-asturias">Turismo
-                Asturias: Prerrománico en Asturias</referencia>
+            <referencia url="TODO">TODO</referencia>
+            <referencia url="TODO">TODO</referencia>
+            <referencia url="TODO">TODO</referencia>
         </referencias>
         <hitos>
             <hito nombre="TODO">
-                <descripcion>Conocida como la "Iglesia de Santullano", este monumento es uno de los
-                    más importantes del arte prerrománico asturiano.</descripcion>
+                <descripcion>TODO</descripcion>
                 <coordenadas>
-                    <longitud>-5.864891</longitud>
-                    <latitud>43.364939</latitud>
-                    <altitud>130</altitud>
+                    <longitud>TODO</longitud>
+                    <latitud>TODO</latitud>
+                    <altitud>TODO</altitud>
                 </coordenadas>
-                <distancia unidades="kilometros">0.5</distancia>
+                <distancia unidades="kilometros">TODO</distancia>
                 <galeria_fotos>
-                    <foto>san_julian_1.jpg</foto>
-                    <foto>san_julian_2.jpg</foto>
+                    <foto alt="TODO"
+                        figCaption="TODO">multimedia/TODO.jpg</foto>
+                    <foto alt="TODO"
+                        figCaption="TODO">multimedia/TODO.jpg</foto>
                 </galeria_fotos>
                 <galeria_videos>
-                    <video>https://www.youtube.com/watch?v=ZD8gVnZZ2Ko</video>
+                    <video>TODO</video>
                 </galeria_videos>
             </hito>
             <hito nombre="TODO">
-                <descripcion>Construida en el siglo IX, esta iglesia palatina es una de las obras
-                    más destacadas del arte asturiano prerrománico.</descripcion>
+                <descripcion>TODO</descripcion>
                 <coordenadas>
-                    <longitud>-5.846508</longitud>
-                    <latitud>43.375942</latitud>
-                    <altitud>310</altitud>
+                    <longitud>TODO</longitud>
+                    <latitud>TODO</latitud>
+                    <altitud>TODO</altitud>
                 </coordenadas>
-                <distancia unidades="kilometros">0.5</distancia>
+                <distancia unidades="kilometros">TODO</distancia>
                 <galeria_fotos>
-                    <foto>santa_maria_1.jpg</foto>
-                    <foto>santa_maria_2.jpg</foto>
+                    <foto alt="TODO"
+                        figCaption="TODO">multimedia/TODO.jpg</foto>
+                    <foto alt="TODO"
+                        figCaption="TODO">multimedia/TODO.jpg</foto>
                 </galeria_fotos>
                 <galeria_videos>
-                    <video>https://www.youtube.com/watch?v=JDfTft3jX30</video>
+                    <video>TODO</video>
                 </galeria_videos>
             </hito>
             <hito nombre="TODO">
-                <descripcion>Construida en el siglo IX, esta iglesia palatina es una de las obras
-                    más destacadas del arte asturiano prerrománico.</descripcion>
+                <descripcion>TODO</descripcion>
                 <coordenadas>
-                    <longitud>-5.846508</longitud>
-                    <latitud>43.375942</latitud>
-                    <altitud>310</altitud>
+                    <longitud>TODO</longitud>
+                    <latitud>TODO</latitud>
+                    <altitud>TODO</altitud>
                 </coordenadas>
-                <distancia unidades="kilometros">0.5</distancia>
+                <distancia unidades="kilometros">TODO</distancia>
                 <galeria_fotos>
-                    <foto>santa_maria_1.jpg</foto>
-                    <foto>santa_maria_2.jpg</foto>
+                    <foto alt="TODO"
+                        figCaption="TODO">multimedia/TODO.jpg</foto>
+                    <foto alt="TODO"
+                        figCaption="TODO">multimedia/TODO.jpg</foto>
                 </galeria_fotos>
                 <galeria_videos>
-                    <video>https://www.youtube.com/watch?v=JDfTft3jX30</video>
+                    <video>TODO</video>
                 </galeria_videos>
             </hito>
         </hitos>

@@ -31,6 +31,9 @@
 <!ATTLIST distancia unidades CDATA #REQUIRED>
 <!ELEMENT galeria_fotos (foto+)>
 <!ELEMENT foto (#PCDATA)>
+<!ATTLIST foto
+        alt CDATA #REQUIRED
+        figCaption CDATA #REQUIRED>
 <!ELEMENT galeria_videos (video*)>
 <!ELEMENT video (#PCDATA)>
 <!ELEMENT planimetria (#PCDATA)>
