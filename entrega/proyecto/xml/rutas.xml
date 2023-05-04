@@ -151,87 +151,79 @@
                 </galeria_fotos>
             </hito>
         </hitos>
-        <planimetria></planimetria>
-        <altimetria></altimetria>
+        <planimetria>TODO</planimetria>
+        <altimetria>TODO</altimetria>
     </ruta>
-    <ruta nombre="TODO" tipo="TODO" medio_transporte="TODO" recomendacion="TODO">
-        <duracion unidades="horas">TODO</duracion>
-        <agencia>TODO</agencia>
-        <descripcion>TODO</descripcion>
-        <personas>TODO</personas>
+    <ruta nombre="Pico Aliño desde Naveda" tipo="Ida y vuelta" medio_transporte="A pie" recomendacion="8">
+        <duracion unidades="horas">2</duracion>
+        <agencia>NaturAller</agencia>
+        <descripcion>Hermosa ruta en la que recorreremos una parte menos frecuentada de Cabranes, pero que aún así recoge la naturaleza y belleza que la caracteríza</descripcion>
+        <personas>Cualquiera</personas>
         <inicio>
-            <fecha>TODO</fecha>
-            <hora>TODO</hora>
-            <lugar>TODO</lugar>
-            <direccion>TODO</direccion>
+            <fecha>2023-07-30</fecha>
+            <hora>10:00:00</hora>
+            <lugar>Pueblo de Naveda</lugar>
+            <direccion>Desde el pueblo de Naveda , se toma una pista que sale hacia la izquierda</direccion>
             <coordenadas>
-                <longitud>TODO</longitud>
-                <latitud>TODO</latitud>
-                <altitud>TODO</altitud>
+                <longitud>43.404288</longitud>
+                <latitud>-5.433390</latitud>
+                <altitud>436</altitud>
             </coordenadas>
         </inicio>
         <referencias>
-            <referencia url="TODO">TODO</referencia>
-            <referencia url="TODO">TODO</referencia>
-            <referencia url="TODO">TODO</referencia>
+            <referencia url="https://es.wikiloc.com/rutas-senderismo/pico-alino-desde-naveda-cabranes-asturias-31640180">Ruta en wikiloc</referencia>
+            <referencia url="https://es.wikiloc.com/rutas-senderismo/alino-vertices-geodesicos-de-asturias-95092772">Ruta alternativa en wikiloc</referencia>
+            <referencia url="https://www.vivirasturias.com/entidades-poblacion/c/0/i/54853829/naveda">Naveda en vivirasturias.com</referencia>
         </referencias>
         <hitos>
-            <hito nombre="TODO">
-                <descripcion>TODO</descripcion>
+            <hito nombre="Pueblo de Naveda">
+                <descripcion>Pequeña aldea que cuenta con una población de alrededor de 90 habitantes. El pueblo está rodeado de un hermoso paisaje rural. Muchas de sus viviendas se alquilan con fines de casa rural. Famosa por Embutidos Naveda.</descripcion>
                 <coordenadas>
-                    <longitud>TODO</longitud>
-                    <latitud>TODO</latitud>
-                    <altitud>TODO</altitud>
+                    <longitud>43.404567</longitud>
+                    <latitud>-5.433687</latitud>
+                    <altitud>438</altitud>
                 </coordenadas>
-                <distancia unidades="kilometros">TODO</distancia>
+                <distancia unidades="kilometros">0.1</distancia>
                 <galeria_fotos>
-                    <foto alt="TODO"
-                        figCaption="TODO">multimedia/TODO.jpg</foto>
-                    <foto alt="TODO"
-                        figCaption="TODO">multimedia/TODO.jpg</foto>
+                    <foto alt="Foto panorámica desde el cielo de Naveda"
+                        figCaption="Naveda">multimedia/naveda1.jpg</foto>
+                    <foto alt="Foto del jardín del hotel rural de naveda"
+                        figCaption="Hotel rural de Naveda">multimedia/naveda2.jpg</foto>
                 </galeria_fotos>
                 <galeria_videos>
-                    <video>TODO</video>
+                    <video>multimedia/naveda.mp4</video>
                 </galeria_videos>
             </hito>
-            <hito nombre="TODO">
-                <descripcion>TODO</descripcion>
+            <hito nombre="Fuente pública de La Bobia">
+                <descripcion>Lavadero antiguo, bien conservado</descripcion>
                 <coordenadas>
-                    <longitud>TODO</longitud>
-                    <latitud>TODO</latitud>
-                    <altitud>TODO</altitud>
+                    <longitud>43.406717</longitud>
+                    <latitud>-5.436423</latitud>
+                    <altitud>422</altitud>
                 </coordenadas>
-                <distancia unidades="kilometros">TODO</distancia>
+                <distancia unidades="kilometros">0.3</distancia>
                 <galeria_fotos>
-                    <foto alt="TODO"
-                        figCaption="TODO">multimedia/TODO.jpg</foto>
-                    <foto alt="TODO"
-                        figCaption="TODO">multimedia/TODO.jpg</foto>
+                    <foto alt="Foto de la fuente pública de La Bobia"
+                        figCaption="Fuente pública de La Bobia">multimedia/lavadero1.jpg</foto>
+                    <foto alt="Foto de la placa de la fuente pública de La Bobia"
+                        figCaption="Placa de la fuente">multimedia/lavadero2.jpg</foto>
                 </galeria_fotos>
-                <galeria_videos>
-                    <video>TODO</video>
-                </galeria_videos>
             </hito>
-            <hito nombre="TODO">
-                <descripcion>TODO</descripcion>
+            <hito nombre="Cima del Aliño">
+                <descripcion>Cima del Aliño, un modesto monte de Cabranes</descripcion>
                 <coordenadas>
-                    <longitud>TODO</longitud>
-                    <latitud>TODO</latitud>
-                    <altitud>TODO</altitud>
+                    <longitud>43.405019</longitud>
+                    <latitud>-5.450440</latitud>
+                    <altitud>544</altitud>
                 </coordenadas>
-                <distancia unidades="kilometros">TODO</distancia>
+                <distancia unidades="kilometros">1.7</distancia>
                 <galeria_fotos>
-                    <foto alt="TODO"
-                        figCaption="TODO">multimedia/TODO.jpg</foto>
-                    <foto alt="TODO"
-                        figCaption="TODO">multimedia/TODO.jpg</foto>
+                    <foto alt="Foto desde la cima del monte Aliño"
+                        figCaption="Cima del Aliño">multimedia/alino1.jpg</foto>
                 </galeria_fotos>
-                <galeria_videos>
-                    <video>TODO</video>
-                </galeria_videos>
             </hito>
         </hitos>
-        <planimetria></planimetria>
-        <altimetria></altimetria>
+        <planimetria>TODO</planimetria>
+        <altimetria>TODO</altimetria>
     </ruta>
 </rutas>
