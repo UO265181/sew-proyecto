@@ -7,22 +7,6 @@ class ArchivoXML {
     }
 
 
-
-
-
-
-
-
-    generarKML(coordenadas, section) {
-
-
-
-    }
-
-
-
-
-
     cargarDatos() {
         $.ajax({
             dataType: "xml",
@@ -177,22 +161,6 @@ class ArchivoXML {
                     var serializer = new XMLSerializer();
                     var kmlString = serializer.serializeToString(kmlDoc);
                     section.append(kmlString);
-
-
-
-
-
-                    var kmlUrl = URL.createObjectURL(new Blob([kmlDoc], {type: 'application/vnd.google-earth.kml+xml'}));
-
-                    // Crear la capa de KML
-                    var kmlLayer = new L.KML(kmlUrl, {async: true});
-        
-                    // Crear el mapa
-                    var map = L.map('map').setView([43.357, -5.853], 10);
-        
-                    // Añadir la capa de KML al mapa
-                    kmlLayer.appendTo(section);
-
                 });
             },
             error: function () {
@@ -201,18 +169,6 @@ class ArchivoXML {
         });
     }
 
-
-
-
-
-    crearElemento(tipoElemento, texto, insertarAntesDe) {
-        // Crea un nuevo elemento modificando el árbol DOM
-        // El elemnto creado es de 'tipoElemento' con un 'texto' 
-        // El elemnto se coloca antes del elemnto 'insertarAntesDe'
-        var elemento = document.createElement(tipoElemento);
-        elemento.innerHTML = texto;
-        $(insertarAntesDe).before(elemento);
-    }
     verXML() {
         this.cargarDatos();
         $("button").attr("disabled", "disabled");
