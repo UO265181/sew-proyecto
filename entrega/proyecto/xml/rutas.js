@@ -51,8 +51,10 @@ class ArchivoXML {
 
                     $('<h3>').text("Inicio").appendTo(section);
                     var datosDeInicio = $('<ul>');
-                    $('<li>').text('Fecha: ' + inicio_fecha).appendTo(datosDeInicio);
-                    $('<li>').text('Hora: ' + inicio_hora).appendTo(datosDeInicio);
+                    if(inicio_fecha.length>0)
+                        $('<li>').text('Fecha: ' + inicio_fecha).appendTo(datosDeInicio);
+                    if(inicio_hora.length>0)
+                        $('<li>').text('Hora: ' + inicio_hora).appendTo(datosDeInicio);
                     $('<li>').text('Lugar: ' + inicio_lugar).appendTo(datosDeInicio);
                     $('<li>').text('Dirección: ' + inicio_direccion).appendTo(datosDeInicio);
                     var coordenadasItem = $('<li>').text("Coordenadas: ")
@@ -79,7 +81,7 @@ class ArchivoXML {
                         var sectionHito = $('<section>').appendTo(section);
                         $('<h3>').text(hito).appendTo(sectionHito);
 
-                        $('<p>').text('descripcion: ' + descripcion).appendTo(sectionHito);
+                        $('<p>').text(descripcion).appendTo(sectionHito);
 
                         var datosDeHito = $('<ul>');
                         $('<li>').text('Distancia ('+distancia_unidades+'): ' + distancia).appendTo(datosDeHito);
@@ -90,6 +92,36 @@ class ArchivoXML {
                         $('<li>').text('Altitud: ' + altitud).appendTo(coordenadasLista);
                         coordenadasItem.appendTo(datosDeHito);
                         datosDeHito.appendTo(sectionHito);
+
+
+                        var seccionMultimedia = $('<section>').appendTo(sectionHito)
+                        $('<h4>').text("Multimedia:").appendTo(seccionMultimedia);
+
+                        $("foto", this).each(function () {
+                            var src = $(this).text();
+                            var alt = $(this).attr('alt');
+                            var figCaption = $(this).attr('figCaption');
+
+                            var figura = $("<figure>");
+                            $("<img>").attr("src", src).attr("alt", alt).appendTo(figura);
+                            $("<figcaption>").text(figCaption).appendTo(figura);
+                            figura.appendTo(seccionMultimedia);
+                        });
+
+
+                        $("video", this).each(function () {
+                            var src = $(this).text();
+                            var type = $(this).attr('type');
+
+                            var video = $("<video>").attr({
+                                "controls": true,
+                                "preload": "auto",
+                            });
+                            $("<source>").attr("src",src).attr("type",type).appendTo(video);
+                            video.appendTo(seccionMultimedia);
+                        });
+
+
                     });
 
                 });

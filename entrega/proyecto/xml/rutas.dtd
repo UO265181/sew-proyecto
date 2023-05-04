@@ -36,5 +36,7 @@
         figCaption CDATA #REQUIRED>
 <!ELEMENT galeria_videos (video*)>
 <!ELEMENT video (#PCDATA)>
+<!ATTLIST video
+        type CDATA #REQUIRED>
 <!ELEMENT planimetria (#PCDATA)>
 <!ELEMENT altimetria (#PCDATA)>

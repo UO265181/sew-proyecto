@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-
 <rutas xmlns="http://www.uniovi.es"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.uniovi.es rutas.xsd">
@@ -48,7 +46,7 @@
                         figCaption="Parroquia de Santa Eulalia">multimedia/parroquia3.jpg</foto>
                 </galeria_fotos>
                 <galeria_videos>
-                    <video>multimedia/ruta1.mp4</video>
+                    <video type="video/mp4">multimedia/ruta1.mp4</video>
                 </galeria_videos>
             </hito>
             <hito nombre="Iglesia de San Julián de Viñón">
@@ -108,7 +106,7 @@
         </referencias>
         <hitos>
             <hito nombre="Portilla">
-                <descripcion>A escasos metros del final nos encontramos una portilla que hemos de rebasar para finalizar el trayecto</descripcion>
+                <descripcion>A escasos metros del final nos encontramos una portilla que hemos de rebasar para finalizar el trayecto.</descripcion>
                 <coordenadas>
                     <longitud>43.436068</longitud>
                     <latitud>-5.412070</latitud>
@@ -121,7 +119,7 @@
                 </galeria_fotos>
             </hito>
             <hito nombre="Cima de Peña Cabrera">
-                <descripcion>Modesta cima de Peña Cabrera</descripcion>
+                <descripcion>Modesta cima de Peña Cabrera.</descripcion>
                 <coordenadas>
                     <longitud>43.436377</longitud>
                     <latitud>-5.413244</latitud>
@@ -157,7 +155,7 @@
     <ruta nombre="Pico Aliño desde Naveda" tipo="Ida y vuelta" medio_transporte="A pie" recomendacion="8">
         <duracion unidades="horas">2</duracion>
         <agencia>NaturAller</agencia>
-        <descripcion>Hermosa ruta en la que recorreremos una parte menos frecuentada de Cabranes, pero que aún así recoge la naturaleza y belleza que la caracteríza</descripcion>
+        <descripcion>Hermosa ruta en la que recorreremos una parte menos frecuentada de Cabranes, pero que aún así recoge la naturaleza y belleza que la caracteríza.</descripcion>
         <personas>Cualquiera</personas>
         <inicio>
             <fecha>2023-07-30</fecha>
@@ -191,11 +189,11 @@
                         figCaption="Hotel rural de Naveda">multimedia/naveda2.jpg</foto>
                 </galeria_fotos>
                 <galeria_videos>
-                    <video>multimedia/naveda.mp4</video>
+                    <video type="video/mp4">multimedia/naveda.mp4</video>
                 </galeria_videos>
             </hito>
             <hito nombre="Fuente pública de La Bobia">
-                <descripcion>Lavadero antiguo, bien conservado</descripcion>
+                <descripcion>Lavadero antiguo, bien conservado.</descripcion>
                 <coordenadas>
                     <longitud>43.406717</longitud>
                     <latitud>-5.436423</latitud>
@@ -210,7 +208,7 @@
                 </galeria_fotos>
             </hito>
             <hito nombre="Cima del Aliño">
-                <descripcion>Cima del Aliño, un modesto monte de Cabranes</descripcion>
+                <descripcion>Cima del Aliño, un modesto monte de Cabranes.</descripcion>
                 <coordenadas>
                     <longitud>43.405019</longitud>
                     <latitud>-5.450440</latitud>
