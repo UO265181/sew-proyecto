@@ -106,12 +106,19 @@
             <xs:simpleContent>
                 <xs:extension base="xs:decimal">
                     <xs:attribute name="unidades"
-                        type="xs:string"
+                        type="distancia_unidades-type"
                         use="required" />
                 </xs:extension>
             </xs:simpleContent>
         </xs:complexType>
     </xs:element>
+
+    <xs:simpleType name="distancia_unidades-type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="metros" />
+            <xs:enumeration value="kilómetros" />
+        </xs:restriction>
+    </xs:simpleType>
 
     <xs:element name="galeria_fotos">
         <xs:complexType>

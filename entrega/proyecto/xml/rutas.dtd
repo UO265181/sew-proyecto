@@ -29,7 +29,7 @@
 <!ATTLIST hito
         nombre CDATA #REQUIRED>
 <!ELEMENT distancia (#PCDATA)>
-<!ATTLIST distancia unidades CDATA #REQUIRED>
+<!ATTLIST distancia unidades (metros|kilómetros) #REQUIRED>
 <!ELEMENT galeria_fotos (foto+)>
 <!ELEMENT foto (#PCDATA)>
 <!ATTLIST foto
