@@ -81,7 +81,7 @@
             </hito>
         </hitos>
         <planimetria>TODO</planimetria>
-        <altimetria>TODO</altimetria>
+        <altimetria>xml/Senda Fluvial del Río Viacaba.svg</altimetria>
     </ruta>
 
     <ruta nombre="Ruta de Peña Cabrera" tipo="Senderos de pequeño recorrido"
@@ -150,7 +150,7 @@
             </hito>
         </hitos>
         <planimetria>TODO</planimetria>
-        <altimetria>TODO</altimetria>
+        <altimetria>xml/Ruta de Peña Cabrera.svg</altimetria>
     </ruta>
     <ruta nombre="Pico Aliño desde Naveda" tipo="Paseo por la montaña" medio_transporte="A pie" recomendacion="8" ida_y_vuelta="si">
         <duracion unidades="horas">2</duracion>
@@ -222,6 +222,6 @@
             </hito>
         </hitos>
         <planimetria>TODO</planimetria>
-        <altimetria>TODO</altimetria>
+        <altimetria>xml/Pico Aliño desde Naveda.svg</altimetria>
     </ruta>
 </rutas>

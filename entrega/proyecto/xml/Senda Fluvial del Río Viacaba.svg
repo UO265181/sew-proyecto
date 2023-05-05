@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000">
+    <circle cx="28.56046229351967" cy="926.0284026597841" r="5" fill="red" />
+    <text x="28.56046229351967" y="916.0284026597841" font-size="8" font-family="sans-serif"
+        text-anchor="middle">Inicio de Senda Fluvial del Río Viacaba</text>
+    <text x="28.56046229351967" y="906.0284026597841" font-size="8" font-family="sans-serif"
+        text-anchor="middle">259</text>
+    <circle cx="85.68138688055902" cy="929.4556581350064" r="5" fill="red" />
+    <text x="85.68138688055902" y="919.4556581350064" font-size="8" font-family="sans-serif"
+        text-anchor="middle">Parroquia de Santa Eulalia</text>
+    <text x="85.68138688055902" y="909.4556581350064" font-size="8" font-family="sans-serif"
+        text-anchor="middle">247</text>
+    <circle cx="799.6929442185508" cy="952.8752372156926" r="5" fill="red" />
+    <text x="799.6929442185508" y="942.8752372156926" font-size="8" font-family="sans-serif"
+        text-anchor="middle">Iglesia de San Julián de Viñón</text>
+    <text x="799.6929442185508" y="932.8752372156926" font-size="8" font-family="sans-serif"
+        text-anchor="middle">165</text>
+    <circle cx="971.0557179796688" cy="953.7320510844982" r="5" fill="red" />
+    <text x="971.0557179796688" y="943.7320510844982" font-size="8" font-family="sans-serif"
+        text-anchor="middle">Castillete minero de Vegapallía</text>
+    <text x="971.0557179796688" y="933.7320510844982" font-size="8" font-family="sans-serif"
+        text-anchor="middle">162</text>
+    <polyline
+        points="28.56046229351967,926.0284026597841 85.68138688055902,929.4556581350064 799.6929442185508,952.8752372156926 971.0557179796688,953.7320510844982"
+        stroke="blue" stroke-width="2" stroke-dasharray="5,5" fill="none" />
+</svg>

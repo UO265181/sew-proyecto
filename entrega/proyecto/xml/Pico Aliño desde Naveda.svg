@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000">
+    <circle cx="22.727157683067368" cy="900.9095925018263" r="5" fill="red" />
+    <text x="22.727157683067368" y="890.9095925018263" font-size="8" font-family="sans-serif"
+        text-anchor="middle">Inicio de Pico Aliño desde Naveda</text>
+    <text x="22.727157683067368" y="880.9095925018263" font-size="8" font-family="sans-serif"
+        text-anchor="middle">436</text>
+    <circle cx="45.454315366134736" cy="900.455049348165" r="5" fill="red" />
+    <text x="45.454315366134736" y="890.455049348165" font-size="8" font-family="sans-serif"
+        text-anchor="middle">Pueblo de Naveda</text>
+    <text x="45.454315366134736" y="880.455049348165" font-size="8" font-family="sans-serif"
+        text-anchor="middle">438</text>
+    <circle cx="113.63578841533683" cy="904.0913945774557" r="5" fill="red" />
+    <text x="113.63578841533683" y="894.0913945774557" font-size="8" font-family="sans-serif"
+        text-anchor="middle">Fuente pública de La Bobia</text>
+    <text x="113.63578841533683" y="884.0913945774557" font-size="8" font-family="sans-serif"
+        text-anchor="middle">422</text>
+    <circle cx="499.99746902748205" cy="876.3642622041135" r="5" fill="red" />
+    <text x="499.99746902748205" y="866.3642622041135" font-size="8" font-family="sans-serif"
+        text-anchor="middle">Cima del Aliño</text>
+    <text x="499.99746902748205" y="856.3642622041135" font-size="8" font-family="sans-serif"
+        text-anchor="middle">544</text>
+    <circle cx="886.3591496396273" cy="904.0913945774557" r="5" fill="red" />
+    <text x="886.3591496396273" y="894.0913945774557" font-size="8" font-family="sans-serif"
+        text-anchor="middle">Fuente pública de La Bobia</text>
+    <text x="886.3591496396273" y="884.0913945774557" font-size="8" font-family="sans-serif"
+        text-anchor="middle">422</text>
+    <circle cx="954.5406226888294" cy="900.455049348165" r="5" fill="red" />
+    <text x="954.5406226888294" y="890.455049348165" font-size="8" font-family="sans-serif"
+        text-anchor="middle">Pueblo de Naveda</text>
+    <text x="954.5406226888294" y="880.455049348165" font-size="8" font-family="sans-serif"
+        text-anchor="middle">438</text>
+    <circle cx="977.2677803718967" cy="900.9095925018263" r="5" fill="red" />
+    <text x="977.2677803718967" y="890.9095925018263" font-size="8" font-family="sans-serif"
+        text-anchor="middle">Inicio de Pico Aliño desde Naveda</text>
+    <text x="977.2677803718967" y="880.9095925018263" font-size="8" font-family="sans-serif"
+        text-anchor="middle">436</text>
+    <polyline
+        points="22.727157683067368,900.9095925018263 45.454315366134736,900.455049348165 113.63578841533683,904.0913945774557 499.99746902748205,876.3642622041135 886.3591496396273,904.0913945774557 954.5406226888294,900.455049348165 977.2677803718967,900.9095925018263"
+        stroke="blue" stroke-width="2" stroke-dasharray="5,5" fill="none" />
+</svg>
