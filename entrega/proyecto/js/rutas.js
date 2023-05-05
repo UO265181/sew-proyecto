@@ -135,6 +135,7 @@ class ArchivoXML {
 
                     //KML-----------------------------
 
+                    /*
                     var kmlDoc = document.implementation.createDocument('', 'kml', null);
                     var kmlElement = kmlDoc.documentElement;
 
@@ -161,6 +162,7 @@ class ArchivoXML {
                     var serializer = new XMLSerializer();
                     var kmlString = serializer.serializeToString(kmlDoc);
                     section.append(kmlString);
+                    */
                 });
             },
             error: function () {
