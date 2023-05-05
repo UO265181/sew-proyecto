@@ -23,8 +23,8 @@
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
-                            <xs:element name="planimetria" type="xs:string" />
-                            <xs:element name="altimetria" type="xs:string" />
+                            <xs:element name="planimetria" minOccurs="1" maxOccurs="1" type="xs:string" />
+                            <xs:element name="altimetria" minOccurs="1" maxOccurs="1" type="xs:string" />
                         </xs:sequence>
                         <xs:attribute name="nombre" use="required" type="xs:string" />
                         <xs:attribute name="tipo" use="required" type="xs:string" />
