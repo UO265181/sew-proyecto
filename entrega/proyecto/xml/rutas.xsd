@@ -30,11 +30,19 @@
                         <xs:attribute name="tipo" use="required" type="xs:string" />
                         <xs:attribute name="medio_transporte" use="required" type="xs:string" />
                         <xs:attribute name="recomendacion" use="required" type="xs:integer" />
+                        <xs:attribute name="ida_y_vuelta" type="ida_y_vuelta-type" use="required" />
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+
+    <xs:simpleType name="ida_y_vuelta-type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="si" />
+            <xs:enumeration value="no" />
+        </xs:restriction>
+    </xs:simpleType>
 
     <xs:element name="duracion">
         <xs:complexType>
@@ -129,14 +137,14 @@
             <xs:sequence>
                 <xs:element name="video"
                     minOccurs="0"
-                    maxOccurs="3" >
-                <xs:complexType>
-                    <xs:simpleContent>
-                        <xs:extension base="xs:string">
-                            <xs:attribute name="type" use="required" type="xs:string" />
-                        </xs:extension>
-                    </xs:simpleContent>
-                </xs:complexType>
+                    maxOccurs="3">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute name="type" use="required" type="xs:string" />
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
                 </xs:element>
             </xs:sequence>
         </xs:complexType>

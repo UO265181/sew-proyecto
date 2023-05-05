@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.uniovi.es rutas.xsd">
     <ruta nombre="Senda Fluvial del Río Viacaba" tipo="Senda Fluvial"
-        medio_transporte="A pie" recomendacion="10">
+        medio_transporte="A pie" recomendacion="10" ida_y_vuelta="no">
         <duracion unidades="minutos">45</duracion>
         <agencia>Sin Agencia</agencia>
         <descripcion>La ruta comienza en la población de Santa Eulalia de Cabranes y termina donde estaba la antigua mina de antracita con su castillete restaurado en Vegapallía. Es un agradable paseo siguiendo el cauce del río Viacaba con interesantes monumentos artísticos e industriales que por si mismo merece la pena realizarse aunque también puede complementarse al PR AS- 52 como vuelta de la misma acortando el trayecto y haciéndolo más fácil. El camino se inicia junto al ayuntamiento de Santa Eulalia, donde hemos dejado aparcado el vehículo, desde aquí vamos hacia la iglesia y junto a ella sale un camino de hormigón que nos llevará al principio de la senda. La senda atraviesa zonas de labranza junto al río y nos llevará en un corto espacio de tiempo y tras pasar varios puentes, hasta el pueblo de Viñón, donde podemos ver la iglesia de San Julián y al final del camino el castillete restaurado de la antigua mina. Aquí mismo podremos comer en las mesas que hay allí o bien descansar un momento contemplando el río. La vuelta la haremos por el mismo recorrido.</descripcion>
@@ -85,7 +85,7 @@
     </ruta>
 
     <ruta nombre="Ruta de Peña Cabrera" tipo="Senderos de pequeño recorrido"
-        medio_transporte="A pie" recomendacion="7">
+        medio_transporte="A pie" recomendacion="7" ida_y_vuelta="no">
         <duracion unidades="horas">4</duracion>
         <agencia>Sin Agencia</agencia>
         <descripcion>El recorrido parte de Santolaya y transcurre entre Villaviciosa y Piloña, por senderos y caminos carreteros a través de fincas, plantaciones de eucalipto y bosques de robles. Después de la subida inicial, se sigue por la cresta de la loma entre los valles de los ríos Viacaba y Profundo, con vistas panorámicas a ambos. Desde el área recreativa de Peña Cabrera, el punto de partida, se puede disfrutar de una vista impresionante de Villaviciosa y su ría antes de regresar o bajar por la carretera hasta Viñón y volver por el camino del río Viacaba, donde se encuentra el Museo de la Escuela Rural de Viñón. Durante el recorrido, se pueden escuchar los sonidos de la vida diaria de las pequeñas parroquias y su entorno, como el corte de leña, la siega de los prados, tractores y perros, todos ellos en la lejanía.</descripcion>
@@ -152,7 +152,7 @@
         <planimetria>TODO</planimetria>
         <altimetria>TODO</altimetria>
     </ruta>
-    <ruta nombre="Pico Aliño desde Naveda" tipo="Ida y vuelta" medio_transporte="A pie" recomendacion="8">
+    <ruta nombre="Pico Aliño desde Naveda" tipo="Paseo por la montaña" medio_transporte="A pie" recomendacion="8" ida_y_vuelta="si">
         <duracion unidades="horas">2</duracion>
         <agencia>NaturAller</agencia>
         <descripcion>Hermosa ruta en la que recorreremos una parte menos frecuentada de Cabranes, pero que aún así recoge la naturaleza y belleza que la caracteríza.</descripcion>

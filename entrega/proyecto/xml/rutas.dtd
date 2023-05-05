@@ -4,7 +4,8 @@
         nombre CDATA #REQUIRED
         tipo CDATA #REQUIRED
         medio_transporte CDATA #REQUIRED
-        recomendacion CDATA #REQUIRED>
+        recomendacion CDATA #REQUIRED
+        ida_y_vuelta (si|no) #REQUIRED>
 <!ELEMENT duracion (#PCDATA)>
 <!ATTLIST duracion
         unidades CDATA #REQUIRED>
