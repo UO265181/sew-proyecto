@@ -14,8 +14,12 @@ class Tiempo {
           this.temperature = response.main.temp;
           this.description = response.weather.description;
           
-          document.write('<p>').text('Temperature: ${this.temperature}');
-          document.write('<p>').text('Description: ${this.description}');
+          document.write('<p>')
+          document.write('Temperature: ${this.temperature}');
+          document.write('</p>')
+          document.write('<p>')
+          document.write('Description: ${this.description}');
+          document.write('</p>')
         },
         error: (error) => {
           console.log('Error al obtener los datos meteorológicos:', error);
