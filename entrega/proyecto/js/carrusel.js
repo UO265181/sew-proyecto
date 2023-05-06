@@ -55,6 +55,7 @@ const contenedor = document.getElementById('carrusel');
 const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
 
+//TODO: la primera vez que se renderiza una imagen se recarga la página entera
 const carrusel = new Carrusel(images);
 carrusel.start(3000, contenedor);
 
