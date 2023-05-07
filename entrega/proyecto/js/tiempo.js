@@ -10,7 +10,7 @@ class Tiempo {
         this.windSpeed = null;
     }
 
-    fetchData() {
+    fetchDataAndRender() {
 
         $.ajax({
             url: 'https://api.openweathermap.org/data/2.5/weather?id=6359916&appid=f584ab7920bcc2b1c18704d726aea2a5&units=metric&lang=sp',
@@ -26,6 +26,9 @@ class Tiempo {
                 this.pressure = response.main.pressure;
                 this.humidity = response.main.humidity;
                 this.windSpeed = response.wind.speed;
+
+
+                this.render();
             },
             error: (error) => {
                 console.log('Error al obtener los datos meteorológicos:', error);
@@ -86,8 +89,7 @@ class Tiempo {
 }
 
 const tiempo = new Tiempo();
-tiempo.fetchData();
-tiempo.render();
+tiempo.fetchDataAndRender();
 
 
 //  "id": 6359916,

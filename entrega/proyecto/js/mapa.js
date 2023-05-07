@@ -1,12 +1,8 @@
 class Mapa {
     constructor() {
-        this.src = null
-    }
-
-    fetchData() {
-
         this.src = 'https://www.mapquestapi.com/staticmap/v5/map?key=2LVGEKH0ZArUc3dX6Jj2nMLmJSqeLLaW&locations=Cabranes&size=1100,500@2x&type=hyb&scalebar=true&defaultMarker=circle-white&zoom=10';
     }
+
 
     render() {
 
@@ -35,7 +31,6 @@ class Mapa {
 }
 
 const mapa = new Mapa();
-mapa.fetchData();
 mapa.render();
 
 

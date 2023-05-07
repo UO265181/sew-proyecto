@@ -16,6 +16,8 @@ class Noticias {
 
                 this.articles = response.articles;
 
+                this.render();
+
             },
             error: (error) => {
                 console.log('Error al obtener noticas:', error);
@@ -81,7 +83,6 @@ class Noticias {
 }
 
 const noticias = new Noticias(3);
-noticias.fetchData();
-noticias.render();
+noticias.fetchDataAndRender();
 
 

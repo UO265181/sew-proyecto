@@ -2,12 +2,7 @@ class Carrusel {
 
 
     constructor(images) {
-        this.images = [
-            { src: 'multimedia/carrusel1.jpg', alt: 'Foto de la placa de Cabranes', figCaption: 'Placa de Cabranes' },
-            { src: 'multimedia/carrusel2.jpg', alt: 'Foto de la cima del monte Incós', figCaption: 'Monte Incós' },
-            { src: 'multimedia/carrusel3.jpg', alt: 'Foto de la Iglesia de San Martín el Real en Torazo', figCaption: 'Iglesia de San Martín el Real' },
-            { src: 'multimedia/carrusel4.jpg', alt: 'Foto de los vecinos reunidos en el festival del arroz', figCaption: 'Festival de Arroz' },
-            { src: 'multimedia/carrusel5.jpg', alt: 'Foto del antiguo castillete minero', figCaption: 'Castillete minero' }];
+        this.images = images;
         this.currentIndex = 0;
         this.contenedor = null;
     }
@@ -66,7 +61,12 @@ class Carrusel {
     }
 
 }
-
+const images = [
+    { src: 'multimedia/carrusel1.jpg', alt: 'Foto de la placa de Cabranes', figCaption: 'Placa de Cabranes' },
+    { src: 'multimedia/carrusel2.jpg', alt: 'Foto de la cima del monte Incós', figCaption: 'Monte Incós' },
+    { src: 'multimedia/carrusel3.jpg', alt: 'Foto de la Iglesia de San Martín el Real en Torazo', figCaption: 'Iglesia de San Martín el Real' },
+    { src: 'multimedia/carrusel4.jpg', alt: 'Foto de los vecinos reunidos en el festival del arroz', figCaption: 'Festival de Arroz' },
+    { src: 'multimedia/carrusel5.jpg', alt: 'Foto del antiguo castillete minero', figCaption: 'Castillete minero' }];
 //TODO: la primera vez que se renderiza una imagen se recarga la página entera
 const carrusel = new Carrusel(images);
 carrusel.crearContenedor();
