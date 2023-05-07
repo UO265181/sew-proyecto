@@ -4,7 +4,7 @@ class Noticias {
         this.maxArticulos = maxArticulos;
     }
 
-    fetchData() {
+    fetchDataAndRender() {
 
         $.ajax({
             url: 'https://api.newscatcherapi.com/v2/search?q=Cabranes%20AND%20Asturias&lang=es&sort_by=date',
