@@ -26,8 +26,6 @@ class Tiempo {
                 this.pressure = response.main.pressure;
                 this.humidity = response.main.humidity;
                 this.windSpeed = response.wind.speed;
-
-                this.renderData();
             },
             error: (error) => {
                 console.log('Error al obtener los datos meteorológicos:', error);
@@ -35,7 +33,7 @@ class Tiempo {
         });
     }
 
-    renderData() {
+    render() {
         const section = document.createElement('section');
 
         const h2 = document.createElement('h2')
@@ -75,8 +73,6 @@ class Tiempo {
         ulOtros.appendChild(liPresion);
         ulOtros.appendChild(liViento);
 
-
-
         section.appendChild(h2);
         section.appendChild(pDescripcion);
         section.appendChild(h3Temperaturas);
@@ -91,6 +87,7 @@ class Tiempo {
 
 const tiempo = new Tiempo();
 tiempo.fetchData();
+tiempo.render();
 
 
 //  "id": 6359916,

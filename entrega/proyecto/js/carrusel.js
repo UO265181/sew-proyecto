@@ -2,17 +2,22 @@ class Carrusel {
 
 
     constructor(images) {
-        this.images = images;
+        this.images = [
+            { src: 'multimedia/carrusel1.jpg', alt: 'Foto de la placa de Cabranes', figCaption: 'Placa de Cabranes' },
+            { src: 'multimedia/carrusel2.jpg', alt: 'Foto de la cima del monte Incós', figCaption: 'Monte Incós' },
+            { src: 'multimedia/carrusel3.jpg', alt: 'Foto de la Iglesia de San Martín el Real en Torazo', figCaption: 'Iglesia de San Martín el Real' },
+            { src: 'multimedia/carrusel4.jpg', alt: 'Foto de los vecinos reunidos en el festival del arroz', figCaption: 'Festival de Arroz' },
+            { src: 'multimedia/carrusel5.jpg', alt: 'Foto del antiguo castillete minero', figCaption: 'Castillete minero' }];
         this.currentIndex = 0;
         this.contenedor = null;
     }
 
-    render() {
-        var img = document.createElement('img');
+    update() {
+        const img = document.createElement('img');
         img.src = this.images[this.currentIndex].src;
         img.alt = this.images[this.currentIndex].alt;
 
-        var figCaption = document.createElement('figCaption');
+        const figCaption = document.createElement('figCaption');
         figCaption.textContent = this.images[this.currentIndex].figCaption;
 
         this.contenedor.innerHTML = '';
@@ -21,22 +26,22 @@ class Carrusel {
     }
 
     start(interval) {
-        this.render(this.contenedor);
+        this.update();
         this.intervalId = setInterval(() => this.next(), interval);
     }
 
     next() {
         this.currentIndex = (this.currentIndex + 1) % this.images.length;
-        this.render(this.contenedor);
+        this.update();
     }
 
     prev() {
         this.currentIndex = (this.currentIndex + this.images.length - 1) % this.images.length;
-        this.render(this.contenedor);
+        this.update();
     }
 
 
-    createContainer() {
+    crearContenedor() {
         const section = document.createElement('section');
 
         const h2 = document.createElement('h2')
@@ -62,16 +67,8 @@ class Carrusel {
 
 }
 
-const images = [
-    { src: 'multimedia/carrusel1.jpg', alt: 'Foto de la placa de Cabranes', figCaption: 'Placa de Cabranes' },
-    { src: 'multimedia/carrusel2.jpg', alt: 'Foto de la cima del monte Incós', figCaption: 'Monte Incós' },
-    { src: 'multimedia/carrusel3.jpg', alt: 'Foto de la Iglesia de San Martín el Real en Torazo', figCaption: 'Iglesia de San Martín el Real' },
-    { src: 'multimedia/carrusel4.jpg', alt: 'Foto de los vecinos reunidos en el festival del arroz', figCaption: 'Festival de Arroz' },
-    { src: 'multimedia/carrusel5.jpg', alt: 'Foto del antiguo castillete minero', figCaption: 'Castillete minero' }];
-
-
 //TODO: la primera vez que se renderiza una imagen se recarga la página entera
 const carrusel = new Carrusel(images);
-carrusel.createContainer();
+carrusel.crearContenedor();
 carrusel.start(3000);
 

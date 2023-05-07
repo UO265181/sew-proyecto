@@ -16,8 +16,6 @@ class Noticias {
 
                 this.articles = response.articles;
 
-
-                this.renderData();
             },
             error: (error) => {
                 console.log('Error al obtener noticas:', error);
@@ -25,8 +23,7 @@ class Noticias {
         });
     }
 
-    renderData() {
-
+    render() {
 
         const section = document.createElement('section');
 
@@ -76,14 +73,8 @@ class Noticias {
                 article.appendChild(ulFuentes);
 
                 section.appendChild(article);
-
             }
-
         }
-
-
-
-
         document.getElementsByTagName('main')[0].appendChild(section);
     }
 
@@ -91,5 +82,6 @@ class Noticias {
 
 const noticias = new Noticias(3);
 noticias.fetchData();
+noticias.render();
 
 
