@@ -45,10 +45,10 @@ class Carrusel {
         const figure = document.createElement('figure');
         const buttonPrev = document.createElement('button');
         buttonPrev.textContent = 'Anterior';
-        buttonPrev.addEventListener('click', () => carrusel.prev());
+        buttonPrev.addEventListener('click', () => this.prev());
         const buttonNext = document.createElement('button');
         buttonNext.textContent = 'Siguiente';
-        buttonNext.addEventListener('click', () => carrusel.next());
+        buttonNext.addEventListener('click', () => this.next());
 
         section.appendChild(h2);
         section.appendChild(figure);
