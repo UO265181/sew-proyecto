@@ -1,0 +1,19 @@
+nav dentro de header?
+
+adaptabilidad
+
+rutas js en general
+
+mirar poo en js
+
+ajax en head de rutas.html
+
+imagenes precarga carrusel
+
+nombre en el h1
+
+
+
+
+visuales: botones, juego, algunas imagenes al medio
+
