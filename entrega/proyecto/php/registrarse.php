@@ -1,94 +1,91 @@
 <?php
+
+
+require_once 'conexionDB.php';
+require_once 'validacion.php';
+
 class Registrarse
 {
-
-    private $db;
-
-    public function __construct($servername, $username, $password, $database)
-    {
-        $this->db = new mysqli($servername, $username, $password, $database);
-        if ($this->db->connect_error) {
-            exit("<h2>ERROR de conexión:" . $this->db->connect_error . "</h2>");
-        } else {
-            echo "<h2>Conexión establecida</h2>";
-        }
-    }
 
     private function validarDatos($nombre, $email, $password)
     {
 
-        if (empty($nombre)) {
-            echo "El nombre es obligatorio.";
-            return false;
-        }
+        $vNombre = Validacion::validarNombre($nombre);
 
-        if (empty($email)) {
-            echo "El email es obligatorio.";
-            return false;
-        }
+        $vEmail = Validacion::validarNombre($email);
 
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            echo "El email no tiene un formato válido.";
-            return false;
-        }
+        $vPassword = Validacion::validarNombre($password);
 
-        if (empty($password)) {
-            echo "La contraseña es obligatoria.";
-            return false;
-        }
 
-        return true;
+        // TODO: mostrar cada error
+
+        return $vNombre && $vEmail && $vPassword;
     }
 
-    private function insertarUsuario($nombre, $email, $password)
+
+
+    public function comprobarEmailNoRepetido($email)
     {
+        
+        $result = ConexionDB::obtenerUsuariosPorEmail($email);
+        
 
-        $consultaPre = $this->db->prepare("INSERT INTO usuarios (nombre, email, password) VALUES (?,?,?)");
-        $consultaPre->bind_param('sss', $nombre, $email, $password);
-        $consultaPre->execute();
-
-        if ($consultaPre->error) {
-            echo "Error en la consulta: " . $consultaPre->error;
+        if (!is_null($result)) {
+            if (empty($result)) {
+                return true;
+            } else {
+                //TODO: email repe
+                echo "email repe";
+                return false;
+            }
         } else {
-            echo "<p>Filas agregadas: " . $consultaPre->affected_rows . "</p>";
+            //TODO: error al consulta
+            echo "error consulta email";
+            return false;
         }
 
-        $consultaPre->close();
 
-        $this->db->close();
     }
 
-    private function notificarRegistro($nombre)
-    {
-        echo "Te has registrado como " . $nombre . ". Ahora puedes iniciar sesión.";
-    }
-
-    public function intentarRegistrarse($nombre, $email, $password)
+    public function registrarUsuario($nombre, $email, $password)
     {
 
         $validacion = $this->validarDatos($nombre, $email, $password);
 
         if ($validacion) {
-            $this->insertarUsuario($nombre, $email, $password);
-            $this->notificarRegistro($nombre);
+
+            $emailNoRepetido = $this->comprobarEmailNoRepetido($email);
+
+            if ($emailNoRepetido) {
+
+                
+                $result = ConexionDB::insertarUsuario($nombre, $email, $password);
+                
+
+                if ($result === 1) {
+                    //TODO: echo "Te has registrado como " . $nombre . ". Ahora puedes iniciar sesión.";
+                    echo "Te has registrado como " . $nombre . ". Ahora puedes iniciar sesión.";
+
+                } else {
+                    //TODO: error al insertar
+                    echo "Error al insertar";
+                }
+            } else {
+                //TODO: no se puc con el email repe
+                echo "no se sabe si email no es repe";
+            }
         } else {
-            echo "Datos de registro no válidos";
+            //TODO: error en los datos introducidos
+            echo "Datos mal";
         }
-
-
     }
 
 }
 
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "test";
+$registrarse = new Registrarse();
 
-$registrarse = new Registrarse($servername, $username, $password, $database);
-
-$registrarse->intentarRegistrarse($_POST['nombre'], $_POST["email"], $_POST["password"]);
+$registrarse->registrarUsuario($_POST['nombre'], $_POST["email"], $_POST["password"]);
 
 
 ?>
