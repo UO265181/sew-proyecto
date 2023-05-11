@@ -38,7 +38,65 @@
     <main>
 
         <?php
-            echo "<p> La versión PHP es: " . phpversion() . "</p>";;
+
+
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        // Recibo los POST
+        require_once 'registrarse.php';
+        $registrarse = new Registrarse();
+        if (isset($_POST['registrarse'])) {
+            $registrarse->registrarUsuario($_POST['nombre'], $_POST["email"], $_POST["password"]);
+        }
+
+        
+        require_once 'identificarse.php';
+        $identificarse = new Identificarse();
+        if (isset($_POST['identificarse'])) {
+            $identificarse->iniciarSesion($_POST["email"], $_POST["password"]);
+        }
+
+
+        // Usuario no identificado
+        if (!isset($_SESSION['user_id'])) {
+
+
+
+
+            echo "<h2>Información</h2>";
+            echo "<section>";
+            echo "<p>Bienvenido a la página de reservas. Para poder realizar una reserva primero deberás registrarse. Una vez que te hayas registrado podrás identificarte y empezar a resevar tus recursos turísticos de Cabranes favoritos.</p>";
+
+
+            // Registro
+            require_once 'registrarse.php';
+            echo "<section>";
+            echo "<h2>Registrarse</h2>";
+            $registrarse->imprimirFormulario();
+            echo "</section>";
+
+
+            // Ident
+            echo "<section>";
+            echo "<h2>Identificarse</h2>";
+            $identificarse->imprimirFormulario();
+            echo "</section>";
+
+            echo "</section>";
+
+        } else {
+            // Usuario identificado
+            echo "<section>";
+            echo "<h2>Información</h2>";
+
+            echo "<p>¡Bienvenido " . $_SESSION["username"] . "! Puedes realizar reservas y ver tu presupuesto más abajo.</p>";
+        }
+
+
+
+
         ?>
 
     </main>

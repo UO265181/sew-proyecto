@@ -1,23 +1,33 @@
 <?php
-
-
 require_once 'conexionDB.php';
 require_once 'validacion.php';
 
 class Registrarse
 {
 
+    private $errorNombre = "";
+    private $errorEmail = "";
+    private $errorPassword = "";
+    private $fallos = "";
+
     private function validarDatos($nombre, $email, $password)
     {
 
         $vNombre = Validacion::validarNombre($nombre);
 
-        $vEmail = Validacion::validarNombre($email);
+        $vEmail = Validacion::validarEmail($email);
 
-        $vPassword = Validacion::validarNombre($password);
+        $vPassword = Validacion::validarPassword($password);
 
-
-        // TODO: mostrar cada error
+        if(!$vNombre) {
+            $this->errorNombre = "El nombre no puede estar vacío";
+        }
+        if(!$vEmail) {
+            $this->errorEmail = "El email no puede estar vacío y ha de tener un formato válido";
+        }
+        if(!$vPassword) {
+            $this->errorPassword = "La contraseña no puede estar vacía";
+        }
 
         return $vNombre && $vEmail && $vPassword;
     }
@@ -26,21 +36,19 @@ class Registrarse
 
     public function comprobarEmailNoRepetido($email)
     {
-        
+
         $result = ConexionDB::obtenerUsuariosPorEmail($email);
-        
+
 
         if (!is_null($result)) {
             if (empty($result)) {
                 return true;
             } else {
-                //TODO: email repe
-                echo "email repe";
+                $this->fallos .= "Ya existe un usuario con ese email. ";
                 return false;
             }
         } else {
-            //TODO: error al consulta
-            echo "error consulta email";
+            $this->fallos .= "Error al consultar si ese email ya existe. ";
             return false;
         }
 
@@ -58,34 +66,43 @@ class Registrarse
 
             if ($emailNoRepetido) {
 
-                
+
                 $result = ConexionDB::insertarUsuario($nombre, $email, $password);
-                
+
 
                 if ($result === 1) {
                     //TODO: echo "Te has registrado como " . $nombre . ". Ahora puedes iniciar sesión.";
                     echo "Te has registrado como " . $nombre . ". Ahora puedes iniciar sesión.";
-
+                    //TODO: redirect
                 } else {
-                    //TODO: error al insertar
-                    echo "Error al insertar";
+                    $this->fallos .= "Error al insertar al usuario en la base de datos. ";
                 }
             } else {
-                //TODO: no se puc con el email repe
-                echo "no se sabe si email no es repe";
+                $this->fallos .= "No se ha podido verificar que el email no exista. ";
             }
         } else {
-            //TODO: error en los datos introducidos
-            echo "Datos mal";
+            $this->fallos .= "Datos del formulario no válidos. ";
         }
     }
 
+    public function imprimirFormulario()
+    {
+        echo "
+<form method='post' action='reservas.php' name='fRegistrarse'>
+    <p>Nombre</p>
+    <p><input type='text' name='nombre' /><span>&nbsp;" . $this->errorNombre . "</span></p>
+    <p>Email</p>
+    <p><input type='text' name='email' /><span>&nbsp;" . $this->errorEmail . "</span></p>
+    <p>Contraseña</p>
+    <p><input type='text' name='password' /><span>&nbsp;" . $this->errorPassword . "</span></p>
+    <input type='submit' value='Registrarse' name='registrarse'/>
+</form>
+";
+     if($this->fallos!="") {
+        echo "<p><span> El registro no ha sido posible: " . $this->fallos. "</span></p>";
+     }
+    }
+
 }
-
-
-$registrarse = new Registrarse();
-
-$registrarse->registrarUsuario($_POST['nombre'], $_POST["email"], $_POST["password"]);
-
 
 ?>
