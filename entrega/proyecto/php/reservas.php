@@ -29,7 +29,7 @@
                 <li><a title="Enlace a Rutas" target="_self" href="../rutas.html">Rutas</a></li>
                 <li><a title="Enlace a Meteorología" target="_self" href="../meteorologia.html">Meteorología</a></li>
                 <li><a title="Enlace a Juego" target="_self" href="../juego.html">Juego</a></li>
-                <li><a title="Enlace a Reservas" target="_self" href="php/reservas.php">Reservas</a></li>
+                <li><a title="Enlace a Reservas" target="_self" href="reservas.php">Reservas</a></li>
             </ul>
         </div>
     </nav>
@@ -45,17 +45,13 @@
         }
 
         // Recibo los POST
-        require_once 'registrarse.php';
-        $registrarse = new Registrarse();
+        require_once 'usuarios.php';
+        $usuarios = new Usuarios();
         if (isset($_POST['registrarse'])) {
-            $registrarse->registrarUsuario($_POST['nombre'], $_POST["email"], $_POST["password"]);
+            $usuarios->registrarUsuario($_POST['nombre'], $_POST["email"], $_POST["password"]);
         }
-
-        
-        require_once 'identificarse.php';
-        $identificarse = new Identificarse();
         if (isset($_POST['identificarse'])) {
-            $identificarse->iniciarSesion($_POST["email"], $_POST["password"]);
+            $usuarios->identificarUsuario($_POST["email"], $_POST["password"]);
         }
 
 
@@ -71,17 +67,16 @@
 
 
             // Registro
-            require_once 'registrarse.php';
             echo "<section>";
             echo "<h2>Registrarse</h2>";
-            $registrarse->imprimirFormulario();
+            $usuarios->imprimirFormularioDeRegistro();
             echo "</section>";
 
 
             // Ident
             echo "<section>";
             echo "<h2>Identificarse</h2>";
-            $identificarse->imprimirFormulario();
+            $usuarios->imprimirFormularioDeIdentificarse();
             echo "</section>";
 
             echo "</section>";
@@ -92,6 +87,26 @@
             echo "<h2>Información</h2>";
 
             echo "<p>¡Bienvenido " . $_SESSION["username"] . "! Puedes realizar reservas y ver tu presupuesto más abajo.</p>";
+            echo "</section>";
+
+            
+            echo "<section>";
+            echo "<h2>Recursos Tutísticos</h2>";
+            echo "<section>";
+            echo "<h3>Tabla de recursos</h3>";
+            require_once 'recursos.php';
+            $recursos = new Recursos();
+            $recursos->obtenerRecursos();
+            $recursos->imprimirRecursos();
+            
+            echo "</section>";
+
+            echo "<section>";
+            echo "<h3>Formulario de reserva</h3>";
+            $recursos->imprimirFormularioDeReserva();
+
+
+
         }
 
 
