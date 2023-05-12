@@ -89,14 +89,12 @@
             // Usuario identificado
             echo "<section>";
             echo "<h2>Información</h2>";
-
             echo "<p>¡Bienvenido " . $_SESSION["username"] . "! Puedes realizar reservas y ver tu presupuesto más abajo.</p>";
             echo "</section>";
 
             
             echo "<section>";
             echo "<h2>Recursos Tutísticos</h2>";
-
             echo "<section>";
             echo "<h3>Tabla de recursos</h3>";
             require_once 'recursos.php';
@@ -104,7 +102,10 @@
             $recursos->obtenerRecursos();
             $recursos->imprimirRecursos();
             echo "</section>";
+            echo "</section>";
 
+            echo "<section>";
+            echo "<h2>Reservas</h2>";
             echo "<section>";
             echo "<h3>Formulario de reserva</h3>";
             $reservas->imprimirFormularioDeReserva();
@@ -115,6 +116,7 @@
             echo "<h3>Reservas realizadas</h3>";
             $reservas->obtenerReservas();
             $reservas->imprimirReservas();
+            echo "</section>";
             echo "</section>";
 
 
