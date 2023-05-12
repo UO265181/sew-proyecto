@@ -58,6 +58,11 @@
         if (isset($_POST['reservar'])) {
             $reservas->reservarRecurso($_POST["nombre"], $_POST["fecha"], $_POST["hora"]);
         }
+        require_once 'presupuestos.php';
+        $presupuestos = new Presupuestos();
+        if (isset($_POST['generarPresupuesto'])) {
+            $presupuestos->generarPresupuesto();
+        }
 
         // Usuario no identificado
         if (!isset($_SESSION['user_id'])) {
@@ -110,13 +115,16 @@
             echo "<h3>Formulario de reserva</h3>";
             $reservas->imprimirFormularioDeReserva();
             echo "</section>";
-
-
             echo "<section>";
             echo "<h3>Reservas realizadas</h3>";
             $reservas->obtenerReservas();
             $reservas->imprimirReservas();
             echo "</section>";
+            echo "</section>";
+
+            echo "<section>";
+            echo "<h2>Presupuesto</h2>";
+            $presupuestos->imprimirBotonDeGenerarPresupuesto();
             echo "</section>";
 
 

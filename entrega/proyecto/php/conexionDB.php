@@ -64,6 +64,13 @@ class ConexionDB
         $consultaPre->bind_param('s', $email);
         return ConexionDB::realizarConsultaObtener($consultaPre);
     }
+    public static function obtenerUsuariosPorId($id)
+    {
+        ConexionDB::abrirConexion();
+        $consultaPre = self::$db->prepare("SELECT * FROM usuarios WHERE id = ?");
+        $consultaPre->bind_param('i', $id);
+        return ConexionDB::realizarConsultaObtener($consultaPre);
+    }
 
 
     // RECURSOS ----------------------------------
