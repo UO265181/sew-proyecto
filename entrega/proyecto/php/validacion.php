@@ -30,6 +30,22 @@ class Validacion
         return true;
     }
 
+    public static function validarFecha($fecha)
+    {
+        if (empty($fecha)) {
+            return false;
+        }
+        return true;
+    }
+
+    public static function validarHora($fecha)
+    {
+        if (empty($fecha)) {
+            return false;
+        }
+        return true;
+    }
+
 
 
 }
