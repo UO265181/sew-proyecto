@@ -46,6 +46,7 @@
 
         // Recibo los POST
         require_once 'usuarios.php';
+        require_once 'recursos.php';
         $usuarios = new Usuarios();
         if (isset($_POST['registrarse'])) {
             $usuarios->registrarUsuario($_POST['nombre'], $_POST["email"], $_POST["password"]);
@@ -53,7 +54,10 @@
         if (isset($_POST['identificarse'])) {
             $usuarios->identificarUsuario($_POST["email"], $_POST["password"]);
         }
-
+        $recursos = new Recursos();
+        if (isset($_POST['reservar'])) {
+            $recursos->reservarRecurso($_POST["nombre"], $_POST["fecha"], $_POST["hora"]);
+        }
 
         // Usuario no identificado
         if (!isset($_SESSION['user_id'])) {
@@ -94,8 +98,6 @@
             echo "<h2>Recursos Tutísticos</h2>";
             echo "<section>";
             echo "<h3>Tabla de recursos</h3>";
-            require_once 'recursos.php';
-            $recursos = new Recursos();
             $recursos->obtenerRecursos();
             $recursos->imprimirRecursos();
             

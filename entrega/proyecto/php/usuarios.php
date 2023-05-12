@@ -118,7 +118,7 @@ class Usuarios
 
         if ($validacion) {
 
-            $result = ConexionDB::obtenerUsuariosPorEmailYPassword($email, $password);
+            $result = ConexionDB::obtenerUsuariosPorEmailPassword($email, $password);
 
             if ($result !== null) {
                 if (count($result) === 1) {

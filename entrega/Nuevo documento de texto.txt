@@ -20,5 +20,5 @@ visuales: botones, juego, algunas imagenes al medio
 
 -----
 
-email unico
+email, nombreRecurso unico
 
