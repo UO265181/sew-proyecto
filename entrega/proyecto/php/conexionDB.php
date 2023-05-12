@@ -26,23 +26,7 @@ class ConexionDB
         }
     }
 
-
-    public static function insertarUsuario($nombre, $email, $password)
-    {
-        ConexionDB::abrirConexion();
-        $consultaPre = self::$db->prepare("INSERT INTO usuarios (nombre, email, password) VALUES (?,?,?)");
-        $consultaPre->bind_param('sss', $nombre, $email, $password);
-        return ConexionDB::realizarConsultaInsertar($consultaPre);
-    }
-
-    public static function insertarAforo($id_recurso, $fecha_inicio, $fecha_final, $hora_inicio, $hora_final)
-    {
-        ConexionDB::abrirConexion();
-        $consultaPre = self::$db->prepare("INSERT INTO aforos (id_recurso, fecha_inicio, fecha_final, hora_inicio, hora_final) VALUES (?,?,?,?,?)");
-        $consultaPre->bind_param('issss', $id_recurso, $fecha_inicio, $fecha_final, $hora_inicio, $hora_final);
-        return ConexionDB::realizarConsultaInsertar($consultaPre);
-    }
-
+    // RESERVAS ----------------------------------
     public static function insertarReserva($id_aforo, $id_usuario, $id_recurso)
     {
         ConexionDB::abrirConexion();
@@ -50,8 +34,22 @@ class ConexionDB
         $consultaPre->bind_param('iii', $id_aforo, $id_usuario, $id_recurso);
         return ConexionDB::realizarConsultaInsertar($consultaPre);
     }
-
-
+    public static function obtenerReservasPorIdusuario($id_usuario)
+    {
+        ConexionDB::abrirConexion();
+        $consultaPre = self::$db->prepare("SELECT * FROM reservas WHERE id_usuario = ?");
+        $consultaPre->bind_param('i', $id_usuario);
+        return ConexionDB::realizarConsultaObtener($consultaPre);
+    }
+    
+    // USUARIOS ----------------------------------
+    public static function insertarUsuario($nombre, $email, $password)
+    {
+        ConexionDB::abrirConexion();
+        $consultaPre = self::$db->prepare("INSERT INTO usuarios (nombre, email, password) VALUES (?,?,?)");
+        $consultaPre->bind_param('sss', $nombre, $email, $password);
+        return ConexionDB::realizarConsultaInsertar($consultaPre);
+    }
     public static function obtenerUsuariosPorEmailPassword($email, $password)
     {
         ConexionDB::abrirConexion();
@@ -59,7 +57,6 @@ class ConexionDB
         $consultaPre->bind_param('ss', $email, $password);
         return ConexionDB::realizarConsultaObtener($consultaPre);
     }
-
     public static function obtenerUsuariosPorEmail($email)
     {
         ConexionDB::abrirConexion();
@@ -68,13 +65,21 @@ class ConexionDB
         return ConexionDB::realizarConsultaObtener($consultaPre);
     }
 
+
+    // RECURSOS ----------------------------------
     public static function obtenerRecursos()
     {
         ConexionDB::abrirConexion();
         $consultaPre = self::$db->prepare("SELECT * FROM recursos");
         return ConexionDB::realizarConsultaObtener($consultaPre);
     }
-
+    public static function obtenerRecursosPorId($id)
+    {
+        ConexionDB::abrirConexion();
+        $consultaPre = self::$db->prepare("SELECT * FROM recursos WHERE id = ?");
+        $consultaPre->bind_param('i', $id);
+        return ConexionDB::realizarConsultaObtener($consultaPre);
+    }
     public static function obtenerRecursosPorNombre($nombre)
     {
         ConexionDB::abrirConexion();
@@ -83,6 +88,7 @@ class ConexionDB
         return ConexionDB::realizarConsultaObtener($consultaPre);
     }
 
+    // PRESUPUESTOS ----------------------------------
     public static function obtenerPresupuestos()
     {
         ConexionDB::abrirConexion();
@@ -90,22 +96,34 @@ class ConexionDB
         return ConexionDB::realizarConsultaObtener($consultaPre);
     }
 
+    // AFOROS ----------------------------------
+    public static function obtenerAforosPorId($id)
+    {
+        ConexionDB::abrirConexion();
+        $consultaPre = self::$db->prepare("SELECT * FROM aforos WHERE id = ?");
+        $consultaPre->bind_param('i', $id);
+        return ConexionDB::realizarConsultaObtener($consultaPre);
+    }
     public static function obtenerAforosPorIdrecursoFechaHora($idRecurso, $fecha, $hora)
     {
         ConexionDB::abrirConexion();
         $consultaPre = self::$db->prepare("SELECT * FROM aforos WHERE id_recurso = ? AND fecha_inicio = ? AND hora_inicio = ?");
-        $consultaPre->bind_param('sss', $idRecurso, $fecha, $hora);
+        $consultaPre->bind_param('iss', $idRecurso, $fecha, $hora);
         return ConexionDB::realizarConsultaObtener($consultaPre);
     }
-
-    
     public static function aumentarAforoActual($idAforo, $aforoActual) {
         ConexionDB::abrirConexion();
         $consultaPre = self::$db->prepare("UPDATE aforos SET aforo_actual = ? WHERE id = ?");
         $consultaPre->bind_param('ii', $aforoActual, $idAforo);
         return ConexionDB::realizarConsultaInsertar($consultaPre);
     }
-
+    public static function insertarAforo($id_recurso, $fecha_inicio, $fecha_final, $hora_inicio, $hora_final)
+    {
+        ConexionDB::abrirConexion();
+        $consultaPre = self::$db->prepare("INSERT INTO aforos (id_recurso, fecha_inicio, fecha_final, hora_inicio, hora_final) VALUES (?,?,?,?,?)");
+        $consultaPre->bind_param('issss', $id_recurso, $fecha_inicio, $fecha_final, $hora_inicio, $hora_final);
+        return ConexionDB::realizarConsultaInsertar($consultaPre);
+    }
 
     private static function realizarConsultaObtener($consultaPre)
     {

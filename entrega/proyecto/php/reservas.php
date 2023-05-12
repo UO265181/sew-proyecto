@@ -96,17 +96,26 @@
             
             echo "<section>";
             echo "<h2>Recursos Tutísticos</h2>";
+
             echo "<section>";
             echo "<h3>Tabla de recursos</h3>";
             $recursos->obtenerRecursos();
             $recursos->imprimirRecursos();
-            
             echo "</section>";
 
             echo "<section>";
             echo "<h3>Formulario de reserva</h3>";
             $recursos->imprimirFormularioDeReserva();
+            echo "</section>";
 
+
+            echo "<section>";
+            echo "<h3>Reservas realizadas</h3>";
+            require_once 'reservasO.php';
+            $reservas = new Reservas();
+            $reservas->obtenerReservas();
+            $reservas->imprimirReservas();
+            echo "</section>";
 
 
         }
