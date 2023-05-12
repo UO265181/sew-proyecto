@@ -54,6 +54,14 @@ class Recursos
                     if (count($recurso) === 1) {
                         $recurso = $recurso[0];
 
+                        // El recurso existe se intenta realizar una reserva
+                        // Se formatea fecha y hora
+                        $fecha = new DateTime($fecha);
+                        $fecha = $fecha->format('Y-m-d');
+                        $hora = new DateTime($hora);
+                        $hora = $hora->format('H:i:s');
+                        $fechaHoraInicial = new DateTime($fecha . ' ' . $hora);
+
                         // Comprobar aforo
                         $aforo = ConexionDB::obtenerAforosPorIdrecursoFechaHora($recurso["id"], $fecha, $hora);
                         if ($aforo !== null) {
@@ -61,31 +69,46 @@ class Recursos
                                 // No hay nadie inscrito a esa hora aún, se crea el aforo y la reserva
 
                                 // Se crea el aforo
-                                $fechaHoraFin = $this->calcularFechaHoraFin($recurso["duracion"], $fecha, $hora);
-                                $aforoInsertado = ConexionDB::insertarAforo($recurso["id"], $fecha, $fechaHoraFin[0], $hora, $fechaHoraFin[1]);
+                                $fechaHoraFinal = $this->calcularFechaHoraFinal($recurso["duracion"], $fechaHoraInicial);
+                                $aforoInsertado = ConexionDB::insertarAforo($recurso["id"], $fecha, $fechaHoraFinal->format('Y-m-d'), $hora, $fechaHoraFinal->format('H:i:s'));
 
                                 // Se recupera
                                 $aforo = ConexionDB::obtenerAforosPorIdrecursoFechaHora($recurso["id"], $fecha, $hora);
 
-                                // Se crea la reserva
-                                $reserva = ConexionDB::insertarReserva($aforo["id"], $_SESSION["user_id"], $recurso["id"]);
-
-                                // Se aumenta el aforo
-                                $aforoAct = intval($aforo["aforo_actual"]);
-                                $aforoAct++;
-                                $aumentarAforo = ConexionDB::aumentarAforoActual($aforo["id"], $aforoAct);
-
+                                if ($aforo !== null) {
+                                    if (count($aforo) === 1) {
+                                        $aforo = $aforo[0];
+                                        // Se crea la reserva
+                                        $reserva = ConexionDB::insertarReserva($aforo["id"], $_SESSION["user_id"], $recurso["id"]);
+                                        if ($reserva === 1) {
+                                            // Se aumenta el aforo
+                                            $aforoAct = $aforo["aforo_actual"];
+                                            $aforoAct++;
+                                            $aumentarAforo = ConexionDB::aumentarAforoActual($aforo["id"], $aforoAct);
+                                        } else {
+                                            $this->fallosReservar .= "Error al crear la reserva en la base de datos: ". $reserva;
+                                        }
+                                    } else {
+                                        $this->fallosReservar .= "Error al obtener el aforo creado para el recurso. ";
+                                    }
+                                } else {
+                                    $this->fallosReservar .= "Error al realizar la consulta de obtener el aforo creado para el recurso. ";
+                                }
                             } else {
                                 // El aforo existe, comprobar que no esté lleno
                                 $aforo = $aforo[0];
-                                $aforoMax = intval($recurso["aforo_max"]);
+                                $aforoMax = intval($recurso["aforo_maximo"]);
                                 $aforoAct = intval($aforo["aforo_actual"]);
 
                                 if ($aforoAct < $aforoMax) {
                                     // Hay hueco, se reserva y se aumenta el aforo
                                     $reserva = ConexionDB::insertarReserva($aforo["id"], $_SESSION["user_id"], $recurso["id"]);
-                                    $aforoAct++;
-                                    $aumentarAforo = ConexionDB::aumentarAforoActual($aforo["id"], $aforoAct);
+                                    if ($reserva === 1) {
+                                        $aforoAct++;
+                                        $aumentarAforo = ConexionDB::aumentarAforoActual($aforo["id"], $aforoAct);
+                                    } else {
+                                        $this->fallosReservar .= "Error al crear la reserva en la base de datos: ". $reserva;
+                                    }
                                 } else {
                                     // No hay hueco, no se puede reservar
                                     $this->fallosReservar .= "Lo sentimos, el aforo del recurso está completo para esa hora y día. ";
@@ -109,19 +132,11 @@ class Recursos
     }
 
 
-    private function calcularFechaHoraFin($duracion, $fechaInicial, $horaInicial)
+    private function calcularFechaHoraFinal($duracion, $fechaHoraInicial)
     {
-        $fechaInicial = date('Y-m-d'); 
-        $horaInicial = date('H:i:s'); 
-        $duracion= intval($duracion); 
-
-        $fechaHoraActual = new DateTime($fechaInicial . ' ' . $horaInicial);
-
-        $fechaHoraFinal = $fechaHoraActual->modify("+{$duracion} hours");
-
-        $fechaFinal = $fechaHoraFinal->format('Y-m-d');
-        $horaFinal = $fechaHoraFinal->format('H:i:s');
-        return array($fechaFinal,$horaFinal);
+        $duracion = intval($duracion);
+        $fechaHoraFinal = $fechaHoraInicial->modify("+{$duracion} hours");
+        return $fechaHoraFinal;
     }
 
 

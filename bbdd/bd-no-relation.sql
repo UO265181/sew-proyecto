@@ -34,7 +34,6 @@ CREATE TABLE `aforos` (
   `fecha_final` date NOT NULL,
   `hora_inicio` time NOT NULL,
   `hora_final` time NOT NULL,
-  `aforo_max` int(4) NOT NULL,
   `aforo_actual` int(4) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=ascii COLLATE=ascii_bin;
 
@@ -73,6 +72,7 @@ CREATE TABLE `recursos` (
   `tipo` varchar(24) COLLATE ascii_bin NOT NULL,
   `precio` decimal(4,2) NOT NULL,
   `descripcion` text COLLATE ascii_bin NOT NULL,
+  `aforo_max` int(4) NOT NULL,
   `duracion` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=ascii COLLATE=ascii_bin;
 

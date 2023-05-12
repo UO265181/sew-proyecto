@@ -47,7 +47,7 @@ class ConexionDB
     {
         ConexionDB::abrirConexion();
         $consultaPre = self::$db->prepare("INSERT INTO reservas (id_aforo, id_usuario, id_recurso) VALUES (?,?,?)");
-        $consultaPre->bind_param('iii', $nombre, $email, $password);
+        $consultaPre->bind_param('iii', $id_aforo, $id_usuario, $id_recurso);
         return ConexionDB::realizarConsultaInsertar($consultaPre);
     }
 
@@ -101,7 +101,7 @@ class ConexionDB
     
     public static function aumentarAforoActual($idAforo, $aforoActual) {
         ConexionDB::abrirConexion();
-        $consultaPre = self::$db->prepare("UPDATE aforos SET aforoActual = ? WHERE id = ?");
+        $consultaPre = self::$db->prepare("UPDATE aforos SET aforo_actual = ? WHERE id = ?");
         $consultaPre->bind_param('ii', $aforoActual, $idAforo);
         return ConexionDB::realizarConsultaInsertar($consultaPre);
     }
