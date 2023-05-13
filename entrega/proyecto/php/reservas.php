@@ -69,11 +69,11 @@
 
 
 
-
-            echo "<h2>Información</h2>";
+            
             echo "<section>";
+            echo "<h2>Información</h2>";
             echo "<p>Bienvenido a la página de reservas. Para poder realizar una reserva primero deberás registrarse. Una vez que te hayas registrado podrás identificarte y empezar a resevar tus recursos turísticos de Cabranes favoritos.</p>";
-
+            echo "</section>";
 
             // Registro
             echo "<section>";
@@ -86,8 +86,6 @@
             echo "<section>";
             echo "<h2>Identificarse</h2>";
             $usuarios->imprimirFormularioDeIdentificarse();
-            echo "</section>";
-
             echo "</section>";
 
         } else {
