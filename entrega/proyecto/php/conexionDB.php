@@ -10,7 +10,7 @@ class ConexionDB
         self::$servername = "localhost";
         self::$username = "sewAdmin";
         self::$password = "!7ZZ)(p-k8QH*boZ";
-        self::$database = "test";
+        self::$database = "cabranes";
     }
 
     public static function cerrarConexion()

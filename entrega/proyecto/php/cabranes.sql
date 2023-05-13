@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-05-2023 a las 19:12:02
--- Versión del servidor: 10.4.19-MariaDB
--- Versión de PHP: 8.0.6
+-- Tiempo de generación: 13-05-2023 a las 19:49:00
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `test`
+-- Base de datos: `cabranes`
 --
 
 -- --------------------------------------------------------
@@ -35,7 +35,7 @@ CREATE TABLE `aforos` (
   `hora_inicio` time NOT NULL,
   `hora_final` time NOT NULL,
   `aforo_actual` int(4) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=ascii COLLATE=ascii_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -46,7 +46,7 @@ CREATE TABLE `aforos` (
 CREATE TABLE `presupuestos` (
   `id` int(4) NOT NULL,
   `id_usuario` int(4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=ascii COLLATE=ascii_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -58,7 +58,7 @@ CREATE TABLE `presupuestosreservas` (
   `id` int(4) NOT NULL,
   `id_presupuesto` int(4) NOT NULL,
   `id_reserva` int(4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=ascii COLLATE=ascii_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -68,13 +68,14 @@ CREATE TABLE `presupuestosreservas` (
 
 CREATE TABLE `recursos` (
   `id` int(4) NOT NULL,
-  `nombre` varchar(24) COLLATE ascii_bin NOT NULL,
-  `tipo` varchar(24) COLLATE ascii_bin NOT NULL,
+  `nombre` varchar(24) NOT NULL,
+  `tipo` varchar(24) NOT NULL,
   `precio` decimal(4,2) NOT NULL,
-  `descripcion` text COLLATE ascii_bin NOT NULL,
-  `aforo_max` int(4) NOT NULL,
-  `duracion` int(3) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=ascii COLLATE=ascii_bin;
+  `descripcion` mediumtext NOT NULL,
+  `duracion` int(3) NOT NULL,
+  `aforo_maximo` int(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
 
 -- --------------------------------------------------------
 
@@ -87,7 +88,7 @@ CREATE TABLE `reservas` (
   `id_aforo` int(4) NOT NULL,
   `id_usuario` int(4) NOT NULL,
   `id_recurso` int(4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=ascii COLLATE=ascii_bin;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -97,10 +98,11 @@ CREATE TABLE `reservas` (
 
 CREATE TABLE `usuarios` (
   `id` int(4) NOT NULL,
-  `nombre` varchar(24) COLLATE ascii_bin NOT NULL,
-  `email` varchar(24) COLLATE ascii_bin NOT NULL,
-  `password` varchar(24) COLLATE ascii_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=ascii COLLATE=ascii_bin;
+  `nombre` varchar(24) NOT NULL,
+  `email` varchar(24) NOT NULL,
+  `password` varchar(24) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
 
 --
 -- Índices para tablas volcadas
@@ -157,37 +159,37 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `aforos`
 --
 ALTER TABLE `aforos`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `presupuestos`
 --
 ALTER TABLE `presupuestos`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `presupuestosreservas`
 --
 ALTER TABLE `presupuestosreservas`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `recursos`
 --
 ALTER TABLE `recursos`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `reservas`
 --
 ALTER TABLE `reservas`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
