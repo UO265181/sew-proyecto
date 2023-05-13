@@ -60,7 +60,7 @@ class Noticias {
                 liDerechos.textContent = `Derechos: ${this.articles[i].rights}`;
                 const liEnlace = document.createElement('li');
                 const aEnlance = document.createElement('a');
-                aEnlance.textContent = this.articles[i].title+`(enlace)`;
+                aEnlance.textContent = i+`(link)`;
                 aEnlance.href = this.articles[i].link;
 
                 liEnlace.appendChild(aEnlance);
