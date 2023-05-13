@@ -15,24 +15,26 @@ class Juego {
         sPreguntas.appendChild(hPreguntas);
 
         preguntas.forEach((pregunta, index) => {
-            const sPregunta = document.createElement('section');
+            const fsPregunta = document.createElement('fieldset');
 
-            const h3 = document.createElement('h3');
-            h3.textContent = `${index + 1}. ${pregunta.pregunta}`;
+            const legend = document.createElement('legend');
+            legend.textContent = `${index + 1}. ${pregunta.pregunta}`;
 
-            sPregunta.appendChild(h3);
+            fsPregunta.appendChild(legend);
 
             pregunta.opciones.forEach(opcion => {
                 const inputOpcion = document.createElement('input');
                 inputOpcion.type = 'radio';
                 inputOpcion.name = `pregunta-${index}`;
+                inputOpcion.id = opcion;
                 inputOpcion.value = opcion;
 
                 const lbOpcion = document.createElement('label');
+                inputOpcion.for = opcion;
                 lbOpcion.textContent = opcion;
 
-                sPregunta.appendChild(inputOpcion);
-                sPregunta.appendChild(lbOpcion);
+                fsPregunta.appendChild(inputOpcion);
+                fsPregunta.appendChild(lbOpcion);
             });
 
             sPreguntas.appendChild(sPregunta);
