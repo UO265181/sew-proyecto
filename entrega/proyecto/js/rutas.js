@@ -26,7 +26,6 @@ class ArchivoXML {
                     var medio_transporte = $(this).attr('medio_transporte');
                     var recomendacion = $(this).attr('recomendacion');
                     var ida_y_vuelta = $(this).attr('ida_y_vuelta');
-
                     var duracion = $(this).find('duracion').text();
                     var duracion_unidades = $(this).find('duracion').attr('unidades');
                     var agencia = $(this).find('agencia').text();
@@ -42,9 +41,13 @@ class ArchivoXML {
                     var latitud = $(coordenadas).find('latitud').text();
                     var altitud = $(coordenadas).find('altitud').text();
 
-                    coordenadasRuta.push(coordenadas);
+                    coordenadasRuta.push({ longitud: longitud, latitud: latitud, altitud: altitud, nombre: ruta, descripcion:descripcion });
                     puntosSVG.push({ x: xAcumulado, y: altitud, texto: "Inicio de " + ruta, altitudReal: altitud });
 
+
+
+
+                    // Crear el html de la ruta
                     var section = $('<section>').appendTo('main');
                     $('<h2>').text(ruta).appendTo(section);
 
@@ -103,7 +106,7 @@ class ArchivoXML {
                         var latitud = $(coordenadas).find('latitud').text();
                         var altitud = $(coordenadas).find('altitud').text();
 
-                        coordenadasRuta.push(coordenadas);
+                        coordenadasRuta.push({ longitud: longitud, latitud: latitud, altitud: altitud, nombre: hito , descripcion:descripcion});
                         var distanciaPuntoSVG = parseFloat(distancia);
                         if (distancia_unidades === "metros")
                             distanciaPuntoSVG *= 1000000;
@@ -112,7 +115,7 @@ class ArchivoXML {
                         xAcumulado += distanciaPuntoSVG;
                         puntosSVG.push({ x: xAcumulado, y: altitud, texto: hito, altitudReal: altitud });
 
-
+                        // Crear el html del hito
                         var sectionHito = $('<section>').appendTo(section);
                         $('<h3>').text(hito).appendTo(sectionHito);
 
@@ -169,7 +172,7 @@ class ArchivoXML {
 
                     //Adapto los puntos
 
-                    //Punto falso (exolicado en la bitácora)
+                    //Punto falso (explicado en la bitácora)
                     var menorY = puntosSVG.reduce((previous, current) => {
                         return current.y < previous.y ? current : previous;
                     });
@@ -256,7 +259,7 @@ class ArchivoXML {
                     var altimetriaSection = $('<section>');
                     altimetriaSection.appendTo(section);
                     $('<h3>').text("Altimetría").appendTo(altimetriaSection);
-                    $('<p>').text("Puedes ver la altimetría de la ruta en el archivo SVG ya genereado que se encuentra en: " + dirAltimetria+". También puedes descargarlo ahora usando el botón.").appendTo(altimetriaSection);
+                    $('<p>').text("Puedes ver la altimetría de la ruta en el archivo SVG ya genereado que se encuentra en: " + dirAltimetria + ". También puedes descargarlo ahora usando el botón.").appendTo(altimetriaSection);
 
                     // Botón de descarga
                     var botonSVG = $('<button>');
@@ -280,34 +283,63 @@ class ArchivoXML {
 
                     //KML-----------------------------
 
-                    /*
-                    var kmlDoc = document.implementation.createDocument('', 'kml', null);
-                    var kmlElement = kmlDoc.documentElement;
 
+                    var kmlDoc = document.implementation.createDocument(null, 'kml');
+                    var kml = kmlDoc.documentElement;
                     var documentElement = kmlDoc.createElement('Document');
-                    kmlElement.appendChild(documentElement);
-
+                    kml.appendChild(documentElement);
 
                     for (var i = 0; i < coordenadasRuta.length; i++) {
-                        var latitud = $(coordenadasRuta[i]).find('latitud').text();
-                        var longitud = $(coordenadasRuta[i]).find('longitud').text();
+                        var coordenada = coordenadasRuta[i];
+                        var longitud = coordenada.longitud;
+                        var latitud =  coordenada.latitud;
+                        var altitud =  coordenada.altitud;
+                        var nombre =  coordenada.nombre;
+                        var descripcion =  coordenada.descripcion;
 
-                        var placemarkElement = kmlDoc.createElement('Placemark');
+                        var placemark = kmlDoc.createElement('Placemark');
+                        var name = kmlDoc.createElement('name');
+                        name.textContent = nombre;
+                        placemark.appendChild(name);
 
-                        var pointElement = kmlDoc.createElement('Point');
-                        placemarkElement.appendChild(pointElement);
+                        var description = kmlDoc.createElement('description');
+                        description.textContent = descripcion;
+                        placemark.appendChild(description);
 
-                        var coordinatesElement = kmlDoc.createElement('coordinates');
-                        coordinatesElement.textContent = longitud + ',' + latitud;
-                        pointElement.appendChild(coordinatesElement);
+                        var point = kmlDoc.createElement('Point');
+                        placemark.appendChild(point);
 
-                        documentElement.appendChild(placemarkElement);
+                        var coordinates = kmlDoc.createElement('coordinates');
+                        coordinates.textContent = longitud + ',' + latitud +',' + altitud ;
+                        point.appendChild(coordinates);
+
+                        documentElement.appendChild(placemark);
                     }
 
-                    var serializer = new XMLSerializer();
-                    var kmlString = serializer.serializeToString(kmlDoc);
-                    section.append(kmlString);
-                    */
+                    var dirPlanimetria = $(this).find('planimetria').text();
+                    var planimetriaSection = $('<section>');
+                    planimetriaSection.appendTo(section);
+                    $('<h3>').text("Planimetría").appendTo(planimetriaSection);
+                    $('<p>').text("Puedes ver la planimetría de la ruta en el archivo KML ya genereado que se encuentra en: " + dirPlanimetria + ". También puedes descargarlo ahora usando el botón.").appendTo(planimetriaSection);
+
+                    // Botón de descarga
+                    var botonKML = $('<button>');
+                    botonKML.text('Descargar KML');
+                    botonKML.on('click', function () {
+                        var kmlData = new XMLSerializer().serializeToString(kmlDoc);
+                        var blob = new Blob([kmlData], { type: 'image/kml+xml' });
+                        var url = window.URL.createObjectURL(blob);
+
+                        // Enlace y clic automático para descargar el archivo
+                        var downloadLink = $('<a>');
+                        downloadLink.attr("href", url);
+                        downloadLink.attr("download", ruta + '.kml');
+                        section.append(downloadLink);
+                        downloadLink.get(0).click();
+                        downloadLink.remove();
+                    });
+
+                    planimetriaSection.append(botonKML);
                 });
 
 

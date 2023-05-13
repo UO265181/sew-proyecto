@@ -12,8 +12,8 @@
             <lugar>La entrada este de Santolaya de Cabranes</lugar>
             <direccion>Cuesta arriba, luego seguir el camino hormigonado señalado como PR AS - 52</direccion>
             <coordenadas>
-                <longitud>43.416461</longitud>
-                <latitud>-5.409074</latitud>
+                <longitud>-5.409074</longitud>
+                <latitud>43.416461</latitud>
                 <altitud>259</altitud>
             </coordenadas>
         </inicio>
@@ -32,8 +32,8 @@
             <hito nombre="Parroquia de Santa Eulalia">
                 <descripcion>La iglesia de Santa Eulalia de Cabranes es un templo que data del siglo XV, construido sobre una iglesia románica anterior. Cuenta con un campanario cuadrado y se accede a través de dos puertas. La iglesia está compuesta por cinco naves, con ventanas rectangulares y saeteras, y está bajo la advocación de Santa Eulalia de Mérida. También hay imágenes de San José, San Antonio, el Corazón de Jesús, la Virgen del Rosario y la Virgen de la Purísima Concepción. Durante la Guerra Civil, el templo fue dañado y se eliminaron algunos ornamentos, pero fueron restaurados posteriormente.</descripcion>
                 <coordenadas>
-                    <longitud>43.417013</longitud>
-                    <latitud>-5.411659</latitud>
+                    <longitud>-5.411659</longitud>
+                    <latitud>43.417013</latitud>
                     <altitud>247</altitud>
                 </coordenadas>
                 <distancia unidades="kilómetros">0.2</distancia>
@@ -52,8 +52,8 @@
             <hito nombre="Iglesia de San Julián de Viñón">
                 <descripcion>La Iglesia de San Julián de Viñón es un templo románico ubicado en la localidad asturiana de Viñón en el concejo de Cabranes. Fue declarado Monumento Provincial de Interés Histórico-Artístico en 1965 y en la actualidad es considerado Bien de Interés Cultural. Aunque la fecha fundacional del templo no está clara, se estima que fue construido en el siglo XII. La Iglesia presenta una nave única rectangular con techo de madera a dos aguas en el exterior y un ábside rectangular cubierto con una bóveda de medio cañón. En ampliaciones posteriores se le añadieron los pórticos frontal y lateral así como la sacristía. Ha sido restaurada en varias ocasiones y en la última, en 2004, se alteró radicalmente el aspecto exterior de la Iglesia. Se ha sugerido que el emplazamiento de la Iglesia obedece al propósito de esconderla de eventuales expediciones musulmanas.</descripcion>
                 <coordenadas>
-                    <longitud>43.427156</longitud>
-                    <latitud>-5.424395</latitud>
+                    <longitud>-5.424395</longitud>
+                    <latitud>43.427156</latitud>
                     <altitud>165</altitud>
                 </coordenadas>
                 <distancia unidades="kilómetros">2.5</distancia>
@@ -67,8 +67,8 @@
             <hito nombre="Castillete minero de Vegapallía">
                 <descripcion>El castillete de Viñón es el único testimonio de la minería carbonera del área, que estuvo activa hasta 1969 laboreando con cierta intensidad un afloramiento carbonero que es prolongación septentrional de la Cuenca Hullera Central. El resto de las instalaciones han sido demolidas.</descripcion>
                 <coordenadas>
-                    <longitud>43.429206</longitud>
-                    <latitud>-5.429909</latitud>
+                    <longitud>-5.429909</longitud>
+                    <latitud>43.429206</latitud>
                     <altitud>162</altitud>
                 </coordenadas>
                 <distancia unidades="kilómetros">0.6</distancia>
@@ -94,8 +94,8 @@
             <lugar>Centro del pueblo de Santolaya</lugar>
             <direccion>Cruzamos todo el pueblo hacia arriba, por sus calles asfaltadas. A los 300 metros del cartel, pasando las últimas casas, encontramos una pista de hormigón, que luego será senda, aunque bien conservada. </direccion>
             <coordenadas>
-                <longitud>43.417013</longitud>
-                <latitud>-5.411659</latitud>
+                <longitud>-5.411659</longitud>
+                <latitud>43.417013</latitud>
                 <altitud>247</altitud>
             </coordenadas>
         </inicio>
@@ -108,8 +108,8 @@
             <hito nombre="Portilla">
                 <descripcion>A escasos metros del final nos encontramos una portilla que hemos de rebasar para finalizar el trayecto.</descripcion>
                 <coordenadas>
-                    <longitud>43.436068</longitud>
-                    <latitud>-5.412070</latitud>
+                    <longitud>-5.412070</longitud>
+                    <latitud>43.436068</latitud>
                     <altitud>483</altitud>
                 </coordenadas>
                 <distancia unidades="kilómetros">4</distancia>
@@ -121,8 +121,8 @@
             <hito nombre="Cima de Peña Cabrera">
                 <descripcion>Modesta cima de Peña Cabrera.</descripcion>
                 <coordenadas>
-                    <longitud>43.436377</longitud>
-                    <latitud>-5.413244</latitud>
+                    <longitud>-5.413244</longitud>
+                    <latitud>43.436377</latitud>
                     <altitud>483</altitud>
                 </coordenadas>
                 <distancia unidades="kilómetros">0.2</distancia>
@@ -136,8 +136,8 @@
             <hito nombre="Área recreativa">
                 <descripcion>Aquí podremos disfrutar de la naturaleza, de un buen bocata, una buena barbacoa, para después recrearnos en sus impresionantes vistas: al norte podremos contemplar gran parte del concejo de Villaviciosa, su ría y el mar Cantábrico y al sur se alzan unos majestuosos Picos de Europa y casi la totalidad del concejo Cabranés, más tarde nos podremos tumbar debajo de un árbol y disfrutar del silencio, un lugar donde tocar el cielo con nuestros dedos y disfrutar de unas vistas inigualables, un ambiente natural como el que se respira en toda la Comarca de la Sidra.</descripcion>
                 <coordenadas>
-                    <longitud>43.436512</longitud>
-                    <latitud>-5.420018</latitud>
+                    <longitud>-5.420018</longitud>
+                    <latitud>43.436512</latitud>
                     <altitud>447</altitud>
                 </coordenadas>
                 <distancia unidades="kilómetros">0.6</distancia>
@@ -163,8 +163,8 @@
             <lugar>Pueblo de Naveda</lugar>
             <direccion>Desde el pueblo de Naveda , se toma una pista que sale hacia la izquierda</direccion>
             <coordenadas>
-                <longitud>43.404288</longitud>
-                <latitud>-5.433390</latitud>
+                <longitud>-5.433390</longitud>
+                <latitud>43.404288</latitud>
                 <altitud>436</altitud>
             </coordenadas>
         </inicio>
@@ -177,8 +177,8 @@
             <hito nombre="Pueblo de Naveda">
                 <descripcion>Pequeña aldea que cuenta con una población de alrededor de 90 habitantes. El pueblo está rodeado de un hermoso paisaje rural. Muchas de sus viviendas se alquilan con fines de casa rural. Famosa por Embutidos Naveda.</descripcion>
                 <coordenadas>
-                    <longitud>43.404567</longitud>
-                    <latitud>-5.433687</latitud>
+                    <longitud>-5.433687</longitud>
+                    <latitud>43.404567</latitud>
                     <altitud>438</altitud>
                 </coordenadas>
                 <distancia unidades="kilómetros">0.1</distancia>
@@ -195,8 +195,8 @@
             <hito nombre="Fuente pública de La Bobia">
                 <descripcion>Lavadero antiguo, bien conservado.</descripcion>
                 <coordenadas>
-                    <longitud>43.406717</longitud>
-                    <latitud>-5.436423</latitud>
+                    <longitud>-5.436423</longitud>
+                    <latitud>43.406717</latitud>
                     <altitud>422</altitud>
                 </coordenadas>
                 <distancia unidades="kilómetros">0.3</distancia>
@@ -210,8 +210,8 @@
             <hito nombre="Cima del Aliño">
                 <descripcion>Cima del Aliño, un modesto monte de Cabranes.</descripcion>
                 <coordenadas>
-                    <longitud>43.405019</longitud>
-                    <latitud>-5.450440</latitud>
+                    <longitud>-5.450440</longitud>
+                    <latitud>43.405019</latitud>
                     <altitud>544</altitud>
                 </coordenadas>
                 <distancia unidades="kilómetros">1.7</distancia>
