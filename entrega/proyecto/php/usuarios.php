@@ -94,9 +94,7 @@ class Usuarios
 
 
                 if ($id_usuario !== null && $id_usuario !== 0) {
-                    //TODO: echo "Te has registrado como " . $nombre . ". Ahora puedes iniciar sesión.";
-                    echo "Te has registrado como " . $nombre . ". Ahora puedes iniciar sesión.";
-                    //TODO: redirect
+                    echo "<p>Te has registrado como " . $nombre . ". Ahora puedes iniciar sesión.</p>";
                 } else {
                     $this->fallosReg .= "Error al insertar al usuario en la base de datos. ";
                 }
