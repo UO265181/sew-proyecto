@@ -6,6 +6,7 @@
     <meta name="author" content="UO265181">
     <meta name="description" content="Información del Concejo de Cabranes">
     <meta name="keywords" content="Cabranes, cultura, turismo">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="index.html">
     <link rel="icon" type="image/svg" href="../multimedia/escudo.svg">
     <link rel="stylesheet" type="text/css" href="../estilo/estilo.css">
