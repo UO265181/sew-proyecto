@@ -70,7 +70,7 @@ class Juego {
             return;
         }
 
-        const puntaje = 0;
+        var puntaje = 0;
 
         preguntas.forEach((pregunta, index) => {
             const respuestaSeleccionada = respuestas[index].value;

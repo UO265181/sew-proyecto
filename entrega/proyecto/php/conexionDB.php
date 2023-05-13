@@ -8,8 +8,8 @@ class ConexionDB
     public function __construct()
     {
         self::$servername = "localhost";
-        self::$username = "root";
-        self::$password = "";
+        self::$username = "sewAdmin";
+        self::$password = "!7ZZ)(p-k8QH*boZ";
         self::$database = "test";
     }
 
