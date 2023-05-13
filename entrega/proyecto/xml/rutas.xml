@@ -73,9 +73,9 @@
                 </coordenadas>
                 <distancia unidades="kilómetros">0.6</distancia>
                 <galeria_fotos>
-                    <foto alt="Foto del castillete minero de Vegapallía"
+                    <foto alt="Foto en perspectiva del castillete minero de Vegapallía"
                         figCaption="Castillete minero de Vegapallía">multimedia/castillete1.jpg</foto>
-                    <foto alt="Foto del castillete minero de Vegapallía"
+                    <foto alt="Foto frontal del castillete minero de Vegapallía"
                         figCaption="Castillete minero de Vegapallía">multimedia/castillete2.jpg</foto>
                 </galeria_fotos>
             </hito>
