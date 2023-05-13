@@ -37,8 +37,8 @@ class Recursos
                 echo '<tr><td>' . $recurso['nombre'] . '</td>
                 <td>' . $recurso['tipo'] . '</td>
                 <td>' . $recurso['precio'] . '€' .'</td>
-                <td>' . $recurso['descripcion'] .  ' horas' . '</td>
-                <td>' . $recurso['duracion'] . '</td>
+                <td>' . $recurso['descripcion'] .   '</td>
+                <td>' . $recurso['duracion'] . ' horas' .'</td>
                 </tr>';
             }
 
