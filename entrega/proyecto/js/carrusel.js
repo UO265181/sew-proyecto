@@ -7,6 +7,8 @@ class Carrusel {
         this.contenedor = null;
     }
 
+
+
     update() {
         const img = document.createElement('img');
         img.src = this.images[this.currentIndex].src;
@@ -67,7 +69,6 @@ const images = [
     { src: 'multimedia/carrusel3.jpg', alt: 'Foto de la Iglesia de San Martín el Real en Torazo', figCaption: 'Iglesia de San Martín el Real' },
     { src: 'multimedia/carrusel4.jpg', alt: 'Foto de los vecinos reunidos en el festival del arroz', figCaption: 'Festival de Arroz' },
     { src: 'multimedia/carrusel5.jpg', alt: 'Foto del antiguo castillete minero', figCaption: 'Castillete minero' }];
-//TODO: la primera vez que se renderiza una imagen se recarga la página entera
 const carrusel = new Carrusel(images);
 carrusel.crearContenedor();
 carrusel.start(3000);
