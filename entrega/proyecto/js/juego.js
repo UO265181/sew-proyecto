@@ -23,14 +23,17 @@ class Juego {
             fsPregunta.appendChild(legend);
 
             pregunta.opciones.forEach(opcion => {
+
+                const indexText = `pregunta-${index}`;
+
                 const inputOpcion = document.createElement('input');
                 inputOpcion.type = 'radio';
-                inputOpcion.name = `pregunta-${index}`;
-                inputOpcion.id = opcion;
+                inputOpcion.name = indexText + '-' + opcion;
+                inputOpcion.id = indexText + '-' + opcion;
                 inputOpcion.value = opcion;
 
                 const lbOpcion = document.createElement('label');
-                lbOpcion.htmlFor = opcion;
+                lbOpcion.htmlFor = indexText + '-' + opcion;
                 lbOpcion.textContent = opcion;
 
                 fsPregunta.appendChild(inputOpcion);
