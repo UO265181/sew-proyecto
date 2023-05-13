@@ -102,6 +102,22 @@ class ConexionDB
         $consultaPre = self::$db->prepare("SELECT * FROM presupuestos");
         return ConexionDB::realizarConsultaObtener($consultaPre);
     }
+    public static function insertarPresupuesto($id_usuario)
+    {
+        ConexionDB::abrirConexion();
+        $consultaPre = self::$db->prepare("INSERT INTO presupuestos (id_usuario) VALUES (?)");
+        $consultaPre->bind_param('i', $id_usuario);
+        return ConexionDB::realizarConsultaInsertar($consultaPre);
+    }
+
+    // PRESUPUESTOSRESERVAS ----------------------------------
+    public static function insertarPresupuestosReservas($id_presupuesto, $id_reserva)
+    {
+        ConexionDB::abrirConexion();
+        $consultaPre = self::$db->prepare("INSERT INTO presupuestosreservas (id_presupuesto, id_reserva) VALUES (?, ?)");
+        $consultaPre->bind_param('ii', $id_presupuesto, $id_reserva);
+        return ConexionDB::realizarConsultaInsertar($consultaPre);
+    }
 
     // AFOROS ----------------------------------
     public static function obtenerAforosPorId($id)
@@ -131,6 +147,7 @@ class ConexionDB
         $consultaPre->bind_param('issss', $id_recurso, $fecha_inicio, $fecha_final, $hora_inicio, $hora_final);
         return ConexionDB::realizarConsultaInsertar($consultaPre);
     }
+    
 
     private static function realizarConsultaObtener($consultaPre)
     {
@@ -162,7 +179,7 @@ class ConexionDB
         if ($consultaPre->error) {
             $resultado = $consultaPre->error;
         } else {
-            $resultado = $consultaPre->affected_rows;
+            $resultado = $consultaPre->insert_id;
         }
 
         $consultaPre->close();

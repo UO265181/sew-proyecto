@@ -90,10 +90,10 @@ class Usuarios
             if ($emailNoRepetido) {
 
 
-                $result = ConexionDB::insertarUsuario($nombre, $email, $password);
+                $id_usuario = ConexionDB::insertarUsuario($nombre, $email, $password);
 
 
-                if ($result === 1) {
+                if ($id_usuario !== null && $id_usuario !== 0) {
                     //TODO: echo "Te has registrado como " . $nombre . ". Ahora puedes iniciar sesión.";
                     echo "Te has registrado como " . $nombre . ". Ahora puedes iniciar sesión.";
                     //TODO: redirect

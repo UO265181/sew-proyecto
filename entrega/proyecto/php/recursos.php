@@ -36,7 +36,7 @@ class Recursos
             foreach ($this->recursos as $recurso) {
                 echo '<tr><td>' . $recurso['nombre'] . '</td>
                 <td>' . $recurso['tipo'] . '</td>
-                <td>' . $recurso['precio'] . '</td>
+                <td>' . $recurso['precio'] . '€' .'</td>
                 <td>' . $recurso['descripcion'] . '</td>
                 <td>' . $recurso['duracion'] . '</td>
                 </tr>';

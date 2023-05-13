@@ -52,12 +52,12 @@ class Reservas
 
         if ($aforoAct < $aforoMax) {
             // Hay hueco, se reserva y se aumenta el aforo
-            $reserva = ConexionDB::insertarReserva($aforo["id"], $_SESSION["user_id"], $recurso["id"]);
-            if ($reserva === 1) {
+            $id_reserva = ConexionDB::insertarReserva($aforo["id"], $_SESSION["user_id"], $recurso["id"]);
+            if($id_reserva!==null && $id_reserva !== 0) {
                 $aforoAct++;
                 $aumentarAforo = ConexionDB::aumentarAforoActual($aforo["id"], $aforoAct);
             } else {
-                $this->fallosReservar .= "Error al crear la reserva en la base de datos: " . $reserva;
+                $this->fallosReservar .= "Error al crear la reserva en la base de datos: " . $id_reserva;
             }
         } else {
             // No hay hueco, no se puede reservar
@@ -86,7 +86,7 @@ class Reservas
                                 // Se crea el aforo
                                 $fechaHoraInicial = new DateTime($fecha . ' ' . $hora);
                                 $fechaHoraFinal = $this->calcularFechaHoraFinal($recurso["duracion"], $fechaHoraInicial);
-                                $aforoInsertado = ConexionDB::insertarAforo($recurso["id"], $fecha, $fechaHoraFinal->format('Y-m-d'), $hora, $fechaHoraFinal->format('H:i:s'));
+                                $id_aforoInsertado = ConexionDB::insertarAforo($recurso["id"], $fecha, $fechaHoraFinal->format('Y-m-d'), $hora, $fechaHoraFinal->format('H:i:s'));
 
                                 // Se recupera
                                 $aforo = ConexionDB::obtenerAforosPorIdrecursoFechaHora($recurso["id"], $fecha, $hora);
@@ -169,7 +169,7 @@ class Reservas
 
                 echo '<tr><td>' . $reserva['id'] . '</td>
                 <td>' . $recurso['nombre'] . '</td>
-                <td>' . $recurso['precio'] . '</td>
+                <td>' . $recurso['precio'] . '€' .'</td>
                 <td>' . $aforo['fecha_inicio'] . '</td>
                 <td>' . $aforo['hora_inicio'] . '</td>
                 <td>' . $aforo['fecha_final'] . '</td>
