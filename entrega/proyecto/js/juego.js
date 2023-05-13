@@ -37,7 +37,7 @@ class Juego {
                 fsPregunta.appendChild(lbOpcion);
             });
 
-            sPreguntas.appendChild(sPregunta);
+            sPreguntas.appendChild(fsPregunta);
         });
 
         const button = document.createElement('button');
