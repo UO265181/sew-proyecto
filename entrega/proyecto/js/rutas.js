@@ -1,16 +1,15 @@
 
 "use strict";
 class ArchivoXML {
-    constructor(nombre) {
-        this.nombre = nombre;
-        this.correcto = "¡Todo correcto! archivo XML cargado"
+    constructor(rutaXml) {
+        this.rutaXml = rutaXml;
     }
 
 
-    cargarDatos() {
+    mostrarRutas() {
         $.ajax({
             dataType: "xml",
-            url: this.nombre,
+            url: this.rutaXml,
             method: 'GET',
             success: function (datos) {
 
@@ -315,14 +314,11 @@ class ArchivoXML {
 
             },
             error: function () {
-                $("h1").html("ERROR: No se pudo cargar el archivo XML");
+                $("h1").html("ERROR: No se pudo cargar el archivo de rutas XML");
             }
         });
     }
 
-    verXML() {
-        this.cargarDatos();
-        $("button").attr("disabled", "disabled");
-    }
 }
-var rutas = new ArchivoXML("xml/rutas.xml");
+const rutas = new ArchivoXML("xml/rutas.xml");
+rutas.mostrarRutas();
