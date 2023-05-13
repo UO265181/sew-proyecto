@@ -30,7 +30,7 @@ class Juego {
                 inputOpcion.value = opcion;
 
                 const lbOpcion = document.createElement('label');
-                inputOpcion.for = opcion;
+                lbOpcion.for = opcion;
                 lbOpcion.textContent = opcion;
 
                 fsPregunta.appendChild(inputOpcion);
