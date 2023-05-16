@@ -87,12 +87,12 @@
                 <td>1 horas</td>
                 </tr></tbody></table></section></section><section><h2>Reservas</h2><section><h3>Formulario de reserva</h3>
 <form method="post" action="reservas.php">
-    <p>Nombre del recurso turístico</p>
-    <p><input type="text" name="nombre"><span>&nbsp;</span></p>
-    <p>Fecha</p>
-    <input type="date" name="fecha"><span>&nbsp;</span><p></p>
-    <p>Hora
-    <input type="time" name="hora"><span>&nbsp;</span></p>
+    <p><label for='nombre'>Nombre del recurso turístico</label></p>
+    <p><input type="text" name="nombre"  id='nombre'>><span>&nbsp;</span></p>
+    <p><label for='fecha'>Fecha</label></p>
+    <p><input type='date' name='fecha' id='fecha'><span>&nbsp;</span></p>
+    <p><label for='hora'>Hora</label></p>
+    <p><input type='time' name='hora' id='hora'><span>&nbsp;</span></p>
     <input type="submit" value="Reservar" name="reservar">
 </form>
 </section><section><h3>Reservas realizadas</h3><p><span> No se han podido obtener las reservas: Aún no has realizado ninguna reserva. </span></p></section></section><section><h2>Presupuesto</h2><form method="POST">

@@ -132,15 +132,15 @@ class ReservasObject
     public function imprimirFormularioDeReserva()
     {
         echo "
-<form method='post' action='reservas.php'>
-    <p>Nombre del recurso turístico</p>
-    <p><input type='text' name='nombre'><span>&nbsp;" . $this->errorNombre . "</span></p>
-    <p>Fecha</p>
-    <input type='date' name='fecha'><span>&nbsp;" . $this->errorFecha . "</span></p>
-    <p>Hora</label>
-    <input type='time' name='hora'><span>&nbsp;" . $this->errorHora . "</span></p>
-    <input type='submit' value='Reservar' name='reservar'>
-</form>
+    <form method='post' action='reservas.php'>
+        <p><label for='nombre'>Nombre del recurso turístico</label></p>
+        <p><input type='text' name='nombre' id='nombre'><span>&nbsp;" . $this->errorNombre . "</span></p>
+        <p><label for='fecha'>Fecha</label></p>
+        <p><input type='date' name='fecha' id='fecha'><span>&nbsp;" . $this->errorFecha . "</span></p>
+        <p><label for='hora'>Hora</label></p>
+        <p><input type='time' name='hora' id='hora'><span>&nbsp;" . $this->errorHora . "</span></p>
+        <input type='submit' value='Reservar' name='reservar'>
+    </form>
 ";
         if ($this->fallosReservar != "") {
             echo "<p><span> La reserva no ha sido posible: " . $this->fallosReservar . "</span></p>";
