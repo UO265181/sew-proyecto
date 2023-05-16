@@ -1,6 +1,9 @@
 -- phpMyAdmin SQL Dump
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 16-05-2023 a las 12:44:46
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.0.28
 
@@ -73,7 +76,6 @@ CREATE TABLE `recursos` (
   `aforo_maximo` int(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
-
 -- --------------------------------------------------------
 
 --
@@ -99,7 +101,6 @@ CREATE TABLE `usuarios` (
   `email` varchar(24) NOT NULL,
   `password` varchar(24) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
-
 
 --
 -- Índices para tablas volcadas
@@ -131,7 +132,8 @@ ALTER TABLE `presupuestosreservas`
 -- Indices de la tabla `recursos`
 --
 ALTER TABLE `recursos`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `nombre` (`nombre`);
 
 --
 -- Indices de la tabla `reservas`
@@ -146,7 +148,8 @@ ALTER TABLE `reservas`
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
