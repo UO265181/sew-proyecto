@@ -1,7 +1,5 @@
 
----
-bitácora
+poner bonito
 
-
-- adaptabilidad
-- accesibilidad
+api nueva
+actualizar azure
