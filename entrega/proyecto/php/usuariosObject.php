@@ -141,10 +141,10 @@ class UsuariosObject
         echo "
 <form method='post' action='reservas.php'>
     <p>Email</p>
-    <p><input type='text' name='email' /><span>&nbsp;" . $this->errorEmailId . "</span></p>
+    <p><input type='text' name='email'><span>&nbsp;" . $this->errorEmailId . "</span></p>
     <p>Contraseña</p>
-    <p><input type='text' name='password' /><span>&nbsp;" . $this->errorPasswordId . "</span></p>
-    <input type='submit' value='Identificarse' name='identificarse'/>
+    <p><input type='text' name='password'><span>&nbsp;" . $this->errorPasswordId . "</span></p>
+    <input type='submit' value='Identificarse' name='identificarse'>
 </form>
 ";
         if ($this->fallosId != "") {
@@ -157,12 +157,12 @@ class UsuariosObject
         echo "
 <form method='post' action='reservas.php'>
     <p>Nombre</p>
-    <p><input type='text' name='nombre' /><span>&nbsp;" . $this->errorNombreReg . "</span></p>
+    <p><input type='text' name='nombre'><span>&nbsp;" . $this->errorNombreReg . "</span></p>
     <p>Email</p>
-    <p><input type='text' name='email' /><span>&nbsp;" . $this->errorEmailReg . "</span></p>
+    <p><input type='text' name='email'><span>&nbsp;" . $this->errorEmailReg . "</span></p>
     <p>Contraseña</p>
-    <p><input type='text' name='password' /><span>&nbsp;" . $this->errorPasswordReg . "</span></p>
-    <input type='submit' value='Registrarse' name='registrarse'/>
+    <p><input type='text' name='password'><span>&nbsp;" . $this->errorPasswordReg . "</span></p>
+    <input type='submit' value='Registrarse' name='registrarse'>
 </form>
 ";
         if ($this->fallosReg != "") {

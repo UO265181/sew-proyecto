@@ -134,12 +134,12 @@ class ReservasObject
         echo "
 <form method='post' action='reservas.php'>
     <p>Nombre del recurso turístico</p>
-    <p><input type='text' name='nombre' /><span>&nbsp;" . $this->errorNombre . "</span></p>
+    <p><input type='text' name='nombre'><span>&nbsp;" . $this->errorNombre . "</span></p>
     <p>Fecha</p>
     <input type='date' name='fecha'><span>&nbsp;" . $this->errorFecha . "</span></p>
     <p>Hora</label>
     <input type='time' name='hora'><span>&nbsp;" . $this->errorHora . "</span></p>
-    <input type='submit' value='Reservar' name='reservar'/>
+    <input type='submit' value='Reservar' name='reservar'>
 </form>
 ";
         if ($this->fallosReservar != "") {
