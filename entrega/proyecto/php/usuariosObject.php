@@ -2,7 +2,7 @@
 require_once 'conexionDB.php';
 require_once 'validacion.php';
 
-class Usuarios
+class UsuariosObject
 {
 
     private $errorNombreReg = "";

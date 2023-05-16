@@ -6,7 +6,7 @@
     <meta name="author" content="UO265181">
     <meta name="description" content="Información del Concejo de Cabranes">
     <meta name="keywords" content="Cabranes, cultura, turismo">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="index.html">
     <link rel="icon" type="image/svg" href="../multimedia/escudo.svg">
     <link rel="stylesheet" type="text/css" href="../estilo/estilo.css">
@@ -40,97 +40,15 @@
 
         <?php
 
-
         if (session_status() == PHP_SESSION_NONE) {
             session_start();
         }
 
-        // Recibo los POST
-        require_once 'usuarios.php';
-        $usuarios = new Usuarios();
-        if (isset($_POST['registrarse'])) {
-            $usuarios->registrarUsuario($_POST['nombre'], $_POST["email"], $_POST["password"]);
-        }
-        if (isset($_POST['identificarse'])) {
-            $usuarios->identificarUsuario($_POST["email"], $_POST["password"]);
-        }
-        require_once 'reservasO.php';
-        $reservas = new Reservas();
-        if (isset($_POST['reservar'])) {
-            $reservas->reservarRecurso($_POST["nombre"], $_POST["fecha"], $_POST["hora"]);
-        }
-        require_once 'presupuestos.php';
-        $presupuestos = new Presupuestos();
-        if (isset($_POST['generarPresupuesto'])) {
-            $presupuestos->generarPresupuesto();
-        }
+        require_once 'vista.php';
 
-        // Usuario no identificado
-        if (!isset($_SESSION['user_id'])) {
-
-
-
-            
-            echo "<section>";
-            echo "<h2>Información</h2>";
-            echo "<p>Bienvenido a la página de reservas. Para poder realizar una reserva primero deberás registrarse. Una vez que te hayas registrado podrás identificarte y empezar a resevar tus recursos turísticos de Cabranes favoritos.</p>";
-            echo "</section>";
-
-            // Registro
-            echo "<section>";
-            echo "<h2>Registrarse</h2>";
-            $usuarios->imprimirFormularioDeRegistro();
-            echo "</section>";
-
-
-            // Ident
-            echo "<section>";
-            echo "<h2>Identificarse</h2>";
-            $usuarios->imprimirFormularioDeIdentificarse();
-            echo "</section>";
-
-        } else {
-            // Usuario identificado
-            echo "<section>";
-            echo "<h2>Información</h2>";
-            echo "<p>¡Bienvenido " . $_SESSION["username"] . "! Puedes realizar reservas y ver tu presupuesto más abajo.</p>";
-            echo "</section>";
-
-            
-            echo "<section>";
-            echo "<h2>Recursos Tutísticos</h2>";
-            echo "<section>";
-            echo "<h3>Tabla de recursos</h3>";
-            require_once 'recursos.php';
-            $recursos = new Recursos();
-            $recursos->obtenerRecursos();
-            $recursos->imprimirRecursos();
-            echo "</section>";
-            echo "</section>";
-
-            echo "<section>";
-            echo "<h2>Reservas</h2>";
-            echo "<section>";
-            echo "<h3>Formulario de reserva</h3>";
-            $reservas->imprimirFormularioDeReserva();
-            echo "</section>";
-            echo "<section>";
-            echo "<h3>Reservas realizadas</h3>";
-            $reservas->obtenerReservas();
-            $reservas->imprimirReservas();
-            echo "</section>";
-            echo "</section>";
-
-            echo "<section>";
-            echo "<h2>Presupuesto</h2>";
-            $presupuestos->imprimirBotonDeGenerarPresupuesto();
-            echo "</section>";
-
-
-        }
-
-
-
+        $vista = new Vista();
+        $vista->recibirPOST();
+        $vista->mostrarVista();
 
         ?>
 

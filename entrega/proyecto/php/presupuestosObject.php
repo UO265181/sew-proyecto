@@ -2,7 +2,7 @@
 
 require_once 'conexionDB.php';
 
-class Presupuestos
+class PresupuestosObject
 {
 
     private $fallosGenerarPresupuesto = "";

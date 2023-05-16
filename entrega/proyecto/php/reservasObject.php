@@ -2,7 +2,7 @@
 require_once 'conexionDB.php';
 require_once 'validacion.php';
 
-class Reservas
+class ReservasObject
 {
 
     private $reservas;

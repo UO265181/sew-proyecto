@@ -2,7 +2,7 @@
 
 require_once 'conexionDB.php';
 
-class Recursos
+class RecursosObject
 {
 
     private $recursos;
