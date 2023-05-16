@@ -28,7 +28,7 @@ class RecursosObject
         if ($this->fallosRecursos != "") {
             echo "<p><span> No se han podido obtener los recursos: " . $this->fallosRecursos . "</span></p>";
         } else {
-            echo '<table><thead><tr>';
+            echo '<table> <caption> Recursos </caption><thead><tr>';
             echo '<th>Nombre</th><th>Tipo</th><th>Precio</th><th>Descripción</th><th>Duración</th>';
             echo '</tr></thead>';
             echo '<tbody>';

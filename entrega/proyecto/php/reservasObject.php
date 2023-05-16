@@ -156,7 +156,7 @@ class ReservasObject
         if ($this->fallosReservas != "") {
             echo "<p><span> No se han podido obtener las reservas: " . $this->fallosReservas . "</span></p>";
         } else {
-            echo '<table><thead><tr>';
+            echo '<table><caption> Reservas </caption><thead><tr>';
             echo '<th>Reserva</th><th>Nombre</th><th>Precio</th><th>Fecha Inicio</th><th>Hora Inicio</th><th>Fecha Final</th><th>Hora Final</th>';
             echo '</tr></thead>';
             echo '<tbody>';

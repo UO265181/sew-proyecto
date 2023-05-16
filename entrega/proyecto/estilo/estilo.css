@@ -96,3 +96,19 @@ video {
 audio {
   border: 10px solid #B0CFD1;
 }
+
+/* Especifidad: 001*/
+form {
+  padding: 1%;
+  border: 10px solid #B0CFD1;
+}
+
+/* Especifidad: 001*/
+span {
+  color: red;
+}
+
+/* Especifidad: 021*/
+input[type="submit"]:hover {
+  background-color: #63B2B8;
+}
