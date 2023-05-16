@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="es"><head>
+    <meta charset="utf-8">
+    <meta name="author" content="UO265181">
+    <meta name="description" content="Información del Concejo de Cabranes">
+    <meta name="keywords" content="Cabranes, cultura, turismo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="index.html">
+    <link rel="icon" type="image/svg" href="../multimedia/escudo.svg">
+    <link rel="stylesheet" type="text/css" href="../estilo/estilo.css">
+    <link rel="stylesheet" type="text/css" href="../estilo/layout.css">
+    <title>Concejo de Cabranes</title>
+</head>
+
+
+<body>
+
+    <header>
+        <h1>Concejo de Cabranes</h1>
+    </header>
+
+    <nav>
+        <div>
+            <h2>Índice</h2>
+            <ul>
+                <li><a title="Enlace a la página principal" target="_self" href="../index.html">Inicio</a></li>
+                <li><a title="Enlace a Gastronomía" target="_self" href="../gastronomia.html">Gastronomía</a></li>
+                <li><a title="Enlace a Rutas" target="_self" href="../rutas.html">Rutas</a></li>
+                <li><a title="Enlace a Meteorología" target="_self" href="../meteorologia.html">Meteorología</a></li>
+                <li><a title="Enlace a Juego" target="_self" href="../juego.html">Juego</a></li>
+                <li><a title="Enlace a Reservas" target="_self" href="reservas.php">Reservas</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <main>
+
+        <section><h2>Información</h2><p>¡Bienvenido a! Puedes realizar reservas y ver tu presupuesto más abajo.</p></section><section><h2>Recursos Tutísticos</h2><section><h3>Tabla de recursos</h3><table> <caption> Recursos </caption><thead><tr><th>Nombre</th><th>Tipo</th><th>Precio</th><th>Descripción</th><th>Duración</th></tr></thead><tbody><tr><td>Museo de la Escuela Rura</td>
+                <td>Museo</td>
+                <td>5.25€</td>
+                <td>En esta antigua escuela, construida en 1908, el visitante se verá inmerso en una atmósfera que le transportará a otro tiempo. A través de una gran colección de mobiliario y material escolar que data de 1911 hasta 1970, el museo ofrece un recorrido cronológico por la Historia de la Educación en Asturias.</td>
+                <td>4 horas</td>
+                </tr><tr><td>Casa Museo de Leopoldo P</td>
+                <td>Museo</td>
+                <td>12.00€</td>
+                <td>Ubicado en el pueblo de Piñera, el museo se encuentra en una casa de arquitectura tradicional asturiana. Un recorrido por el mismo nos ofrece una extensa colección de piezas de cerámica popular con una amplia representación de todos los alfares.</td>
+                <td>2 horas</td>
+                </tr><tr><td>Que Cocine Valentina</td>
+                <td>Restaurante</td>
+                <td>18.99€</td>
+                <td>Acogedor restaurante de comida casera y tradicional asturiana. El menú incluye fabada asturiana con compango de la zona y merluza de pincho a la sidra con almejas y mejillones;  </td>
+                <td>2 horas</td>
+                </tr><tr><td>Sidrería Casa Cortina</td>
+                <td>Restaurante</td>
+                <td>32.50€</td>
+                <td>Sidrería con una gran selección de sidras asturianas y platos tradicionales. El menú incluye croquetas de la abuela con jamón serrano y sopa de marisco con percebes y langostinos.</td>
+                <td>2 horas</td>
+                </tr><tr><td>Hostería de Torazo</td>
+                <td>Hostal</td>
+                <td>72.00€</td>
+                <td>Hotel sencillo con restaurante, helipuerto, spa de día y piscinas exterior y cubierta.</td>
+                <td>12 horas</td>
+                </tr><tr><td>Hotel peñacabrera</td>
+                <td>Hotel</td>
+                <td>47.25€</td>
+                <td>El Hotel peñacabrera 2 se encuentra en Santa Eulalia y ofrece bar, WiFi gratuita y vistas al jardín.</td>
+                <td>12 horas</td>
+                </tr><tr><td>Pico Aliño desde Naveda</td>
+                <td>Ruta</td>
+                <td>1.50€</td>
+                <td>Hermosa ruta en la que recorreremos una parte menos frecuentada de Cabranes, pero que aún así recoge la naturaleza y belleza que la caracteriza.</td>
+                <td>2 horas</td>
+                </tr><tr><td>Ruta de Peña Cabrera</td>
+                <td>Ruta</td>
+                <td>0.00€</td>
+                <td>El recorrido parte de Santolaya y transcurre entre Villaviciosa y Piloña, por senderos y caminos carreteros a través de fincas, plantaciones de eucalipto y bosques de robles. </td>
+                <td>4 horas</td>
+                </tr><tr><td>Senda del Río Viacaba</td>
+                <td>Ruta</td>
+                <td>0.00€</td>
+                <td>La ruta comienza en la población de Santa Eulalia de Cabranes y termina donde estaba la antigua mina de antracita con su castillete restaurado en Vegapallía.</td>
+                <td>1 horas</td>
+                </tr><tr><td>Iglesia de Santa Eulalia</td>
+                <td>Religioso</td>
+                <td>0.00€</td>
+                <td>La iglesia de Santa Eulalia de Cabranes es un templo que data del siglo XV, construido sobre una iglesia románica anterior. Cuenta con un campanario cuadrado y se accede a través de dos puertas.</td>
+                <td>1 horas</td>
+                </tr></tbody></table></section></section><section><h2>Reservas</h2><section><h3>Formulario de reserva</h3>
+<form method="post" action="reservas.php">
+    <p>Nombre del recurso turístico</p>
+    <p><input type="text" name="nombre"><span>&nbsp;</span></p>
+    <p>Fecha</p>
+    <input type="date" name="fecha"><span>&nbsp;</span><p></p>
+    <p>Hora
+    <input type="time" name="hora"><span>&nbsp;</span></p>
+    <input type="submit" value="Reservar" name="reservar">
+</form>
+</section><section><h3>Reservas realizadas</h3><p><span> No se han podido obtener las reservas: Aún no has realizado ninguna reserva. </span></p></section></section><section><h2>Presupuesto</h2><form method="POST">
+                <input type="submit" name="generarPresupuesto" value="Generar Presupuesto">
+            </form></section>
+    </main>
+
+
+    <footer>
+        <address><a href="mailto:UO265181@uniovi.es">Alberto Fernández Gutiérrez</a></address>
+
+    </footer>
+
+
+
+
+
+
+</body></html>
