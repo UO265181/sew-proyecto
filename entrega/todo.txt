@@ -1,6 +1,5 @@
     --- HTML ---
 lista definida que definid
-quitar target _self
     --- CSS ---
 no px ni unidades absolutas
 doc advertencias de color
