@@ -1,0 +1,23 @@
+    --- HTML ---
+quitar div
+lista definida que definid
+quitar target _self
+    --- CSS ---
+no px ni unidades absolutas
+doc advertencias de color
+css layout
+    --- JS ---
+id sin espacios
+carrusel tamaño imagenes
+kml hacer la línea y comprobar formato
+    --- PHP ---
+horas fijas
+presupuesto printear en el html
+campo contraseña que no se vea xd
+span mejor otra cosa
+    --- BIT ---
+documentar todo de azure
+usabilidad segun seminario (preguntas)
+las mejoras de usabilidad han se ser mas importantes
+    --- VALID ---
+ULTRA VALIDAR (con githubPages)
