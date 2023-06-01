@@ -1,5 +1,4 @@
     --- HTML ---
-quitar div
 lista definida que definid
 quitar target _self
     --- CSS ---
