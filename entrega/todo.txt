@@ -5,7 +5,6 @@ no px ni unidades absolutas
 doc advertencias de color
 css layout
     --- JS ---
-carrusel tamaño imagenes
 kml hacer la línea y comprobar formato
     --- PHP ---
 horas fijas
