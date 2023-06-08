@@ -19,8 +19,8 @@ nav h2 {
 /* Especifidad: 002*/
 nav ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin: 0%;
+  padding: 0%;
 }
 
 /* Especifidad: 002*/
@@ -53,13 +53,12 @@ section {
 /* Especifidad: 002*/
 section p {
   display: block;
-  font-size: 16px;
 }
 
 /* Especifidad: 001*/
 footer {
   display: block;
-  padding: 1em;
+  padding: 2.5%;
 }
 
 /* Especifidad: 001*/
@@ -71,42 +70,44 @@ table {
 /* Especifidad: 001*/
 th,
 td {
-  padding: 12px;
+  padding: 1.5%;
 }
 
 /* Especifidad: 001*/
 caption {
-  font-size: 20px;
-  margin-bottom: 12px;
+  font-size: 1.25em;
+  margin-bottom: 1em;
+  margin-top: 0.5em;
 }
 
 /* Especifidad: 001*/
 dl {
-  margin: 0;
-  padding: 0;
+  margin: 0%;
+  padding: 0%;
 }
 
 /* Especifidad: 001*/
 dt {
-  margin-top: 10px;
+  margin-top: 1em;
 }
 
 /* Especifidad: 001*/
 dd {
   margin-left: 0;
-  margin-bottom: 5px;
+  margin-bottom: 1.5em;
 }
 
 /* Especifidad: 001*/
 ul {
-  margin-top: 5px;
+  margin-top: 0.25em;
 }
 
 /* Especifidad: 001*/
 figure {
-  margin: 20px;
+  margin: 5%;
   max-width: 50%;
 }
+
 
 /* Especifidad: 002*/
 figure img {
@@ -119,14 +120,14 @@ video {
   max-width: 50%;
   width: 50%;
   height: auto;
-  margin: 20px;
-  padding: 5px;
+  margin: 5%;
+  padding: 1%;
 }
 
 /* Especifidad: 001*/
 audio {
-  margin: 20px;
-  padding: 5px;
+  margin: 5%;
+  padding: 1%;
   width: 50%;
   max-width: 50%;
 }

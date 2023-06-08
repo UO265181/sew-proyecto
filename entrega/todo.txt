@@ -1,7 +1,6 @@
     --- HTML ---
 lista definida que definid
     --- CSS ---
-no px ni unidades absolutas
 doc advertencias de color
 css layout
     --- JS ---

@@ -55,7 +55,7 @@ footer a {
 th,
 td {
   text-align: left;
-  border-bottom: 1px solid #B0CFD1;
+  border-bottom: solid #B0CFD1;
 }
 
 /* Especifidad: 001*/
@@ -89,18 +89,18 @@ figure figcaption {
 
 /* Especifidad: 001*/
 video {
-  border: 10px solid #B0CFD1;
+  border: 0.5em solid #B0CFD1;
 }
 
 /* Especifidad: 001*/
 audio {
-  border: 10px solid #B0CFD1;
+  border: 0.5em solid #B0CFD1;
 }
 
 /* Especifidad: 001*/
 form {
   padding: 1%;
-  border: 10px solid #B0CFD1;
+  border: 0.5em solid #B0CFD1;
 }
 
 /* Especifidad: 001*/
