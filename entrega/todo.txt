@@ -16,3 +16,6 @@ usabilidad segun seminario (preguntas)
 las mejoras de usabilidad han se ser mas importantes
     --- VALID ---
 ULTRA VALIDAR (con githubPages)
+    --- ??? ---
+carácteres raros
+
