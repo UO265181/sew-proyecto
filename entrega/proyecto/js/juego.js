@@ -29,11 +29,11 @@ class Juego {
                 const inputOpcion = document.createElement('input');
                 inputOpcion.type = 'radio';
                 inputOpcion.name = indexText + '-' + opcion;
-                inputOpcion.id = indexText + '-' + opcion;
+                inputOpcion.id = indexText + '-' + opcion.replaceAll(' ','_');
                 inputOpcion.value = opcion;
 
                 const lbOpcion = document.createElement('label');
-                lbOpcion.htmlFor = indexText + '-' + opcion;
+                lbOpcion.htmlFor = indexText + '-' + opcion.replaceAll(' ','_');
                 lbOpcion.textContent = opcion;
 
                 fsPregunta.appendChild(inputOpcion);
