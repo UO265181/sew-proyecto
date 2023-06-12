@@ -60,14 +60,14 @@ class PresupuestosObject
 
         $rutaArchivo = '../../presupuesto.txt';
         file_put_contents($rutaArchivo, $txtPresupuesto);
-        header('Content-Type: text/plain');
+        //header('Content-Type: text/plain');
         header('Content-Disposition: attachment; filename="' . basename($rutaArchivo) . '"');
         header('Content-Length: ' . filesize($rutaArchivo));
 
         ob_clean();
         readfile($rutaArchivo);
         unlink($rutaArchivo);
-        exit();
+        //exit();
     }
 
 
@@ -89,10 +89,10 @@ class PresupuestosObject
                             return;
                         } 
                     }
+                    $this->crearArchivoPresupuesto($reservas);
                 } else {
                     $this->fallosGenerarPresupuesto .= "Error al insertar el presupuesto en la base de datos. ";
                 }
-                $this->crearArchivoPresupuesto($reservas);
             } else {
                 $this->fallosGenerarPresupuesto .= "No se puede realizar un presupuesto sin reservas. ";
             }
