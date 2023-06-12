@@ -53,7 +53,7 @@ class ReservasObject
         if ($aforoAct < $aforoMax) {
             // Hay hueco, se reserva y se aumenta el aforo
             $id_reserva = ConexionDB::insertarReserva($aforo["id"], $_SESSION["user_id"], $recurso["id"]);
-            if($id_reserva!==null && $id_reserva !== 0) {
+            if ($id_reserva !== null && $id_reserva !== 0) {
                 $aforoAct++;
                 $aumentarAforo = ConexionDB::aumentarAforoActual($aforo["id"], $aforoAct);
             } else {
@@ -77,34 +77,43 @@ class ReservasObject
 
                         // El recurso existe, se intenta realizar una reserva
 
-                        // Comprobar aforo
-                        $aforo = ConexionDB::obtenerAforosPorIdrecursoFechaHora($recurso["id"], $fecha, $hora);
-                        if ($aforo !== null) {
-                            if (count($aforo) === 0) {
-                                // No hay nadie inscrito a esa hora aún, se crea el aforo y la reserva
+                        // Comprobar disponibilidad horaria
 
-                                // Se crea el aforo
-                                $fechaHoraInicial = new DateTime($fecha . ' ' . $hora);
-                                $fechaHoraFinal = $this->calcularFechaHoraFinal($recurso["duracion"], $fechaHoraInicial);
-                                $id_aforoInsertado = ConexionDB::insertarAforo($recurso["id"], $fecha, $fechaHoraFinal->format('Y-m-d'), $hora, $fechaHoraFinal->format('H:i:s'));
+                        $horasArray = explode(';', $recurso['horas']);
 
-                                // Se recupera
-                                $aforo = ConexionDB::obtenerAforosPorIdrecursoFechaHora($recurso["id"], $fecha, $hora);
-                                if ($aforo !== null) {
-                                    if (count($aforo) === 1) {
-                                        $this->comprobarAforoYReservar($aforo[0],$recurso);
+                        if (in_array($hora, $horasArray)) {
+
+                            // Comprobar aforo
+                            $aforo = ConexionDB::obtenerAforosPorIdrecursoFechaHora($recurso["id"], $fecha, $hora);
+                            if ($aforo !== null) {
+                                if (count($aforo) === 0) {
+                                    // No hay nadie inscrito a esa hora aún, se crea el aforo y la reserva
+
+                                    // Se crea el aforo
+                                    $fechaHoraInicial = new DateTime($fecha . ' ' . $hora);
+                                    $fechaHoraFinal = $this->calcularFechaHoraFinal($recurso["duracion"], $fechaHoraInicial);
+                                    $id_aforoInsertado = ConexionDB::insertarAforo($recurso["id"], $fecha, $fechaHoraFinal->format('Y-m-d'), $hora, $fechaHoraFinal->format('H:i:s'));
+
+                                    // Se recupera
+                                    $aforo = ConexionDB::obtenerAforosPorIdrecursoFechaHora($recurso["id"], $fecha, $hora);
+                                    if ($aforo !== null) {
+                                        if (count($aforo) === 1) {
+                                            $this->comprobarAforoYReservar($aforo[0], $recurso);
+                                        } else {
+                                            $this->fallosReservar .= "Error al obtener el aforo creado para el recurso. ";
+                                        }
                                     } else {
-                                        $this->fallosReservar .= "Error al obtener el aforo creado para el recurso. ";
+                                        $this->fallosReservar .= "Error al realizar la consulta de obtener el aforo creado para el recurso. ";
                                     }
                                 } else {
-                                    $this->fallosReservar .= "Error al realizar la consulta de obtener el aforo creado para el recurso. ";
+                                    // El aforo existe, comprobar que no esté lleno
+                                    $this->comprobarAforoYReservar($aforo[0], $recurso);
                                 }
                             } else {
-                                // El aforo existe, comprobar que no esté lleno
-                                $this->comprobarAforoYReservar($aforo[0],$recurso);
+                                $this->fallosReservar .= "Error al realizar la consulta del aforo del recurso. ";
                             }
                         } else {
-                            $this->fallosReservar .= "Error al realizar la consulta del aforo del recurso. ";
+                            $this->fallosReservar .= 'El recurso '. $recurso['nombre'] . ' no está disponible a esa hora. Revise la tabla de recursos. ';
                         }
                     } else {
                         $this->fallosReservar .= "No existe ningún recurso con ese nombre. ";
@@ -169,7 +178,7 @@ class ReservasObject
 
                 echo '<tr><td>' . $reserva['id'] . '</td>
                 <td>' . $recurso['nombre'] . '</td>
-                <td>' . $recurso['precio'] . '€' .'</td>
+                <td>' . $recurso['precio'] . '€' . '</td>
                 <td>' . $aforo['fecha_inicio'] . '</td>
                 <td>' . $aforo['hora_inicio'] . '</td>
                 <td>' . $aforo['fecha_final'] . '</td>

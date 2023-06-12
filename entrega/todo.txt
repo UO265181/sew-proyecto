@@ -6,7 +6,6 @@ css layout
     --- JS ---
 kml hacer la línea y comprobar formato
     --- PHP ---
-horas fijas
 presupuesto printear en el html
 campo contraseña que no se vea xd
 span mejor otra cosa

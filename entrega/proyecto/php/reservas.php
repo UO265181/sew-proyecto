@@ -29,7 +29,7 @@
 			<li><a title="Enlace a Rutas" href="../rutas.html">Rutas</a></li>
 			<li><a title="Enlace a Meteorología" href="../meteorologia.html">Meteorología</a></li>
 			<li><a title="Enlace a Juego" href="../juego.html">Juego</a></li>
-			<li><a title="Enlace a Reservas" href="php/reservas.php">Reservas</a></li>
+			<li><a title="Enlace a Reservas" href="reservas.php">Reservas</a></li>
 		</ul>
 	</nav>
 

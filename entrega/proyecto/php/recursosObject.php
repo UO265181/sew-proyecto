@@ -29,7 +29,7 @@ class RecursosObject
             echo "<p><span> No se han podido obtener los recursos: " . $this->fallosRecursos . "</span></p>";
         } else {
             echo '<table> <caption> Recursos </caption><thead><tr>';
-            echo '<th>Nombre</th><th>Tipo</th><th>Precio</th><th>Descripción</th><th>Duración</th>';
+            echo '<th>Nombre</th><th>Tipo</th><th>Precio</th><th>Descripción</th><th>Aforo</th><th>Disponibilidad</th><th>Duración</th>';
             echo '</tr></thead>';
             echo '<tbody>';
 
@@ -38,6 +38,8 @@ class RecursosObject
                 <td>' . $recurso['tipo'] . '</td>
                 <td>' . $recurso['precio'] . '€' .'</td>
                 <td>' . $recurso['descripcion'] .   '</td>
+                <td>' . $recurso['aforo_maximo'] .   '</td>
+                <td>' . str_replace(';', ', ', $recurso['horas']) .'</td>
                 <td>' . $recurso['duracion'] . ' horas' .'</td>
                 </tr>';
             }
