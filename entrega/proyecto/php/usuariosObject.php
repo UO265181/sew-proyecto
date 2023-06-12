@@ -143,7 +143,7 @@ class UsuariosObject
 <p><label for='emailId'>Email</label></p>
     <p><input type='text' name='email' id='emailId'><span>&nbsp;" . $this->errorEmailId . "</span></p>
     <p><label for='passwordId'>Contraseña</label></p>
-    <p><input type='text' name='password' id='passwordId'><span>&nbsp;" . $this->errorPasswordId . "</span></p>
+    <p><input type='password' name='password' id='passwordId'><span>&nbsp;" . $this->errorPasswordId . "</span></p>
     <input type='submit' value='Identificarse' name='identificarse'>
 </form>
 ";
@@ -161,7 +161,7 @@ class UsuariosObject
 <p><label for='emailReg'>Email</label></p>
     <p><input type='text' name='email' id='emailReg'><span>&nbsp;" . $this->errorEmailReg . "</span></p>
     <p><label for='passwordReg'>Contraseña</label></p>
-    <p><input type='text' name='password' id='passwordReg'><span>&nbsp;" . $this->errorPasswordReg . "</span></p>
+    <p><input type='password' name='password' id='passwordReg'><span>&nbsp;" . $this->errorPasswordReg . "</span></p>
     <input type='submit' value='Registrarse' name='registrarse'>
 </form>
 ";

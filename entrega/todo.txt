@@ -7,7 +7,6 @@ css layout
 kml hacer la línea y comprobar formato
     --- PHP ---
 presupuesto printear en el html
-campo contraseña que no se vea xd
 span mejor otra cosa
     --- BIT ---
 documentar todo de azure
