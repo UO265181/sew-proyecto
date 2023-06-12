@@ -73,8 +73,8 @@ CREATE TABLE `recursos` (
   `precio` decimal(4,2) NOT NULL,
   `descripcion` mediumtext NOT NULL,
   `duracion` int(3) NOT NULL,
-  `aforo_maximo` int(4) NOT NULL
-  `horas` varchar(24) NOT NULL,
+  `aforo_maximo` int(4) NOT NULL,
+  `horas` varchar(24) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 -- --------------------------------------------------------
