@@ -28,7 +28,7 @@ class Juego {
 
                 const inputOpcion = document.createElement('input');
                 inputOpcion.type = 'radio';
-                inputOpcion.name = indexText + '-' + opcion;
+                inputOpcion.name = indexText;
                 inputOpcion.id = indexText + '-' + opcion.replaceAll(' ','_');
                 inputOpcion.value = opcion;
 
