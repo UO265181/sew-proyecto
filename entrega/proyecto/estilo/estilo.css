@@ -85,6 +85,7 @@ dd {
 
 /* Especifidad: 001*/
 section {
+  margin-right: 0.25em;
   margin-left: 0;
   margin-bottom: 2em;
   padding-left: 0.25em;
@@ -161,8 +162,38 @@ span {
   color: #5a0000;
 }
 
+/* Especifidad: 001*/
+button {
+  color: #000A0A;
+  background-color: #B0CFD1;
+}
+
+/* Especifidad: 011*/
+button:hover {
+  color: #000A0A;
+  background-color: #47888d;
+}
+
+/* Especifidad: 011*/
+input[type="submit"] {
+  color: #000A0A;
+  background-color: #B0CFD1;
+}
+
 /* Especifidad: 021*/
 input[type="submit"]:hover {
   color: #000A0A;
-  background-color: #63B2B8;
+  background-color: #47888d;
 }
+
+/* Especifidad: 001*/
+fieldset {
+  margin-bottom: 1.5em;
+}
+
+/* Especifidad: 001*/
+fieldset label, fieldset input{
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+

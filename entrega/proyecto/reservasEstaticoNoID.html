@@ -5,9 +5,9 @@
     <meta name="keywords" content="Cabranes, cultura, turismo">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="index.html">
-    <link rel="icon" type="image/svg" href="multimedia/escudo.svg">
-    <link rel="stylesheet" type="text/css" href="estilo/estilo.css">
-    <link rel="stylesheet" type="text/css" href="estilo/layout.css">
+    <link rel="icon" type="image/svg" href="../multimedia/escudo.svg">
+    <link rel="stylesheet" type="text/css" href="../estilo/estilo.css">
+    <link rel="stylesheet" type="text/css" href="../estilo/layout.css">
     <title>Concejo de Cabranes</title>
 </head>
 
@@ -18,15 +18,15 @@
         <h1>Concejo de Cabranes</h1>
     </header>
 
-	<nav>
+    <nav>
 		<h2>Índice</h2>
 		<ul>
-			<li><a title="Enlace a la página principal" href="index.html">Inicio</a></li>
-			<li><a title="Enlace a Gastronomía" href="gastronomia.html">Gastronomía</a></li>
-			<li><a title="Enlace a Rutas" href="rutas.html">Rutas</a></li>
-			<li><a title="Enlace a Meteorología" href="meteorologia.html">Meteorología</a></li>
-			<li><a title="Enlace a Juego" href="juego.html">Juego</a></li>
-			<li><a title="Enlace a Reservas" href="php/reservas.php">Reservas</a></li>
+			<li><a title="Enlace a la página principal" href="../index.html">Inicio</a></li>
+			<li><a title="Enlace a Gastronomía" href="../gastronomia.html">Gastronomía</a></li>
+			<li><a title="Enlace a Rutas" href="../rutas.html">Rutas</a></li>
+			<li><a title="Enlace a Meteorología" href="../meteorologia.html">Meteorología</a></li>
+			<li><a title="Enlace a Juego" href="../juego.html">Juego</a></li>
+			<li><a title="Enlace a Reservas" href="reservas.php">Reservas</a></li>
 		</ul>
 	</nav>
 
@@ -35,20 +35,20 @@
 
         <section><h2>Información</h2><p>Bienvenido a la página de reservas. Para poder realizar una reserva primero deberás registrarse. Una vez que te hayas registrado podrás identificarte y empezar a resevar tus recursos turísticos de Cabranes favoritos.</p></section><section><h2>Registrarse</h2>
 <form method="post" action="reservas.php">
-    <p><label for='nombreReg'>Nombre</label></p>
-    <p><input type='text' name='nombre' id='nombreReg'><span>&nbsp;</span></p>
-    <p><label for='emailReg'>Email</label></p>
-    <p><input type='text' name='email' id='emailReg'><span>&nbsp;</span></p>
-    <p><label for='passwordReg'>Contraseña</label></p>
-    <p><input type='text' name='password' id='passwordReg'><span>&nbsp;</span></p>
+<p><label for="nombreReg">Nombre</label></p>
+    <p><input type="text" name="nombre" id="nombreReg"><span>&nbsp;</span></p>
+<p><label for="emailReg">Email</label></p>
+    <p><input type="text" name="email" id="emailReg"><span>&nbsp;</span></p>
+    <p><label for="passwordReg">Contraseña</label></p>
+    <p><input type="password" name="password" id="passwordReg"><span>&nbsp;</span></p>
     <input type="submit" value="Registrarse" name="registrarse">
 </form>
 </section><section><h2>Identificarse</h2>
 <form method="post" action="reservas.php">
-    <p><label for='emailId'>Email</label></p>
-    <p><input type='text' name='email' id='emailId'><span>&nbsp;</span></p>
-    <p><label for='passwordId'>Contraseña</label></p>
-    <p><input type='text' name='password' id='passwordId'><span>&nbsp;</span></p>
+<p><label for="emailId">Email</label></p>
+    <p><input type="text" name="email" id="emailId"><span>&nbsp;</span></p>
+    <p><label for="passwordId">Contraseña</label></p>
+    <p><input type="password" name="password" id="passwordId"><span>&nbsp;</span></p>
     <input type="submit" value="Identificarse" name="identificarse">
 </form>
 </section>
