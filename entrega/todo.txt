@@ -1,8 +1,6 @@
     --- CSS ---
 doc advertencias de color
 css layout
-    --- JS ---
-kml hacer la línea y comprobar formato
     --- PHP ---
 presupuesto printear en el html
 span mejor otra cosa

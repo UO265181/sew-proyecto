@@ -41,7 +41,7 @@ class ArchivoXML {
                     var latitud = $(coordenadas).find('latitud').text();
                     var altitud = $(coordenadas).find('altitud').text();
 
-                    coordenadasRuta.push({ longitud: longitud, latitud: latitud, altitud: altitud, nombre: ruta, descripcion:descripcion });
+                    coordenadasRuta.push({ longitud: longitud, latitud: latitud, altitud: altitud, nombre: ruta, descripcion: descripcion });
                     puntosSVG.push({ x: xAcumulado, y: altitud, texto: "Inicio de " + ruta, altitudReal: altitud });
 
 
@@ -106,7 +106,7 @@ class ArchivoXML {
                         var latitud = $(coordenadas).find('latitud').text();
                         var altitud = $(coordenadas).find('altitud').text();
 
-                        coordenadasRuta.push({ longitud: longitud, latitud: latitud, altitud: altitud, nombre: hito , descripcion:descripcion});
+                        coordenadasRuta.push({ longitud: longitud, latitud: latitud, altitud: altitud, nombre: hito, descripcion: descripcion });
                         var distanciaPuntoSVG = parseFloat(distancia);
                         if (distancia_unidades === "metros")
                             distanciaPuntoSVG *= 1000000;
@@ -202,9 +202,13 @@ class ArchivoXML {
                     // Creo el svg
                     var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
                     svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-
                     svg.setAttribute('width', anchoSVG);
                     svg.setAttribute('height', altoSVG);
+
+                    var xml = document.createElementNS('http://www.w3.org/XML/1998/namespace', 'xml');
+                    xml.setAttribute('version', '1.0');
+                    xml.setAttribute('encoding', 'UTF-8');
+                    svg.insertBefore(xml, svg.firstChild);
 
                     var polyline = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
                     var polylineCoordenadas = "";
@@ -289,13 +293,20 @@ class ArchivoXML {
                     var documentElement = kmlDoc.createElement('Document');
                     kml.appendChild(documentElement);
 
+                    var linePlacemark = kmlDoc.createElement('Placemark');
+                    var lineString = kmlDoc.createElement('LineString');
+                    var lineCoordinates = kmlDoc.createElement('coordinates');
+                    lineString.appendChild(lineCoordinates);
+                    linePlacemark.appendChild(lineString);
+                    documentElement.appendChild(linePlacemark);
+
                     for (var i = 0; i < coordenadasRuta.length; i++) {
                         var coordenada = coordenadasRuta[i];
                         var longitud = coordenada.longitud;
-                        var latitud =  coordenada.latitud;
-                        var altitud =  coordenada.altitud;
-                        var nombre =  coordenada.nombre;
-                        var descripcion =  coordenada.descripcion;
+                        var latitud = coordenada.latitud;
+                        var altitud = coordenada.altitud;
+                        var nombre = coordenada.nombre;
+                        var descripcion = coordenada.descripcion;
 
                         var placemark = kmlDoc.createElement('Placemark');
                         var name = kmlDoc.createElement('name');
@@ -310,8 +321,10 @@ class ArchivoXML {
                         placemark.appendChild(point);
 
                         var coordinates = kmlDoc.createElement('coordinates');
-                        coordinates.textContent = longitud + ',' + latitud +',' + altitud ;
+                        coordinates.textContent = longitud + ',' + latitud + ',' + altitud;
                         point.appendChild(coordinates);
+
+                        lineCoordinates.textContent += longitud + ',' + latitud + ',' + altitud + ' ';
 
                         documentElement.appendChild(placemark);
                     }
