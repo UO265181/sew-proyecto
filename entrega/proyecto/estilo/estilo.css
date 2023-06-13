@@ -10,6 +10,17 @@ nav {
   color: #000A0A;
 }
 
+/* Especifidad: 002*/
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Especifidad: 003*/
+nav ul li {
+  border: 0.25em solid #f2f2f2;
+}
+
 /* Especifidad: 003*/
 nav li a {
   color: #000A0A;
@@ -20,8 +31,8 @@ nav li a {
 
 /* Especifidad: 013*/
 nav li a:hover {
-  color: #63B2B8;
-  background-color: #1E3638;
+  color: #000A0A;
+  background-color: #f2f2f2;
 }
 
 /* Especifidad: 001*/
@@ -32,8 +43,8 @@ main {
 
 /* Especifidad: 002*/
 main h2 {
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
+  padding-left: 0;
+  margin-bottom: 0.25em;
   background-color: #63B2B8;
   color: #000A0A;
 }
@@ -42,7 +53,6 @@ main h2 {
 footer {
   background-color: #1E3638;
   color: #B0CFD1;
-  text-align: center;
 }
 
 /* Especifidad: 002*/
@@ -56,12 +66,37 @@ th,
 td {
   text-align: left;
   border-bottom: solid #B0CFD1;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
 }
 
 /* Especifidad: 001*/
 th {
   background-color: #B0CFD1;
   color: #000A0A;
+}
+
+/* Especifidad: 001*/
+dd {
+  margin-left: 0.25em;
+  padding-left: 0.75em;
+  border-left: 0.15em dashed #B0CFD1;
+}
+
+/* Especifidad: 001*/
+section {
+  margin-left: 0;
+  margin-bottom: 2em;
+  padding-left: 0.25em;
+  border-left: 0.25em solid #63B2B8;
+}
+
+/* Especifidad: 002*/
+section section,
+section article {
+  margin-left: 0.25em;
+  padding-left: 0.75em;
+  border-left: 0.25em solid #B0CFD1;
 }
 
 /* Especifidad: 001*/
@@ -80,21 +115,38 @@ dt {
   font-weight: bold;
 }
 
+/* Especifidad: 001*/
+figure {
+  background-color: #f2f2f2;
+  color: #000A0A;
+}
+
 /* Especifidad: 002*/
 figure figcaption {
   background-color: #B0CFD1;
   color: #000A0A;
-  text-align: center;
+  padding: 0.25em;
+  border-left: 0.25em solid #47888d;
+  border-bottom: 0.25em solid #47888d;
+  border-right: 0.25em solid #47888d;
 }
 
 /* Especifidad: 001*/
 video {
-  border: 0.5em solid #B0CFD1;
+  background-color: #B0CFD1;
+  color: #000A0A;
+  padding: 0.25em;
+  border: 0.25em solid #47888d;
+  max-width: 75%;
 }
 
 /* Especifidad: 001*/
 audio {
-  border: 0.5em solid #B0CFD1;
+  background-color: #B0CFD1;
+  color: #000A0A;
+  padding: 0.25em;
+  border: 0.25em solid #47888d;
+  border-radius: 2.5em;
 }
 
 /* Especifidad: 001*/
@@ -105,10 +157,12 @@ form {
 
 /* Especifidad: 001*/
 span {
+  background-color: #f2f2f2;
   color: #5a0000;
 }
 
 /* Especifidad: 021*/
 input[type="submit"]:hover {
+  color: #000A0A;
   background-color: #63B2B8;
 }

@@ -1,6 +1,3 @@
-    --- CSS ---
-doc advertencias de color
-css layout
     --- PHP ---
 presupuesto printear en el html
 span mejor otra cosa
