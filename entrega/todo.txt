@@ -1,5 +1,3 @@
-    --- HTML ---
-lista definida que definid
     --- CSS ---
 doc advertencias de color
 css layout
