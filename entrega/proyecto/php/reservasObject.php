@@ -113,7 +113,7 @@ class ReservasObject
                                 $this->fallosReservar .= "Error al realizar la consulta del aforo del recurso. ";
                             }
                         } else {
-                            $this->fallosReservar .= 'El recurso '. $recurso['nombre'] . ' no está disponible a esa hora. Revise la tabla de recursos. ';
+                            $this->fallosReservar .= 'El recurso '. $recurso['nombre'] . ' solo se encuentra disponible para las siguientes horas: '. str_replace(';', ', ', $recurso['horas']).'.';
                         }
                     } else {
                         $this->fallosReservar .= "No existe ningún recurso con ese nombre. ";

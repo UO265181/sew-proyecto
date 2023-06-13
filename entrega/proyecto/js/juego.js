@@ -18,8 +18,13 @@ class Juego {
             const fsPregunta = document.createElement('fieldset');
 
             const legend = document.createElement('legend');
-            legend.textContent = `${index + 1}. ${pregunta.pregunta}`;
+            legend.textContent = `${index + 1}. ${pregunta.pregunta} `;
 
+            const aEnlance = document.createElement('a');
+            aEnlance.textContent = `[Pista-${index + 1}]`;
+            aEnlance.href = pregunta.sitio;
+
+            legend.appendChild(aEnlance);
             fsPregunta.appendChild(legend);
 
             pregunta.opciones.forEach(opcion => {
@@ -93,52 +98,62 @@ const preguntas = [
     {
         pregunta: '¿Qué festival se celebra en Cabranes?',
         opciones: ['Festival del Carnaval Asturiano', 'Festival de la sidra', 'Festival de los mineros', 'Festival de la mejor vaca', 'Festival del arroz con leche'],
-        respuestaCorrecta: 'Festival del arroz con leche'
+        respuestaCorrecta: 'Festival del arroz con leche',
+        sitio: 'gastronomia.html'
     },
     {
         pregunta: '¿En qué comunidad autónoma se encuentra Cabranes?',
         opciones: ['Asturias', 'Castilla y León', 'Cantabria', 'País Vasco', 'Galicia'],
-        respuestaCorrecta: 'Asturias'
+        respuestaCorrecta: 'Asturias',
+        sitio: 'index.html'
     },
     {
         pregunta: '¿Cúal de estos platos no es típico de Cabranes?',
         opciones: ['Paella', 'Cachopo', 'Arroz con leche', 'Fabes', 'Pote'],
-        respuestaCorrecta: 'Paella'
+        respuestaCorrecta: 'Paella',
+        sitio: 'gastronomia.html'
     },
     {
         pregunta: '¿A qué mancomunidad pertenece Cabranes?',
         opciones: ['Comarca del Cachopo', 'Comarca de la Minería', 'Comarca de la Sidra', 'Comarca del Norte', 'Comarca del Arroz con Leche'],
-        respuestaCorrecta: 'Comarca del Arroz con Leche'
+        respuestaCorrecta: 'Comarca del Arroz con Leche',
+        sitio: 'index.html'
     },
     {
         pregunta: '¿En qué año comenzó el festival del arroz con leche?',
         opciones: ['1980', '1981', '1982', '1990', '1989'],
-        respuestaCorrecta: '1980'
+        respuestaCorrecta: '1980',
+        sitio: 'gastronomia.html'
     },
     {
         pregunta: '¿En qué año fue declarado el festival del arroz con leche de interés turístico regional?',
         opciones: ['2005', '2004', '2003', '2002', 'Nunca'],
-        respuestaCorrecta: '2004'
+        respuestaCorrecta: '2004',
+        sitio: 'gastronomia.html'
     },
     {
         pregunta: '¿En qué año fue declarado el festival del arroz con leche de interés turístico nacional?',
         opciones: ['2014', '2015', '2004', '2010', 'Nunca'],
-        respuestaCorrecta: 'Nunca'
+        respuestaCorrecta: 'Nunca',
+        sitio: 'gastronomia.html'
     },
     {
         pregunta: '¿Cúal de estos ingredientes es típico del arroz con leche?',
         opciones: ['Cúrcuma', 'Canela', 'Orégano', 'Laurel', 'Pimentón'],
-        respuestaCorrecta: 'Canela'
+        respuestaCorrecta: 'Canela',
+        sitio: 'gastronomia.html'
     },
     {
         pregunta: '¿Cúal es la población de Cabranes?',
         opciones: ['1000', '982', '1123', '1057', '1070'],
-        respuestaCorrecta: '1057'
+        respuestaCorrecta: '1057',
+        sitio: 'index.html'
     },
     {
         pregunta: '¿Cúal de estos lugares no pertenece a Cabranes?',
         opciones: ['Fresnedo', 'Viñón', 'Valbuena', 'Niao', 'Todos pertenecen'],
-        respuestaCorrecta: 'Todos pertenecen'
+        respuestaCorrecta: 'Todos pertenecen',
+        sitio: 'index.html'
     }
 ];
 

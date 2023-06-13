@@ -72,6 +72,7 @@ class Vista
         echo "<section>";
         echo "<h2>Información</h2>";
         echo "<p>¡Bienvenido " . $_SESSION["username"] . "! Puedes realizar reservas y ver tu presupuesto más abajo.</p>";
+        echo "<p>Para realizar una reserva deberás utilizar la tabla de recursos turísiticos. Para rellenar el formulario necesitarás el nombre del recurso y la fecha en la que quieres reservar. Ten en cuenta que la hora de reserva ha de coincidir con la disponibilidad del recurso, para ello fijate en la columna de disponibilidad del recurso que quieras reservar.</p>";
         echo "</section>";
 
         echo "<section>";
