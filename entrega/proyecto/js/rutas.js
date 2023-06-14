@@ -205,6 +205,9 @@ class ArchivoXML {
                     svg.setAttribute('width', anchoSVG);
                     svg.setAttribute('height', altoSVG);
 
+                    var xmlDeclaration = document.createProcessingInstruction('xml', 'version="1.0" encoding="UTF-8"');
+                    svg.insertBefore(xmlDeclaration, svg.firstChild);
+
                     var polyline = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
                     var polylineCoordenadas = "";
 
