@@ -10,7 +10,7 @@ class Noticias {
             url: 'https://api.newscatcherapi.com/v2/search?q=Cabranes%20AND%20Asturias&lang=es&sort_by=date',
             method: 'GET',
             headers: {
-                'x-api-key': '5qJpx5i3nRb0GxeX-ycugDrmkwsvw01bjtQX2ctUU5A'
+                'x-api-key': '0ylkrSh_9EaeK4z3pjZTYf_UKOBSMI4sygZ06LPmmfQ'
             },
             success: (response) => {
 
