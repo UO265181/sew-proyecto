@@ -191,7 +191,7 @@ fieldset {
   margin-bottom: 1.5em;
 }
 
-/* Especifidad: 001*/
+/* Especifidad: 002*/
 fieldset label, fieldset input{
   margin-top: 0.25em;
   margin-bottom: 0.25em;
